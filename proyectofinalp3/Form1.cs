@@ -32,7 +32,7 @@ namespace proyectofinalp3
         }
         private void btnclientes_Click(object sender, EventArgs e)
         {
-            Clientes miforma = new Clientes();
+            frmClientes miforma = new frmClientes();
             miforma.Show();
         }
 
@@ -43,7 +43,7 @@ namespace proyectofinalp3
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Clientes miforma = new Clientes();
+            frmClientes miforma = new frmClientes();
             miforma.Show();
         }
 
@@ -85,7 +85,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            Clientes miforma = new Clientes();
+            frmClientes miforma = new frmClientes();
             miforma.Show();
         }
 
@@ -136,7 +136,7 @@ namespace proyectofinalp3
 
         private void verClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Clientes miforma = new Clientes();
+            frmClientes miforma = new frmClientes();
             miforma.Show();
         }
 
@@ -230,7 +230,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem19_Click(object sender, EventArgs e)
         {
-            Clientes miforma = new Clientes();
+            frmClientes miforma = new frmClientes();
             miforma.Show();
         }
 
