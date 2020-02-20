@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proyectofinalp3
 {
-    public partial class Contabilidad : Form
+    public partial class frmContabilidad : Form
     {
-        public Contabilidad()
+        public frmContabilidad()
         {
             InitializeComponent();
         }

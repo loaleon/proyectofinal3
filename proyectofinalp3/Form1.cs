@@ -55,7 +55,7 @@ namespace proyectofinalp3
 
         private void presupuestosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Contabilidad miforma = new Contabilidad();
+            frmContabilidad miforma = new frmContabilidad();
             miforma.Show();
         }
 
@@ -97,13 +97,13 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem9_Click(object sender, EventArgs e)
         {
-            Contabilidad miforma = new Contabilidad();
+            frmContabilidad miforma = new frmContabilidad();
             miforma.Show();
         }
 
         private void toolStripMenuItem10_Click(object sender, EventArgs e)
         {
-            Contabilidad miforma = new Contabilidad();
+            frmContabilidad miforma = new frmContabilidad();
             miforma.Show();
         }
 
@@ -192,7 +192,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
         {
-            Contabilidad miforma = new Contabilidad();
+            frmContabilidad miforma = new frmContabilidad();
             miforma.Show();
         }
 

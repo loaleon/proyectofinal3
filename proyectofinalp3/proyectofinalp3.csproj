@@ -106,11 +106,11 @@
     <Compile Include="Loguin.Designer.cs">
       <DependentUpon>Loguin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contabilidad.cs">
+    <Compile Include="frmContabilidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Contabilidad.Designer.cs">
-      <DependentUpon>Contabilidad.cs</DependentUpon>
+    <Compile Include="frmContabilidad.Designer.cs">
+      <DependentUpon>frmContabilidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,8 +144,8 @@
     <EmbeddedResource Include="Loguin.resx">
       <DependentUpon>Loguin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Contabilidad.resx">
-      <DependentUpon>Contabilidad.cs</DependentUpon>
+    <EmbeddedResource Include="frmContabilidad.resx">
+      <DependentUpon>frmContabilidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
