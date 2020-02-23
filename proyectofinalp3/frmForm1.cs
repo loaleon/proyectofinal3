@@ -255,5 +255,10 @@ namespace proyectofinalp3
         {
             
         }
+
+        private void menuStrip5_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
