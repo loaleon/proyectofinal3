@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proyectofinalp3
 {
-    public partial class Almacen : Form
+    public partial class frmAlmacen : Form
     {
-        public Almacen()
+        public frmAlmacen()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace proyectofinalp3
 
         private void btnentrada_Click(object sender, EventArgs e)
         {
-            RRHH miforma = new RRHH();
+            fmrRRHH miforma = new fmrRRHH();
             
                 
         }

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace proyectofinalp3
 {
-    public partial class ListadoCliente : Form
+    public partial class frmListadoPresupuesto : Form
     {
-        public ListadoCliente()
+        public frmListadoPresupuesto()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btncerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

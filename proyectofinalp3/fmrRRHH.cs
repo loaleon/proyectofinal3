@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proyectofinalp3
 {
-    public partial class RRHH : Form
+    public partial class fmrRRHH : Form
     {
-        public RRHH()
+        public fmrRRHH()
         {
             InitializeComponent();
         }

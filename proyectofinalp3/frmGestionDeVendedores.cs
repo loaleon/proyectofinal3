@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proyectofinalp3
 {
-    public partial class GestionDeVendedores : Form
+    public partial class frmGestionDeVendedores : Form
     {
-        public GestionDeVendedores()
+        public frmGestionDeVendedores()
         {
             InitializeComponent();
         }
@@ -44,7 +44,7 @@ namespace proyectofinalp3
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Form1 miforma = new Form1();
+            frmForm1 miforma = new frmForm1();
             miforma.Show();
         }
 
@@ -66,7 +66,7 @@ namespace proyectofinalp3
 
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-            ListadoCliente miforma = new ListadoCliente();
+            frmListadoCliente miforma = new frmListadoCliente();
             miforma.Show();
         }
 

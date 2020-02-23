@@ -1,6 +1,6 @@
 ﻿namespace proyectofinalp3
 {
-    partial class Form1
+    partial class frmForm1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmForm1));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -158,11 +158,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(36, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 33);
+            this.label1.Size = new System.Drawing.Size(137, 31);
             this.label1.TabIndex = 23;
             this.label1.Text = "Maderarte";
             // 
@@ -375,6 +375,7 @@
             this.menuStrip5.Size = new System.Drawing.Size(202, 69);
             this.menuStrip5.TabIndex = 2;
             this.menuStrip5.Text = "menuStrip5";
+            this.menuStrip5.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip5_ItemClicked);
             // 
             // toolStripMenuItem7
             // 
@@ -774,7 +775,7 @@
     "rling cespedes @Dario Ramirez @Juancarlo @Francis, Con la finalidad de Proyecto " +
     "Final de la materia.";
             // 
-            // Form1
+            // frmForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -785,7 +786,7 @@
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "frmForm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "yj[\\";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
