@@ -1,6 +1,6 @@
 ﻿namespace proyectofinalp3
 {
-    partial class ListadoCliente
+    partial class frmListadoCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoCliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoCliente));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnusar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();

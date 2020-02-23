@@ -1,6 +1,6 @@
 ﻿namespace proyectofinalp3
 {
-    partial class ListadoPresupuesto
+    partial class frmListadoPresupuesto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoPresupuesto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoPresupuesto));
             this.label7 = new System.Windows.Forms.Label();
             this.dgvempleados = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();

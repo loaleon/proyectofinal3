@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MostrarCliente.cs">
+    <Compile Include="frmMostrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MostrarCliente.Designer.cs">
-      <DependentUpon>MostrarCliente.cs</DependentUpon>
+    <Compile Include="frmMostrarCliente.Designer.cs">
+      <DependentUpon>frmMostrarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen.cs">
+    <Compile Include="frmAlmacen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen.Designer.cs">
-      <DependentUpon>Almacen.cs</DependentUpon>
+    <Compile Include="frmAlmacen.Designer.cs">
+      <DependentUpon>frmAlmacen.cs</DependentUpon>
     </Compile>
     <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>
@@ -64,47 +64,47 @@
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Despacho.cs">
+    <Compile Include="frmDespacho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Despacho.Designer.cs">
-      <DependentUpon>Despacho.cs</DependentUpon>
+    <Compile Include="frmDespacho.Designer.cs">
+      <DependentUpon>frmDespacho.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionDeVendedores.cs">
+    <Compile Include="frmGestionDeVendedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionDeVendedores.Designer.cs">
-      <DependentUpon>GestionDeVendedores.cs</DependentUpon>
+    <Compile Include="frmGestionDeVendedores.Designer.cs">
+      <DependentUpon>frmGestionDeVendedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListadoCliente.cs">
+    <Compile Include="frmListadoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoCliente.Designer.cs">
-      <DependentUpon>ListadoCliente.cs</DependentUpon>
+    <Compile Include="frmListadoCliente.Designer.cs">
+      <DependentUpon>frmListadoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="RRHH.cs">
+    <Compile Include="fmrRRHH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RRHH.Designer.cs">
-      <DependentUpon>RRHH.cs</DependentUpon>
+    <Compile Include="fmrRRHH.Designer.cs">
+      <DependentUpon>fmrRRHH.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmForm1.Designer.cs">
+      <DependentUpon>frmForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListadoPresupuesto.cs">
+    <Compile Include="frmListadoPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoPresupuesto.Designer.cs">
-      <DependentUpon>ListadoPresupuesto.cs</DependentUpon>
+    <Compile Include="frmListadoPresupuesto.Designer.cs">
+      <DependentUpon>frmListadoPresupuesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Loguin.cs">
+    <Compile Include="frmLoguin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loguin.Designer.cs">
-      <DependentUpon>Loguin.cs</DependentUpon>
+    <Compile Include="frmLoguin.Designer.cs">
+      <DependentUpon>frmLoguin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmContabilidad.cs">
       <SubType>Form</SubType>
@@ -114,35 +114,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MostrarCliente.resx">
-      <DependentUpon>MostrarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="frmMostrarCliente.resx">
+      <DependentUpon>frmMostrarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Almacen.resx">
-      <DependentUpon>Almacen.cs</DependentUpon>
+    <EmbeddedResource Include="frmAlmacen.resx">
+      <DependentUpon>frmAlmacen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Despacho.resx">
-      <DependentUpon>Despacho.cs</DependentUpon>
+    <EmbeddedResource Include="frmDespacho.resx">
+      <DependentUpon>frmDespacho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionDeVendedores.resx">
-      <DependentUpon>GestionDeVendedores.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestionDeVendedores.resx">
+      <DependentUpon>frmGestionDeVendedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListadoCliente.resx">
-      <DependentUpon>ListadoCliente.cs</DependentUpon>
+    <EmbeddedResource Include="frmListadoCliente.resx">
+      <DependentUpon>frmListadoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RRHH.resx">
-      <DependentUpon>RRHH.cs</DependentUpon>
+    <EmbeddedResource Include="fmrRRHH.resx">
+      <DependentUpon>fmrRRHH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmForm1.resx">
+      <DependentUpon>frmForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListadoPresupuesto.resx">
-      <DependentUpon>ListadoPresupuesto.cs</DependentUpon>
+    <EmbeddedResource Include="frmListadoPresupuesto.resx">
+      <DependentUpon>frmListadoPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loguin.resx">
-      <DependentUpon>Loguin.cs</DependentUpon>
+    <EmbeddedResource Include="frmLoguin.resx">
+      <DependentUpon>frmLoguin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmContabilidad.resx">
       <DependentUpon>frmContabilidad.cs</DependentUpon>

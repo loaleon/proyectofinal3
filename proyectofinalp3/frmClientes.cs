@@ -34,7 +34,7 @@ namespace proyectofinalp3
 
         private void btnver_Click(object sender, EventArgs e)
         {
-            MostrarCliente miforma = new MostrarCliente();
+            frmMostrarCliente miforma = new frmMostrarCliente();
             miforma.Show();
         }
 

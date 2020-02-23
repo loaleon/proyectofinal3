@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proyectofinalp3
 {
-    public partial class Loguin : Form
+    public partial class frmLoguin : Form
     {
-        public Loguin()
+        public frmLoguin()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace proyectofinalp3
         {
             if (txtusuario.Text == "admin" && txtclave.Text == "1234")
             {
-                Form1 miforma = new Form1();
+                frmForm1 miforma = new frmForm1();
                 miforma.Show();
                 this.Hide();
 
