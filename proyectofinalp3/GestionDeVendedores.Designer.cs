@@ -74,7 +74,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtcodcliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -93,6 +92,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tbxapellido = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -523,11 +523,11 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.comboBox2);
             this.groupBox10.Controls.Add(this.comboBox1);
             this.groupBox10.Controls.Add(this.label16);
             this.groupBox10.Controls.Add(this.txtcodcliente);
             this.groupBox10.Controls.Add(this.label3);
-            this.groupBox10.Controls.Add(this.textBox2);
             this.groupBox10.Controls.Add(this.label4);
             this.groupBox10.Controls.Add(this.textBox1);
             this.groupBox10.Controls.Add(this.label6);
@@ -555,9 +555,6 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "SI",
-            "NO"});
             this.comboBox1.Location = new System.Drawing.Point(461, 160);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(50, 21);
@@ -589,13 +586,6 @@
             this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 95;
             this.label3.Text = "Tipo de Cliente";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(461, 122);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 20);
-            this.textBox2.TabIndex = 96;
             // 
             // label4
             // 
@@ -756,6 +746,14 @@
             this.tbxapellido.Size = new System.Drawing.Size(214, 20);
             this.tbxapellido.TabIndex = 72;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(461, 118);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 100;
+            // 
             // GestionDeVendedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -823,7 +821,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtcodcliente;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
@@ -862,5 +859,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

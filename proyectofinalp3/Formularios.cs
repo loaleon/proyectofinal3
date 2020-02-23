@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace proyectofinalp3
 {
-    public partial class ListadoPresupuesto : Form
+    public partial class Formularios : Form
     {
-        public ListadoPresupuesto()
+        public Formularios()
         {
             InitializeComponent();
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Formularios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
             this.Close();
         }

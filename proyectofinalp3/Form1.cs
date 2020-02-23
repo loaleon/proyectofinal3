@@ -49,8 +49,7 @@ namespace proyectofinalp3
 
         private void crearPresupuestoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestionDeVendedores miforma = new GestionDeVendedores();
-            miforma.Show();
+            
         }
 
         private void presupuestosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -254,6 +253,27 @@ namespace proyectofinalp3
         private void toolStripMenuItem15_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem10_Click_2(object sender, EventArgs e)
+        {
+            Formularios miforma = new Formularios();
+            miforma.Show();
+        }
+
+        private void toolStripMenuItem9_Click_1(object sender, EventArgs e)
+        {
+          
         }
     }
 }
