@@ -62,6 +62,8 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.txttiempo = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -117,8 +119,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.tabalmacen.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -497,6 +497,23 @@
             this.groupBox10.Size = new System.Drawing.Size(779, 279);
             this.groupBox10.TabIndex = 97;
             this.groupBox10.TabStop = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(352, 191);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(159, 20);
+            this.label13.TabIndex = 97;
+            this.label13.Text = "Persona de Contacto";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(512, 191);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(141, 20);
+            this.textBox2.TabIndex = 98;
             // 
             // label24
             // 
@@ -990,31 +1007,14 @@
             this.label34.Size = new System.Drawing.Size(139, 16);
             this.label34.TabIndex = 103;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(352, 191);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(159, 20);
-            this.label13.TabIndex = 97;
-            this.label13.Text = "Persona de Contacto";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(512, 191);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 20);
-            this.textBox2.TabIndex = 98;
-            // 
-            // Almacen
+            // frmAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Almacen";
+            this.Name = "frmAlmacen";
             this.Text = "Almacen";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
