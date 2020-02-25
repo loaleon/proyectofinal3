@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\apaAccesoaDatos\CapaAccesoaDatos.csproj" />
     <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj" />
   </ItemGroup>
 
