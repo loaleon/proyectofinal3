@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proyectofinalp3
 {
-    public partial class frmListadoPresupuesto : Form
+    public partial class ListadoPresupuesto : Form
     {
-        public frmListadoPresupuesto()
+        public ListadoPresupuesto()
         {
             InitializeComponent();
         }

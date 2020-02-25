@@ -44,7 +44,7 @@ namespace proyectofinalp3
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            frmForm1 miforma = new frmForm1();
+            frmPrincipal miforma = new frmPrincipal();
             miforma.Show();
         }
 

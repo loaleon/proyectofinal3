@@ -89,17 +89,11 @@
     <Compile Include="frmRRHH.Designer.cs">
       <DependentUpon>frmRRHH.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmForm1.cs">
+    <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmForm1.Designer.cs">
-      <DependentUpon>frmForm1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmListadoPresupuesto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListadoPresupuesto.Designer.cs">
-      <DependentUpon>frmListadoPresupuesto.cs</DependentUpon>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLoguin.cs">
       <SubType>Form</SubType>
@@ -136,11 +130,8 @@
     <EmbeddedResource Include="frmRRHH.resx">
       <DependentUpon>frmRRHH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmForm1.resx">
-      <DependentUpon>frmForm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListadoPresupuesto.resx">
-      <DependentUpon>frmListadoPresupuesto.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoguin.resx">
       <DependentUpon>frmLoguin.cs</DependentUpon>
@@ -172,6 +163,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{77696090-8ec5-4f7c-b373-5458c6e772a3}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
       <Project>{051404eb-7b4f-47e3-9ea1-09e199170cdd}</Project>
       <Name>CapaNegocio</Name>

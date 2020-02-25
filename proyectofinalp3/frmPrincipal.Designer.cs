@@ -1,6 +1,6 @@
 ﻿namespace proyectofinalp3
 {
-    partial class Form1
+    partial class frmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -139,6 +139,7 @@
             this.groupBox2.Size = new System.Drawing.Size(1370, 64);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // groupBox4
             // 
@@ -174,6 +175,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(33, 34);
             this.pictureBox5.TabIndex = 22;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
@@ -292,7 +294,6 @@
             // pictureBox13
             // 
             this.pictureBox13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
             this.pictureBox13.Location = new System.Drawing.Point(0, 0);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(64, 59);
@@ -375,9 +376,8 @@
             this.menuStrip5.Size = new System.Drawing.Size(202, 69);
             this.menuStrip5.TabIndex = 2;
             this.menuStrip5.Text = "menuStrip5";
-            //this.menuStrip5.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip5_ItemClicked);
             // 
-            // toolStripMenuItem7 
+            // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem8,
@@ -775,7 +775,7 @@
     "rling cespedes @Dario Ramirez @Juancarlo @Francis, Con la finalidad de Proyecto " +
     "Final de la materia.";
             // 
-            // frmForm1
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -786,7 +786,7 @@
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmForm1";
+            this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "yj[\\";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
