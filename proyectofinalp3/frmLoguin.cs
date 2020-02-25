@@ -32,7 +32,7 @@ namespace proyectofinalp3
         {
             if (txtusuario.Text == "admin" && txtclave.Text == "1234")
             {
-                frmForm1 miforma = new frmForm1();
+                frmPrincipal miforma = new frmPrincipal();
                 miforma.Show();
                 this.Hide();
 

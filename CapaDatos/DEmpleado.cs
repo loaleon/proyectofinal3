@@ -30,7 +30,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@direccion", obj.direccion);
                 cmd.Parameters.AddWithValue("@sexo", obj.sexo);
                 cmd.Parameters.AddWithValue("@telefono", obj.telefono);
-                cmd.Parameters.AddWithValue("@correo", obj.telefono);
+                cmd.Parameters.AddWithValue("@correo", obj.correo);
                 cmd.Parameters.AddWithValue("@idDepartamento", obj.idDepartamento);
                 cmd.Parameters.AddWithValue("@fechaIngreso", obj.fechaIngreso);
                 cmd.Parameters.AddWithValue("@fechaNacimiento", obj.fechaNacimiento);

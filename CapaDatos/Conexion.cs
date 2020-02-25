@@ -15,7 +15,7 @@ namespace CapaDatos
         private string Clave;
         private bool Seguridad;
         private static Conexion Con = null;
-        
+
         private Conexion()
         {
             this.Base = "UAPA";
@@ -29,7 +29,7 @@ namespace CapaDatos
             SqlConnection Cadena = new SqlConnection();
             try
             {
-                Cadena.ConnectionString = "Server" + this.Servidor + "; Database" + this.Base + "; ";
+                Cadena.ConnectionString = "Server =" + this.Servidor + "; Database =" + this.Base + "; ";
                 if (this.Seguridad)
                 {
                     Cadena.ConnectionString = Cadena.ConnectionString + "Integrated Security = SSPI";
@@ -41,7 +41,7 @@ namespace CapaDatos
                     Cadena.ConnectionString = Cadena.ConnectionString + "User" + this.Usuario + "; password" + this.Clave;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Cadena = null;
                 throw ex;
@@ -49,7 +49,7 @@ namespace CapaDatos
             }
             return Cadena;
 
-        } 
+        }
         public static Conexion CrearInstancia()
         {
             if (Con == null)
@@ -58,6 +58,6 @@ namespace CapaDatos
             }
             return Con;
         }
-       
+
     }
 }
