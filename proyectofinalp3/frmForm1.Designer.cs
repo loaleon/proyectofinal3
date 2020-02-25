@@ -1,6 +1,6 @@
 ﻿namespace proyectofinalp3
 {
-    partial class frmForm1
+    partial class Form1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmForm1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -375,7 +375,7 @@
             this.menuStrip5.Size = new System.Drawing.Size(202, 69);
             this.menuStrip5.TabIndex = 2;
             this.menuStrip5.Text = "menuStrip5";
-            this.menuStrip5.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip5_ItemClicked);
+            //this.menuStrip5.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip5_ItemClicked);
             // 
             // toolStripMenuItem7
             // 

@@ -54,31 +54,31 @@ namespace proyectofinalp3
 
         private void presupuestosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Contabilidad miforma = new Contabilidad();
+            frmContabilidad miforma = new frmContabilidad();
             miforma.Show();
         }
 
         private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestionDeVendedores miforma = new GestionDeVendedores();
+            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
             miforma.Show();
         }
 
         private void crearClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestionDeVendedores miforma = new GestionDeVendedores();
+            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
             miforma.Show();
         }
 
         private void modificarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestionDeVendedores miforma = new GestionDeVendedores();
+            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
             miforma.Show();
         }
 
         private void almacenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Almacen miforma = new Almacen();
+            frmAlmacen miforma = new frmAlmacen();
             miforma.Show();
         }
 
@@ -90,19 +90,19 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            GestionDeVendedores miforma = new GestionDeVendedores();
+            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
             miforma.Show();
         }
 
         private void toolStripMenuItem9_Click(object sender, EventArgs e)
         {
-            Contabilidad miforma = new Contabilidad();
+            frmContabilidad miforma = new frmContabilidad();
             miforma.Show();
         }
 
         private void toolStripMenuItem10_Click(object sender, EventArgs e)
         {
-            Contabilidad miforma = new Contabilidad();
+            frmContabilidad miforma = new frmContabilidad();
             miforma.Show();
         }
 
@@ -113,13 +113,13 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem12_Click(object sender, EventArgs e)
         {
-            Almacen miforma = new Almacen();
+            frmAlmacen miforma = new frmAlmacen();
             miforma.Show();
         }
 
         private void toolStripMenuItem13_Click(object sender, EventArgs e)
         {
-            Almacen miforma = new Almacen();
+            frmAlmacen miforma = new frmAlmacen();
             miforma.Show();
         }
 
@@ -141,7 +141,7 @@ namespace proyectofinalp3
 
         private void crearClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestionDeVendedores miforma = new GestionDeVendedores();
+            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
             miforma.Show();
         }
 
@@ -152,19 +152,19 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
-            GestionDeVendedores miforma = new GestionDeVendedores();
+            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
             miforma.Show();
         }
 
         private void verCluentesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListadoCliente miforma = new ListadoCliente();
+            frmListadoCliente miforma = new frmListadoCliente();
             miforma.Show();
         }
 
         private void verPresupuestosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestionDeVendedores miforma = new GestionDeVendedores();
+            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
             miforma.Show();
         }
 
@@ -175,7 +175,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
-            Almacen miforma = new Almacen();
+            frmAlmacen miforma = new frmAlmacen();
             miforma.Show();
         }
 
@@ -191,19 +191,19 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
         {
-            Contabilidad miforma = new Contabilidad();
+            frmContabilidad miforma = new frmContabilidad();
             miforma.Show();
         }
 
         private void toolStripMenuItem10_Click_1(object sender, EventArgs e)
         {
-            RRHH miforma = new RRHH();
+            frmRRHH miforma = new frmRRHH();
             miforma.Show();
         }
 
         private void toolStripMenuItem14_Click_1(object sender, EventArgs e)
         {
-            GestionDeVendedores miforma = new GestionDeVendedores();
+            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
 
             miforma.tabpresupuesto.TabPages[2].Show();
             
@@ -213,7 +213,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem24_Click(object sender, EventArgs e)
         {
-            RRHH miforma = new RRHH();
+            frmRRHH miforma = new frmRRHH();
             miforma.Show();
         }
 
@@ -235,13 +235,13 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem4_Click_1(object sender, EventArgs e)
         {
-            Despacho miforma = new Despacho();
+            frmDespacho miforma = new frmDespacho();
             miforma.Show();
         }
 
         private void toolStripMenuItem6_Click_1(object sender, EventArgs e)
         {
-            Almacen miforma = new Almacen();
+            frmAlmacen miforma = new frmAlmacen();
             miforma.Show();
         }
             
@@ -267,8 +267,8 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem10_Click_2(object sender, EventArgs e)
         {
-            Formularios miforma = new Formularios();
-            miforma.Show();
+           // frmFormularios miforma = new Formularios();
+            //miforma.Show();
         }
 
         private void toolStripMenuItem9_Click_1(object sender, EventArgs e)

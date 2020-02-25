@@ -8,5 +8,6 @@ namespace apaAccesoaDatos
 {
     class ConexionBD
     {
+
     }
 }

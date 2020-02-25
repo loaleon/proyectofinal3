@@ -82,11 +82,11 @@
     <Compile Include="frmListadoCliente.Designer.cs">
       <DependentUpon>frmListadoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmrRRHH.cs">
+    <Compile Include="frmRRHH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmrRRHH.Designer.cs">
-      <DependentUpon>fmrRRHH.cs</DependentUpon>
+    <Compile Include="frmRRHH.Designer.cs">
+      <DependentUpon>frmRRHH.cs</DependentUpon>
     </Compile>
     <Compile Include="frmForm1.cs">
       <SubType>Form</SubType>
@@ -132,8 +132,8 @@
     <EmbeddedResource Include="frmListadoCliente.resx">
       <DependentUpon>frmListadoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmrRRHH.resx">
-      <DependentUpon>fmrRRHH.cs</DependentUpon>
+    <EmbeddedResource Include="frmRRHH.resx">
+      <DependentUpon>frmRRHH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmForm1.resx">
       <DependentUpon>frmForm1.cs</DependentUpon>
@@ -168,16 +168,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CapaDeNegocio\CapaDeNegocio.csproj">
-      <Project>{b5209134-b78b-4691-b5e8-481d77ee6503}</Project>
-      <Name>CapaDeNegocio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
-      <Project>{9eb54116-98ca-40d2-9f8a-19d9700f8e56}</Project>
-      <Name>CapaEntidades</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

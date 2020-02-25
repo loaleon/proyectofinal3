@@ -24,7 +24,7 @@ namespace proyectofinalp3
 
         private void btnentrada_Click(object sender, EventArgs e)
         {
-            fmrRRHH miforma = new fmrRRHH();
+            frmRRHH miforma = new frmRRHH();
             
                 
         }
