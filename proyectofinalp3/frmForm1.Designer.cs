@@ -377,7 +377,7 @@
             this.menuStrip5.Text = "menuStrip5";
             //this.menuStrip5.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip5_ItemClicked);
             // 
-            // toolStripMenuItem7
+            // toolStripMenuItem7 
             // 
             this.toolStripMenuItem7.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem8,
