@@ -58,6 +58,12 @@ namespace proyectofinalp3
 
         private void frmRRHH_Load(object sender, EventArgs e)
         {
+            MostrarBuscarBD("");
+        }
+        public void MostrarBuscarBD(string buscar)
+        {
+            //NEmpleado objNegocio = new NEmpleado();
+            tablaEmpleado.DataSource = objNegocio.BuscarEmpleadoBD(buscar);
 
         }
 
@@ -79,6 +85,11 @@ namespace proyectofinalp3
 
 
             
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            MostrarBuscarBD(txtBuscar.Text);
         }
     }
 }

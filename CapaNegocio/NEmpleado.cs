@@ -16,6 +16,21 @@ namespace CapaNegocio
             Datos.InsertarEmpleado(obj);
         }
 
+        public List<Empleado>BuscarEmpleadoBD(string buscar)
+        {
+            return Datos.ListarEmpleado(buscar);
+        }
+
+        public void ActualizarEmpleadoBD(Empleado obj)
+        {
+            Datos.ActualizarEmpleado(obj);
+        }
+
+        public void EliminandoEmpleadoBD(Empleado obj)
+        {
+            Datos.ElimiarEmpleado(obj);
+        }
+
         /*
         public static string InsertarEmpleado(string Nombre, string Apellido, 
         string tipoDocumento, string Documento, string Direccion, string Sexo,

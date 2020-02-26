@@ -8,6 +8,7 @@ namespace CapaEntidad
 {
     public class Empleado
     {
+       public int idEmpleado { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string tipoDocumento { get; set; }
