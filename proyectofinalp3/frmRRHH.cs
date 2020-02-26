@@ -14,8 +14,10 @@ namespace proyectofinalp3
 {
     public partial class frmRRHH : Form
     {
+        private string idEmpleado;
         Empleado objEntidad = new Empleado();
         NEmpleado objNegocio = new NEmpleado();
+       
         public frmRRHH()
         {
             InitializeComponent();
@@ -43,10 +45,27 @@ namespace proyectofinalp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (tablaEmpleado.SelectedRows.Count > 0)
+            {
+                idEmpleado = tablaEmpleado.CurrentRow.Cells[0].Value.ToString();
+                txtCodEmpleado.Text = tablaEmpleado.CurrentRow.Cells[0].Value.ToString();
+                txtNombre.Text = tablaEmpleado.CurrentRow.Cells[1].Value.ToString();
+                txtapeempleado.Text = tablaEmpleado.CurrentRow.Cells[2].Value.ToString();
+                txtTipoDocumento.Text = tablaEmpleado.CurrentRow.Cells[3].Value.ToString();
+                txtDocumento.Text = tablaEmpleado.CurrentRow.Cells[4].Value.ToString(); ;
+                txtdirecempleado.Text = tablaEmpleado.CurrentRow.Cells[5].Value.ToString();
+                txtGenero.Text = tablaEmpleado.CurrentRow.Cells[6].Value.ToString();
+                txttelempleado.Text = tablaEmpleado.CurrentRow.Cells[7].Value.ToString(); ;
+                txtemailempleado.Text = tablaEmpleado.CurrentRow.Cells[8].Value.ToString();
+                txtDepartamento.Text = tablaEmpleado.CurrentRow.Cells[9].Value.ToString();
+                txtFechaIngreso.Text = tablaEmpleado.CurrentRow.Cells[10].Value.ToString();
+                txtfechaNacimiento.Text = tablaEmpleado.CurrentRow.Cells[11].Value.ToString();
+
+
+            }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+            private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -82,14 +101,58 @@ namespace proyectofinalp3
             objEntidad.fechaNacimiento = Convert.ToDateTime(txtfechaNacimiento.Text);
 
             objNegocio.InsertandoEmpleadoBD(objEntidad);
+            MessageBox.Show("Empleado agregado correctamente");
+            MostrarBuscarBD("");
+            LimpiarCampos();
 
 
-            
+
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             MostrarBuscarBD(txtBuscar.Text);
+        }
+
+        public void LimpiarCampos()
+        {
+            txtCodEmpleado.Text = "";
+            txtNombre.Text = "";
+            txtapeempleado.Text = ""; 
+            txtTipoDocumento.Text = ""; 
+            txtDocumento.Text = ""; 
+            txtdirecempleado.Text = "";
+            txtGenero.Text = "";
+            txttelempleado.Text = "";
+            txtemailempleado.Text = "";
+            txtDepartamento.Text = "";
+            txtFechaIngreso.Text = "";
+            txtfechaNacimiento.Text = "";
+
+
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            objEntidad.idEmpleado = Convert.ToInt32(txtCodEmpleado.Text);
+            objEntidad.nombre = txtNombre.Text;
+            objEntidad.apellido = txtapeempleado.Text;
+            objEntidad.tipoDocumento = txtTipoDocumento.Text;
+            objEntidad.documento = txtDocumento.Text;
+            objEntidad.direccion = txtdirecempleado.Text;
+            objEntidad.sexo = txtGenero.Text;
+            objEntidad.telefono = txttelempleado.Text;
+            objEntidad.correo = txtemailempleado.Text;
+            objEntidad.idDepartamento = Convert.ToInt32(txtDepartamento.Text);
+            objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
+            objEntidad.fechaNacimiento = Convert.ToDateTime(txtfechaNacimiento.Text);
+
+            objNegocio.ActualizarEmpleadoBD(objEntidad);
+            MessageBox.Show("Emplea actualizado correctamente");
+            MostrarBuscarBD("");
+            LimpiarCampos();
+
         }
     }
 }

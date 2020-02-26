@@ -40,8 +40,10 @@
             this.bnterrar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.tablaEmpleado = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -56,7 +58,7 @@
             this.txtfechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.txtsueldo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtcodempleado = new System.Windows.Forms.TextBox();
+            this.txtCodEmpleado = new System.Windows.Forms.TextBox();
             this.label = new System.Windows.Forms.Label();
             this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -77,8 +79,6 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tabEmpleado = new System.Windows.Forms.TabControl();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -206,17 +206,25 @@
             this.groupBox8.TabIndex = 102;
             this.groupBox8.TabStop = false;
             // 
-            // button1
+            // label4
             // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(503, 336);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 36);
-            this.button1.TabIndex = 92;
-            this.button1.Text = "Cerrar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(39, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 24);
+            this.label4.TabIndex = 100;
+            this.label4.Text = "Buscar:";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(125, 15);
+            this.txtBuscar.Multiline = true;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(254, 32);
+            this.txtBuscar.TabIndex = 99;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // tablaEmpleado
             // 
@@ -237,6 +245,17 @@
             this.tablaEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaEmpleado.Size = new System.Drawing.Size(688, 231);
             this.tablaEmpleado.TabIndex = 98;
+            // 
+            // button1
+            // 
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(586, 336);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 36);
+            this.button1.TabIndex = 92;
+            this.button1.Text = "Seleccionar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -287,7 +306,7 @@
             this.groupBox7.Controls.Add(this.txtfechaNacimiento);
             this.groupBox7.Controls.Add(this.txtsueldo);
             this.groupBox7.Controls.Add(this.label2);
-            this.groupBox7.Controls.Add(this.txtcodempleado);
+            this.groupBox7.Controls.Add(this.txtCodEmpleado);
             this.groupBox7.Controls.Add(this.label);
             this.groupBox7.Controls.Add(this.txtDepartamento);
             this.groupBox7.Controls.Add(this.label17);
@@ -403,13 +422,13 @@
             this.label2.TabIndex = 121;
             this.label2.Text = "Cod Empleado";
             // 
-            // txtcodempleado
+            // txtCodEmpleado
             // 
-            this.txtcodempleado.Location = new System.Drawing.Point(140, 35);
-            this.txtcodempleado.Name = "txtcodempleado";
-            this.txtcodempleado.ReadOnly = true;
-            this.txtcodempleado.Size = new System.Drawing.Size(86, 20);
-            this.txtcodempleado.TabIndex = 122;
+            this.txtCodEmpleado.Location = new System.Drawing.Point(140, 35);
+            this.txtCodEmpleado.Name = "txtCodEmpleado";
+            this.txtCodEmpleado.ReadOnly = true;
+            this.txtCodEmpleado.Size = new System.Drawing.Size(86, 20);
+            this.txtCodEmpleado.TabIndex = 122;
             // 
             // label
             // 
@@ -573,6 +592,7 @@
             this.btnModificar.TabIndex = 115;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnSalir
             // 
@@ -594,26 +614,6 @@
             this.tabEmpleado.SelectedIndex = 0;
             this.tabEmpleado.Size = new System.Drawing.Size(709, 435);
             this.tabEmpleado.TabIndex = 100;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(125, 15);
-            this.txtBuscar.Multiline = true;
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(254, 32);
-            this.txtBuscar.TabIndex = 99;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 24);
-            this.label4.TabIndex = 100;
-            this.label4.Text = "Buscar:";
             // 
             // frmRRHH
             // 
@@ -676,7 +676,7 @@
         private System.Windows.Forms.DateTimePicker txtfechaNacimiento;
         private System.Windows.Forms.TextBox txtsueldo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtcodempleado;
+        private System.Windows.Forms.TextBox txtCodEmpleado;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.TextBox txtDepartamento;
         private System.Windows.Forms.Label label17;

@@ -34,12 +34,13 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@idDepartamento", obj.idDepartamento);
                 cmd.Parameters.AddWithValue("@fechaIngreso", obj.fechaIngreso);
                 cmd.Parameters.AddWithValue("@fechaNacimiento", obj.fechaNacimiento);
-
+               
                 SqlCon.Open();
 
                 cmd.ExecuteNonQuery();
 
                  SqlCon.Close();
+            
 
         }
         
@@ -75,6 +76,7 @@ namespace CapaDatos
                    fechaIngreso = Mostrar.GetDateTime(10),
                    fechaNacimiento = Mostrar.GetDateTime(11)
 
+                   
 
                    
                 });
