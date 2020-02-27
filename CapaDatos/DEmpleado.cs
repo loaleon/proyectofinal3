@@ -132,6 +132,8 @@ namespace CapaDatos
             SqlCon.Close();
             
         }
+
+     
         
     } 
 }

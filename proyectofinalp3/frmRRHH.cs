@@ -61,7 +61,13 @@ namespace proyectofinalp3
                 txtFechaIngreso.Text = tablaEmpleado.CurrentRow.Cells[10].Value.ToString();
                 txtfechaNacimiento.Text = tablaEmpleado.CurrentRow.Cells[11].Value.ToString();
 
+                MessageBox.Show("Registro seleccionado");
+                tabEmpleado.SelectedIndex = 0;
 
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el registro a modificar");
             }
         }
 
@@ -78,6 +84,7 @@ namespace proyectofinalp3
         private void frmRRHH_Load(object sender, EventArgs e)
         {
             MostrarBuscarBD("");
+            tablaEmpleado.ClearSelection();
         }
         public void MostrarBuscarBD(string buscar)
         {
@@ -96,7 +103,7 @@ namespace proyectofinalp3
             objEntidad.sexo = txtGenero.Text;
             objEntidad.telefono = txttelempleado.Text;
             objEntidad.correo = txtemailempleado.Text;
-            objEntidad.idDepartamento = Convert.ToInt32(txtDepartamento.Text);
+             objEntidad.idDepartamento = Convert.ToInt32(txtDepartamento.Text);
             objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
             objEntidad.fechaNacimiento = Convert.ToDateTime(txtfechaNacimiento.Text);
 
@@ -152,6 +159,32 @@ namespace proyectofinalp3
             MessageBox.Show("Emplea actualizado correctamente");
             MostrarBuscarBD("");
             LimpiarCampos();
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            objEntidad.idEmpleado = Convert.ToInt32(txtCodEmpleado.Text);
+            objEntidad.nombre = txtNombre.Text;
+            objEntidad.apellido = txtapeempleado.Text;
+            objEntidad.tipoDocumento = txtTipoDocumento.Text;
+            objEntidad.documento = txtDocumento.Text;
+            objEntidad.direccion = txtdirecempleado.Text;
+            objEntidad.sexo = txtGenero.Text;
+            objEntidad.telefono = txttelempleado.Text;
+            objEntidad.correo = txtemailempleado.Text;
+            objEntidad.idDepartamento = Convert.ToInt32(txtDepartamento.Text);
+            objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
+            objEntidad.fechaNacimiento = Convert.ToDateTime(txtfechaNacimiento.Text);
+
+            objNegocio.EliminandoEmpleadoBD(objEntidad);
+            MessageBox.Show("Emplea eliminado correctamente");
+            MostrarBuscarBD("");
+            LimpiarCampos();
+        }
+
+        private void txtTipoDocumento_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

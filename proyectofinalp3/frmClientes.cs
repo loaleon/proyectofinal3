@@ -42,5 +42,10 @@ namespace proyectofinalp3
         {
             this.Close();
         }
+
+        private void tbxnombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

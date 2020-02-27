@@ -31,6 +31,8 @@ namespace CapaNegocio
             Datos.ElimiarEmpleado(obj);
         }
 
+       
+
         /*
         public static string InsertarEmpleado(string Nombre, string Apellido, 
         string tipoDocumento, string Documento, string Direccion, string Sexo,

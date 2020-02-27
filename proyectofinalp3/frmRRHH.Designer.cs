@@ -56,11 +56,9 @@
             this.txtFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.label25 = new System.Windows.Forms.Label();
             this.txtfechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.txtsueldo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodEmpleado = new System.Windows.Forms.TextBox();
             this.label = new System.Windows.Forms.Label();
-            this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtemailempleado = new System.Windows.Forms.TextBox();
@@ -72,13 +70,13 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.txtapeempleado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tabEmpleado = new System.Windows.Forms.TabControl();
+            this.txtDepartamento = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -287,15 +285,17 @@
             // btnEliminar
             // 
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(286, 356);
+            this.btnEliminar.Location = new System.Drawing.Point(289, 348);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(94, 36);
             this.btnEliminar.TabIndex = 117;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.txtDepartamento);
             this.groupBox7.Controls.Add(this.txtTipoDocumento);
             this.groupBox7.Controls.Add(this.label3);
             this.groupBox7.Controls.Add(this.txtDocumento);
@@ -304,11 +304,9 @@
             this.groupBox7.Controls.Add(this.txtFechaIngreso);
             this.groupBox7.Controls.Add(this.label25);
             this.groupBox7.Controls.Add(this.txtfechaNacimiento);
-            this.groupBox7.Controls.Add(this.txtsueldo);
             this.groupBox7.Controls.Add(this.label2);
             this.groupBox7.Controls.Add(this.txtCodEmpleado);
             this.groupBox7.Controls.Add(this.label);
-            this.groupBox7.Controls.Add(this.txtDepartamento);
             this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Controls.Add(this.label18);
             this.groupBox7.Controls.Add(this.txtemailempleado);
@@ -320,11 +318,10 @@
             this.groupBox7.Controls.Add(this.label21);
             this.groupBox7.Controls.Add(this.label22);
             this.groupBox7.Controls.Add(this.label23);
-            this.groupBox7.Controls.Add(this.label24);
             this.groupBox7.Controls.Add(this.txtapeempleado);
             this.groupBox7.Location = new System.Drawing.Point(16, 50);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(659, 300);
+            this.groupBox7.Size = new System.Drawing.Size(659, 277);
             this.groupBox7.TabIndex = 99;
             this.groupBox7.TabStop = false;
             // 
@@ -337,8 +334,9 @@
             "Otro"});
             this.txtTipoDocumento.Location = new System.Drawing.Point(434, 35);
             this.txtTipoDocumento.Name = "txtTipoDocumento";
-            this.txtTipoDocumento.Size = new System.Drawing.Size(141, 21);
+            this.txtTipoDocumento.Size = new System.Drawing.Size(98, 21);
             this.txtTipoDocumento.TabIndex = 131;
+            this.txtTipoDocumento.SelectedIndexChanged += new System.EventHandler(this.txtTipoDocumento_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -366,18 +364,18 @@
             "Otro"});
             this.txtGenero.Location = new System.Drawing.Point(434, 204);
             this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(121, 21);
+            this.txtGenero.Size = new System.Drawing.Size(98, 21);
             this.txtGenero.TabIndex = 128;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(348, 202);
+            this.label26.Location = new System.Drawing.Point(363, 202);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(63, 20);
+            this.label26.Size = new System.Drawing.Size(45, 20);
             this.label26.TabIndex = 127;
-            this.label26.Text = "Genero";
+            this.label26.Text = "Sexo";
             // 
             // txtFechaIngreso
             // 
@@ -404,13 +402,6 @@
             this.txtfechaNacimiento.Name = "txtfechaNacimiento";
             this.txtfechaNacimiento.Size = new System.Drawing.Size(98, 20);
             this.txtfechaNacimiento.TabIndex = 124;
-            // 
-            // txtsueldo
-            // 
-            this.txtsueldo.Location = new System.Drawing.Point(434, 272);
-            this.txtsueldo.Name = "txtsueldo";
-            this.txtsueldo.Size = new System.Drawing.Size(141, 20);
-            this.txtsueldo.TabIndex = 123;
             // 
             // label2
             // 
@@ -439,13 +430,6 @@
             this.label.Size = new System.Drawing.Size(112, 20);
             this.label.TabIndex = 119;
             this.label.Text = "Departamento";
-            // 
-            // txtDepartamento
-            // 
-            this.txtDepartamento.Location = new System.Drawing.Point(434, 237);
-            this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.Size = new System.Drawing.Size(141, 20);
-            this.txtDepartamento.TabIndex = 120;
             // 
             // label17
             // 
@@ -546,16 +530,6 @@
             this.label23.TabIndex = 104;
             this.label23.Text = "Apellido";
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(361, 276);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(50, 20);
-            this.label24.TabIndex = 109;
-            this.label24.Text = "Seldo";
-            // 
             // txtapeempleado
             // 
             this.txtapeempleado.Location = new System.Drawing.Point(137, 106);
@@ -576,7 +550,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(46, 356);
+            this.btnAgregar.Location = new System.Drawing.Point(46, 348);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(94, 36);
             this.btnAgregar.TabIndex = 114;
@@ -586,7 +560,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(166, 356);
+            this.btnModificar.Location = new System.Drawing.Point(167, 348);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(94, 36);
             this.btnModificar.TabIndex = 115;
@@ -597,7 +571,7 @@
             // btnSalir
             // 
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(581, 356);
+            this.btnSalir.Location = new System.Drawing.Point(581, 348);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(94, 36);
             this.btnSalir.TabIndex = 116;
@@ -614,6 +588,14 @@
             this.tabEmpleado.SelectedIndex = 0;
             this.tabEmpleado.Size = new System.Drawing.Size(709, 435);
             this.tabEmpleado.TabIndex = 100;
+            // 
+            // txtDepartamento
+            // 
+            this.txtDepartamento.FormattingEnabled = true;
+            this.txtDepartamento.Location = new System.Drawing.Point(434, 235);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.Size = new System.Drawing.Size(141, 21);
+            this.txtDepartamento.TabIndex = 132;
             // 
             // frmRRHH
             // 
@@ -674,11 +656,9 @@
         private System.Windows.Forms.DateTimePicker txtFechaIngreso;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DateTimePicker txtfechaNacimiento;
-        private System.Windows.Forms.TextBox txtsueldo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodEmpleado;
         private System.Windows.Forms.Label label;
-        private System.Windows.Forms.TextBox txtDepartamento;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtemailempleado;
@@ -690,7 +670,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtapeempleado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAgregar;
@@ -699,5 +678,6 @@
         private System.Windows.Forms.TabControl tabEmpleado;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox txtDepartamento;
     }
 }
