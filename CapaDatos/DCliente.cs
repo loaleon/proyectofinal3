@@ -84,7 +84,7 @@ namespace CapaDatos
             SqlCommand cmd = new SqlCommand("uspUpdateCliente", SqlCon);
 
             cmd.CommandType = CommandType.StoredProcedure;
-
+            cmd.Parameters.AddWithValue("@idCliente", obj.idCliente);
             cmd.Parameters.AddWithValue("@nombre", obj.nombre);
             cmd.Parameters.AddWithValue("@apellido", obj.apellido);
             cmd.Parameters.AddWithValue("@tipoDocumento", obj.tipoDocumento);
@@ -110,7 +110,7 @@ namespace CapaDatos
 
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@idEmpleado", obj.idCliente);
+            cmd.Parameters.AddWithValue("@idCliente", obj.idCliente);
 
             SqlCon.Open();
             cmd.ExecuteNonQuery();

@@ -661,8 +661,8 @@
             // toolStripMenuItem19
             // 
             this.toolStripMenuItem19.Name = "toolStripMenuItem19";
-            this.toolStripMenuItem19.Size = new System.Drawing.Size(323, 36);
-            this.toolStripMenuItem19.Text = "Ver Todos los Clientes";
+            this.toolStripMenuItem19.Size = new System.Drawing.Size(180, 36);
+            this.toolStripMenuItem19.Text = "Clientes";
             this.toolStripMenuItem19.Click += new System.EventHandler(this.toolStripMenuItem19_Click);
             // 
             // pictureBox9

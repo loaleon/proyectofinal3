@@ -104,6 +104,65 @@ namespace proyectofinalp3
         {
             MostrarBuscarBD(txtBuscar.Text);
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            objEntidad.idCliente = Convert.ToInt32(txtCodCliente.Text);
+            objEntidad.nombre = txtNombre.Text.ToUpper();
+            objEntidad.apellido = txtApellido.Text.ToUpper();
+            objEntidad.direccion = txtDireccion.Text.ToUpper();
+            objEntidad.sexo = txtSexo.Text.ToUpper();
+            objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
+            objEntidad.documento = txtDocumento.Text.ToUpper();
+            objEntidad.telefono = txtTelefono.Text.ToUpper();
+            objEntidad.correo = txtCorreo.Text.ToUpper();
+            objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
+            objNegocio.ActualizarClienteBD(objEntidad);
+
+            MessageBox.Show("Cliente modificado correctamente");
+            MostrarBuscarBD("");
+            LimpiarCampos();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            objEntidad.idCliente = Convert.ToInt32(txtCodCliente.Text);
+            objEntidad.nombre = txtNombre.Text;
+            objEntidad.apellido = txtApellido.Text;
+            objEntidad.direccion = txtDireccion.Text;
+            objEntidad.sexo = txtSexo.Text.ToUpper();
+            objEntidad.tipoDocumento = txtTipoDocumento.Text;
+            objEntidad.documento = txtDocumento.Text;
+            objEntidad.telefono = txtTelefono.Text;
+            objEntidad.correo = txtCorreo.Text;
+            objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
+            objNegocio.EliminandoClienteBD(objEntidad);
+
+            MessageBox.Show("Cliente eliminado");
+            MostrarBuscarBD("");
+            LimpiarCampos();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (tablaCliente.SelectedRows.Count > 0)
+            {
+                txtCodCliente.Text = tablaCliente.CurrentRow.Cells[0].Value.ToString();
+                txtNombre.Text = tablaCliente.CurrentRow.Cells[1].Value.ToString();
+                txtApellido.Text = tablaCliente.CurrentRow.Cells[2].Value.ToString();
+                txtTipoDocumento.Text = tablaCliente.CurrentRow.Cells[3].Value.ToString();
+                txtDocumento.Text = tablaCliente.CurrentRow.Cells[4].Value.ToString();
+                txtDireccion.Text = tablaCliente.CurrentRow.Cells[5].Value.ToString();
+                txtTelefono.Text = tablaCliente.CurrentRow.Cells[6].Value.ToString();
+                txtCorreo.Text = tablaCliente.CurrentRow.Cells[7].Value.ToString();
+                txtSexo.Text = tablaCliente.CurrentRow.Cells[8].Value.ToString();
+                txtFechaIngreso.Text = tablaCliente.CurrentRow.Cells[9].Value.ToString();
+
+                MessageBox.Show("Registro seleccionado");
+                tabCliente.SelectedIndex = 0;
+            }
+            
+        }
     }
     
 }
