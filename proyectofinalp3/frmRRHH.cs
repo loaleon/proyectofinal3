@@ -187,5 +187,10 @@ namespace proyectofinalp3
         {
 
         }
+
+        private void tablaEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -48,6 +48,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtDepartamento = new System.Windows.Forms.ComboBox();
             this.txtTipoDocumento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDocumento = new System.Windows.Forms.TextBox();
@@ -76,7 +77,6 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tabEmpleado = new System.Windows.Forms.TabControl();
-            this.txtDepartamento = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -210,14 +210,14 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(39, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 24);
+            this.label4.Size = new System.Drawing.Size(91, 24);
             this.label4.TabIndex = 100;
-            this.label4.Text = "Buscar:";
+            this.label4.Text = "Nombre:";
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(125, 15);
+            this.txtBuscar.Location = new System.Drawing.Point(134, 15);
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(254, 32);
@@ -230,7 +230,6 @@
             this.tablaEmpleado.AllowUserToDeleteRows = false;
             this.tablaEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tablaEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaEmpleado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tablaEmpleado.BackgroundColor = System.Drawing.SystemColors.Window;
             this.tablaEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -243,6 +242,7 @@
             this.tablaEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaEmpleado.Size = new System.Drawing.Size(688, 231);
             this.tablaEmpleado.TabIndex = 98;
+            this.tablaEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEmpleado_CellContentClick);
             // 
             // button1
             // 
@@ -324,6 +324,14 @@
             this.groupBox7.Size = new System.Drawing.Size(659, 277);
             this.groupBox7.TabIndex = 99;
             this.groupBox7.TabStop = false;
+            // 
+            // txtDepartamento
+            // 
+            this.txtDepartamento.FormattingEnabled = true;
+            this.txtDepartamento.Location = new System.Drawing.Point(434, 235);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.Size = new System.Drawing.Size(141, 21);
+            this.txtDepartamento.TabIndex = 132;
             // 
             // txtTipoDocumento
             // 
@@ -588,14 +596,6 @@
             this.tabEmpleado.SelectedIndex = 0;
             this.tabEmpleado.Size = new System.Drawing.Size(709, 435);
             this.tabEmpleado.TabIndex = 100;
-            // 
-            // txtDepartamento
-            // 
-            this.txtDepartamento.FormattingEnabled = true;
-            this.txtDepartamento.Location = new System.Drawing.Point(434, 235);
-            this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.Size = new System.Drawing.Size(141, 21);
-            this.txtDepartamento.TabIndex = 132;
             // 
             // frmRRHH
             // 
