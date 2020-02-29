@@ -47,17 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmMostrarCliente.cs">
+    <Compile Include="frmProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMostrarCliente.Designer.cs">
-      <DependentUpon>frmMostrarCliente.cs</DependentUpon>
+    <Compile Include="frmProveedor.Designer.cs">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAlmacen.cs">
+    <Compile Include="frmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAlmacen.Designer.cs">
-      <DependentUpon>frmAlmacen.cs</DependentUpon>
+    <Compile Include="frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>
@@ -76,12 +76,6 @@
     </Compile>
     <Compile Include="frmGestionDeVendedores.Designer.cs">
       <DependentUpon>frmGestionDeVendedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmListadoCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListadoCliente.Designer.cs">
-      <DependentUpon>frmListadoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRRHH.cs">
       <SubType>Form</SubType>
@@ -109,11 +103,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmMostrarCliente.resx">
-      <DependentUpon>frmMostrarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="frmProveedor.resx">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAlmacen.resx">
-      <DependentUpon>frmAlmacen.cs</DependentUpon>
+    <EmbeddedResource Include="frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
@@ -123,9 +117,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionDeVendedores.resx">
       <DependentUpon>frmGestionDeVendedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListadoCliente.resx">
-      <DependentUpon>frmListadoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRRHH.resx">
       <DependentUpon>frmRRHH.cs</DependentUpon>

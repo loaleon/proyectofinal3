@@ -39,8 +39,7 @@ namespace proyectofinalp3
 
         private void btnver_Click(object sender, EventArgs e)
         {
-            frmMostrarCliente miforma = new frmMostrarCliente();
-            miforma.Show();
+            
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

@@ -152,7 +152,7 @@
             this.tabpage1.Location = new System.Drawing.Point(4, 22);
             this.tabpage1.Name = "tabpage1";
             this.tabpage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpage1.Size = new System.Drawing.Size(706, 316);
+            this.tabpage1.Size = new System.Drawing.Size(750, 317);
             this.tabpage1.TabIndex = 2;
             this.tabpage1.Text = "Consulatar Clientes";
             this.tabpage1.UseVisualStyleBackColor = true;
@@ -183,7 +183,7 @@
             this.groupBox9.Controls.Add(this.tablaCliente);
             this.groupBox9.Location = new System.Drawing.Point(8, 90);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(706, 233);
+            this.groupBox9.Size = new System.Drawing.Size(706, 227);
             this.groupBox9.TabIndex = 101;
             this.groupBox9.TabStop = false;
             // 
@@ -234,7 +234,7 @@
             this.tabCliente.Location = new System.Drawing.Point(1, 96);
             this.tabCliente.Name = "tabCliente";
             this.tabCliente.SelectedIndex = 0;
-            this.tabCliente.Size = new System.Drawing.Size(770, 342);
+            this.tabCliente.Size = new System.Drawing.Size(758, 343);
             this.tabCliente.TabIndex = 93;
             // 
             // tabcrearmodificar
@@ -511,7 +511,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 462);
+            this.ClientSize = new System.Drawing.Size(760, 451);
             this.Controls.Add(this.tabCliente);
             this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

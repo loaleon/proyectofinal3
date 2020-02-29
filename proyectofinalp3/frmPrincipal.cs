@@ -78,7 +78,7 @@ namespace proyectofinalp3
 
         private void almacenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAlmacen miforma = new frmAlmacen();
+            frmProducto miforma = new frmProducto();
             miforma.Show();
         }
 
@@ -113,13 +113,13 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem12_Click(object sender, EventArgs e)
         {
-            frmAlmacen miforma = new frmAlmacen();
+            frmProducto miforma = new frmProducto();
             miforma.Show();
         }
 
         private void toolStripMenuItem13_Click(object sender, EventArgs e)
         {
-            frmAlmacen miforma = new frmAlmacen();
+            frmProducto miforma = new frmProducto();
             miforma.Show();
         }
 
@@ -158,8 +158,7 @@ namespace proyectofinalp3
 
         private void verCluentesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListadoCliente miforma = new frmListadoCliente();
-            miforma.Show();
+            
         }
 
         private void verPresupuestosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -175,7 +174,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
-            frmAlmacen miforma = new frmAlmacen();
+            frmProducto miforma = new frmProducto();
             miforma.Show();
         }
 
@@ -237,11 +236,13 @@ namespace proyectofinalp3
         {
             frmDespacho miforma = new frmDespacho();
             miforma.Show();
+
+            
         }
 
         private void toolStripMenuItem6_Click_1(object sender, EventArgs e)
         {
-            frmAlmacen miforma = new frmAlmacen();
+            frmProducto miforma = new frmProducto();
             miforma.Show();
         }
             
@@ -284,6 +285,12 @@ namespace proyectofinalp3
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripMenuItem9_Click_2(object sender, EventArgs e)
+        {
+            frmProveedor miforma = new frmProveedor();
+            miforma.Show();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proyectofinalp3
 {
-    public partial class frmAlmacen : Form
+    public partial class frmProducto : Form
     {
-        public frmAlmacen()
+        public frmProducto()
         {
             InitializeComponent();
         }
@@ -73,6 +73,16 @@ namespace proyectofinalp3
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmProducto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,7 +30,10 @@ namespace proyectofinalp3
 
         private void btnentrar_Click(object sender, EventArgs e)
         {
-            if (txtusuario.Text == "admin" && txtclave.Text == "1234")
+            frmPrincipal miforma = new frmPrincipal();
+            miforma.Show();
+            this.Hide();
+            /*if (txtusuario.Text == "admin" && txtclave.Text == "1234")
             {
                 frmPrincipal miforma = new frmPrincipal();
                 miforma.Show();
@@ -44,7 +47,9 @@ namespace proyectofinalp3
                 txtclave.Text = "";
                 txtusuario.Focus();
             }
+             */
         }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

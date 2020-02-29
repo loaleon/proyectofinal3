@@ -66,10 +66,8 @@ namespace proyectofinalp3
 
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-            frmListadoCliente miforma = new frmListadoCliente();
-            miforma.Show();
-        }
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
