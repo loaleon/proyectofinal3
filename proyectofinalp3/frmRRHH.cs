@@ -14,7 +14,7 @@ namespace proyectofinalp3
 {
     public partial class frmRRHH : Form
     {
-        private string idEmpleado;
+        
         Empleado objEntidad = new Empleado();
         NEmpleado objNegocio = new NEmpleado();
        
@@ -47,7 +47,7 @@ namespace proyectofinalp3
         {
             if (tablaEmpleado.SelectedRows.Count > 0)
             {
-                idEmpleado = tablaEmpleado.CurrentRow.Cells[0].Value.ToString();
+               // idEmpleado = tablaEmpleado.CurrentRow.Cells[0].Value.ToString();
                 txtCodEmpleado.Text = tablaEmpleado.CurrentRow.Cells[0].Value.ToString();
                 txtNombre.Text = tablaEmpleado.CurrentRow.Cells[1].Value.ToString();
                 txtapeempleado.Text = tablaEmpleado.CurrentRow.Cells[2].Value.ToString();
@@ -88,7 +88,7 @@ namespace proyectofinalp3
         }
         public void MostrarBuscarBD(string buscar)
         {
-            //NEmpleado objNegocio = new NEmpleado();
+            
             tablaEmpleado.DataSource = objNegocio.BuscarEmpleadoBD(buscar);
 
         }

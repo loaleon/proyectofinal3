@@ -29,32 +29,6 @@ namespace CapaNegocio
         public void EliminandoEmpleadoBD(Empleado obj)
         {
             Datos.ElimiarEmpleado(obj);
-        }
-
-       
-
-        /*
-        public static string InsertarEmpleado(string Nombre, string Apellido, 
-        string tipoDocumento, string Documento, string Direccion, string Sexo,
-        string Telefono, string Correo, int idDepartamento, DateTime fechaIngreso,
-        DateTime fechaNacimiento)
-        {
-            DEmpleado Datos = new DEmpleado();
-            Empleado obj = new Empleado();
-            obj.nombre = Nombre;
-            obj.apellido = Apellido;
-            obj.tipoDocumento = tipoDocumento;
-            obj.documento = Documento;
-            obj.direccion = Direccion;
-            obj.sexo = Sexo;
-            obj.telefono = Telefono;
-            obj.correo = Correo; 
-            obj.idDepartamento = idDepartamento;
-            obj.fechaIngreso = fechaIngreso;
-            obj.fechaNacimiento = fechaNacimiento;
-            
-            
-        }
-        */
+        }       
     } 
 }

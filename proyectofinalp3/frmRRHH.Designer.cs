@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.tablaEmpleado = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -123,7 +123,7 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.btnSeleccionar);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -184,16 +184,16 @@
             this.tablaEmpleado.TabIndex = 98;
             this.tablaEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEmpleado_CellContentClick);
             // 
-            // button1
+            // btnSeleccionar
             // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(586, 336);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 36);
-            this.button1.TabIndex = 92;
-            this.button1.Text = "Seleccionar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeleccionar.Location = new System.Drawing.Point(586, 336);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(108, 36);
+            this.btnSeleccionar.TabIndex = 92;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -601,7 +601,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 531);
+            this.ClientSize = new System.Drawing.Size(715, 539);
             this.Controls.Add(this.tabEmpleado);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -636,7 +636,7 @@
         private System.Windows.Forms.Button bnterrar;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridView tablaEmpleado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage1;

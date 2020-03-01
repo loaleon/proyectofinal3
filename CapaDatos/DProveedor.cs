@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Data;
 namespace CapaDatos
 {
-    class DProveedor
+   public class DProveedor
     {
         public void InsertarProveedores(EProveedor obj)
         {
@@ -17,7 +17,7 @@ namespace CapaDatos
             //string agregar = "";
             SqlConnection SqlCon = new SqlConnection();
             SqlCon = Conexion.CrearInstancia().CrearConexion();
-            SqlCommand cmd = new SqlCommand("uspInsertarProveedor", SqlCon);
+            SqlCommand cmd = new SqlCommand("uspInsertProveedor", SqlCon);
 
             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -61,9 +61,9 @@ namespace CapaDatos
                     idProveedor = Mostrar.GetInt32(0),
                     nombre = Mostrar.GetString(1),
                     razonSocial = Mostrar.GetString(2),
-                    tipoDocumento = Mostrar.GetString(3),
-                    documento = Mostrar.GetString(4),
-                    direccion = Mostrar.GetString(5),
+                    direccion = Mostrar.GetString(3),
+                    tipoDocumento = Mostrar.GetString(4),
+                    documento = Mostrar.GetString(5),
                     telefono = Mostrar.GetString(6),
                     correo = Mostrar.GetString(7),
                     fecha = Mostrar.GetDateTime(8),
@@ -81,8 +81,8 @@ namespace CapaDatos
         {
             SqlConnection SqlCon = new SqlConnection();
             SqlCon = Conexion.CrearInstancia().CrearConexion();
-            SqlCommand cmd = new SqlCommand("uspUdateProveedor", SqlCon);
-
+            SqlCommand cmd = new SqlCommand("uspUpdateProveedor", SqlCon);
+        
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@idProveedor", obj.idProveedor);
@@ -105,7 +105,7 @@ namespace CapaDatos
             SqlConnection SqlCon = new SqlConnection();
             SqlCon = Conexion.CrearInstancia().CrearConexion();
             SqlCommand cmd = new SqlCommand("uspDeleteProveedor", SqlCon);
-
+                                            
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@idProveedor", obj.idProveedor);
