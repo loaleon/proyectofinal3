@@ -128,9 +128,9 @@
             this.groupBox7.Controls.Add(this.txtNombre);
             this.groupBox7.Controls.Add(this.label20);
             this.groupBox7.Controls.Add(this.label22);
-            this.groupBox7.Location = new System.Drawing.Point(13, 50);
+            this.groupBox7.Location = new System.Drawing.Point(15, 50);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(662, 326);
+            this.groupBox7.Size = new System.Drawing.Size(640, 326);
             this.groupBox7.TabIndex = 99;
             this.groupBox7.TabStop = false;
             // 
@@ -282,7 +282,7 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(142, 232);
+            this.txtCorreo.Location = new System.Drawing.Point(137, 235);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(227, 20);
             this.txtCorreo.TabIndex = 113;
@@ -371,7 +371,7 @@
             this.groupBox8.Controls.Add(this.txtBuscar);
             this.groupBox8.Location = new System.Drawing.Point(17, 33);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(661, 297);
+            this.groupBox8.Size = new System.Drawing.Size(643, 297);
             this.groupBox8.TabIndex = 102;
             this.groupBox8.TabStop = false;
             // 
@@ -383,14 +383,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tablaProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaProveedor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tablaProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tablaProveedor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.tablaProveedor.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.tablaProveedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tablaProveedor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tablaProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaProveedor.Location = new System.Drawing.Point(6, 66);
+            this.tablaProveedor.Location = new System.Drawing.Point(8, 66);
             this.tablaProveedor.Name = "tablaProveedor";
             this.tablaProveedor.ReadOnly = true;
+            this.tablaProveedor.RowHeadersVisible = false;
             this.tablaProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaProveedor.Size = new System.Drawing.Size(645, 150);
+            this.tablaProveedor.Size = new System.Drawing.Size(627, 150);
             this.tablaProveedor.TabIndex = 101;
             // 
             // label4
@@ -416,7 +418,7 @@
             // button1
             // 
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(560, 336);
+            this.button1.Location = new System.Drawing.Point(552, 336);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 36);
             this.button1.TabIndex = 92;
@@ -429,7 +431,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(214, 5);
+            this.label1.Location = new System.Drawing.Point(214, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(240, 25);
             this.label1.TabIndex = 101;
