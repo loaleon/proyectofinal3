@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidad;
+using CapaNegocio;
 
 namespace proyectofinalp3
 {
     public partial class frmProducto : Form
     {
+        EProducto objEntidad = new EProducto();
+        NProducto objNegocio = new NProducto();
+
         public frmProducto()
         {
             InitializeComponent();
@@ -83,6 +88,23 @@ namespace proyectofinalp3
         private void frmProducto_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            objEntidad.nombreProd = txtNombreProd.Text.ToUpper();
+            objEntidad.idTipoProd = Convert.ToInt32(txtTipoProducto.Text);
+            objEntidad.descripcion = txtDescripcion.Text.ToUpper();
+            objEntidad.idProveedor = Convert.ToInt32(txtProveedor.Text.ToUpper());
+            objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
+            objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
+            objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
+            objEntidad.prodMin = Convert.ToInt32(txtStockMin.Text);
+            objEntidad.fechaIngreso = Convert.ToDateTime(txtFecha.Text);
+
+            objNegocio.InsertandoProductoBD(objEntidad);
+
+            MessageBox.Show("Registro ingresado correctamente");
         }
     }
 }

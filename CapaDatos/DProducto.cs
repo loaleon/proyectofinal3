@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
 using CapaEntidad;
+using System.Data.SqlClient;
+using System.Data;
 
-namespace CapaDatos.Properties
+namespace CapaDatos
 {
-    public class DProducto
+   public class DProducto
     {
         public void InsertarProducto(EProducto obj)
         {
@@ -20,13 +20,17 @@ namespace CapaDatos.Properties
 
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@nombreProd", obj.idProducto);
+            cmd.Parameters.AddWithValue("@nombreProd", obj.nombreProd);
+            cmd.Parameters.AddWithValue("@idTipoProd", obj.idTipoProd);
+            cmd.Parameters.AddWithValue("@descripcion", obj.descripcion);
+            cmd.Parameters.AddWithValue("@idProveedor", obj.idProveedor);
             cmd.Parameters.AddWithValue("@prodMax", obj.prodMax);
             cmd.Parameters.AddWithValue("@prodMin", obj.prodMin);
-            cmd.Parameters.AddWithValue("@precioCompra", obj.precioVenta);
+            cmd.Parameters.AddWithValue("@precioCompra", obj.precioCompra);
             cmd.Parameters.AddWithValue("@precioVenta", obj.precioVenta);
             cmd.Parameters.AddWithValue("@fechaIngreso", obj.fechaIngreso);
-            cmd.Parameters.AddWithValue("@idTipoProd", obj.idTipoProd);
+       
+           
 
 
             SqlCon.Open();
@@ -57,12 +61,17 @@ namespace CapaDatos.Properties
 
                     idProducto = Mostrar.GetInt32(0),
                     nombreProd = Mostrar.GetString(1),
-                    prodMax = Mostrar.GetInt32(2),
-                    prodMin = Mostrar.GetInt32(3),
-                    precioCompra = Mostrar.GetDecimal(4),
-                    precioVenta = Mostrar.GetDecimal(5),
-                    fechaIngreso = Mostrar.GetDateTime(6),
-                    idTipoProd = Mostrar.GetInt32(7),
+                    idTipoProd = Mostrar.GetInt32(2),
+                    descripcion = Mostrar.GetString(3),
+                    idProveedor = Mostrar.GetInt32(4),
+                    precioCompra = Mostrar.GetDecimal(5),
+                    precioVenta = Mostrar.GetDecimal(6),
+                    prodMax = Mostrar.GetInt32(7),
+                    prodMin = Mostrar.GetInt32(8), 
+                    fechaIngreso = Mostrar.GetDateTime(9),
+                    
+                    
+                    
                 });
             }
             SqlCon.Close();
@@ -75,17 +84,17 @@ namespace CapaDatos.Properties
 
             SqlConnection SqlCon = new SqlConnection();
             SqlCon = Conexion.CrearInstancia().CrearConexion();
-            SqlCommand cmd = new SqlCommand("uspUdateProducto", SqlCon);
+            SqlCommand cmd = new SqlCommand("uspInsertProducto", SqlCon);
 
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@idProducto", obj.idProducto);
             cmd.Parameters.AddWithValue("@nombreProd", obj.nombreProd);
+            cmd.Parameters.AddWithValue("@idTipoProd", obj.idTipoProd);
+            cmd.Parameters.AddWithValue("@descripcion", obj.descripcion);
+            cmd.Parameters.AddWithValue("@idProveedor", obj.idProveedor);
             cmd.Parameters.AddWithValue("@proMax", obj.prodMax);
             cmd.Parameters.AddWithValue("@proMin", obj.prodMin);
             cmd.Parameters.AddWithValue("@precioCompra", obj.precioCompra);
-            cmd.Parameters.AddWithValue("@PrecioVenta", obj.precioVenta);
-            cmd.Parameters.AddWithValue("@FechaIngreso", obj.fechaIngreso);
-            cmd.Parameters.AddWithValue("@idTipoProd", obj.idTipoProd);
+            cmd.Parameters.AddWithValue("@precioVenta", obj.precioVenta);
+            cmd.Parameters.AddWithValue("@fechaIngreso", obj.fechaIngreso);
 
 
 
@@ -95,6 +104,7 @@ namespace CapaDatos.Properties
 
             SqlCon.Close();
         }
+
         public void ElimiarProducto(EProducto obj)
         {
             SqlConnection SqlCon = new SqlConnection();
@@ -108,7 +118,6 @@ namespace CapaDatos.Properties
             SqlCon.Open();
             cmd.ExecuteNonQuery();
             SqlCon.Close();
-
 
         }
     }
