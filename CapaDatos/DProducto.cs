@@ -30,9 +30,7 @@ namespace CapaDatos
             cmd.Parameters.AddWithValue("@precioVenta", obj.precioVenta);
             cmd.Parameters.AddWithValue("@fechaIngreso", obj.fechaIngreso);
        
-           
-
-
+         
             SqlCon.Open();
 
             cmd.ExecuteNonQuery();

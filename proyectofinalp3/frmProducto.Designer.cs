@@ -57,6 +57,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabProducto = new System.Windows.Forms.TabPage();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -65,6 +66,9 @@
             this.tablaProducto = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtStockMin = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtPrecioCompra = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -78,7 +82,6 @@
             this.label39 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.txtProveedor = new System.Windows.Forms.TextBox();
             this.txtStockMax = new System.Windows.Forms.TextBox();
             this.txtNombreProd = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
@@ -89,21 +92,18 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabalmacen = new System.Windows.Forms.TabControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtPrecioCompra = new System.Windows.Forms.TextBox();
-            this.txtStockMin = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.txtProveedor = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProducto)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabalmacen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxdescripcion
@@ -347,6 +347,15 @@
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(5, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(153, 79);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // tabProducto
             // 
             this.tabProducto.Controls.Add(this.btnSeleccionar);
@@ -461,6 +470,30 @@
             this.groupBox2.TabIndex = 101;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = " Datos Producto";
+            // 
+            // txtStockMin
+            // 
+            this.txtStockMin.Location = new System.Drawing.Point(452, 177);
+            this.txtStockMin.Name = "txtStockMin";
+            this.txtStockMin.Size = new System.Drawing.Size(98, 20);
+            this.txtStockMin.TabIndex = 125;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(366, 175);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 20);
+            this.label14.TabIndex = 124;
+            this.label14.Text = "StockMin:";
+            // 
+            // txtPrecioCompra
+            // 
+            this.txtPrecioCompra.Location = new System.Drawing.Point(452, 70);
+            this.txtPrecioCompra.Name = "txtPrecioCompra";
+            this.txtPrecioCompra.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecioCompra.TabIndex = 123;
             // 
             // btnEliminar
             // 
@@ -582,13 +615,6 @@
             this.label40.TabIndex = 65;
             this.label40.Text = "Proveedor:";
             // 
-            // txtProveedor
-            // 
-            this.txtProveedor.Location = new System.Drawing.Point(134, 212);
-            this.txtProveedor.Name = "txtProveedor";
-            this.txtProveedor.Size = new System.Drawing.Size(214, 20);
-            this.txtProveedor.TabIndex = 66;
-            // 
             // txtStockMax
             // 
             this.txtStockMax.Location = new System.Drawing.Point(452, 143);
@@ -684,38 +710,12 @@
             this.tabalmacen.TabIndex = 92;
             this.tabalmacen.TabStop = false;
             // 
-            // pictureBox1
+            // txtProveedor
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 79);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txtPrecioCompra
-            // 
-            this.txtPrecioCompra.Location = new System.Drawing.Point(452, 70);
-            this.txtPrecioCompra.Name = "txtPrecioCompra";
-            this.txtPrecioCompra.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecioCompra.TabIndex = 123;
-            // 
-            // txtStockMin
-            // 
-            this.txtStockMin.Location = new System.Drawing.Point(452, 177);
-            this.txtStockMin.Name = "txtStockMin";
-            this.txtStockMin.Size = new System.Drawing.Size(98, 20);
-            this.txtStockMin.TabIndex = 125;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(366, 175);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 20);
-            this.label14.TabIndex = 124;
-            this.label14.Text = "StockMin:";
+            this.txtProveedor.Location = new System.Drawing.Point(134, 212);
+            this.txtProveedor.Name = "txtProveedor";
+            this.txtProveedor.Size = new System.Drawing.Size(214, 20);
+            this.txtProveedor.TabIndex = 66;
             // 
             // frmProducto
             // 
@@ -734,6 +734,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabProducto.ResumeLayout(false);
             this.tabProducto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProducto)).EndInit();
@@ -742,7 +743,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabalmacen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -797,7 +797,6 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox txtProveedor;
         private System.Windows.Forms.TextBox txtStockMax;
         private System.Windows.Forms.TextBox txtNombreProd;
         private System.Windows.Forms.Label label41;
@@ -812,5 +811,6 @@
         private System.Windows.Forms.TextBox txtPrecioCompra;
         private System.Windows.Forms.TextBox txtStockMin;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtProveedor;
     }
 }

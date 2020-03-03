@@ -105,6 +105,26 @@ namespace proyectofinalp3
             objNegocio.InsertandoProductoBD(objEntidad);
 
             MessageBox.Show("Registro ingresado correctamente");
+            MostrarBuscarBD("");
+            LimpiarCampos();
+        }
+        public void MostrarBuscarBD(string buscar)
+        {
+            tablaProducto.DataSource = objNegocio.BuscarProductoBD(buscar);
+        }
+        public void LimpiarCampos()
+        {
+            txtCodigo.Text = "";
+            txtNombreProd.Text = "";
+            txtTipoProducto.Text = "";
+            txtDescripcion.Text = "";
+            txtProveedor.Text = "";
+            txtPrecioCompra.Text = "";
+            txtPrecioVenta.Text = "";
+            txtStockMax.Text = "";
+            txtStockMin.Text = "";
+            txtFecha.Text = "";
+
         }
     }
 }
