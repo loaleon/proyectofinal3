@@ -66,6 +66,7 @@
             this.tablaProducto = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTipoProducto = new System.Windows.Forms.TextBox();
             this.txtStockMin = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtPrecioCompra = new System.Windows.Forms.TextBox();
@@ -73,7 +74,6 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.txtTipoProducto = new System.Windows.Forms.ComboBox();
             this.txtFecha = new System.Windows.Forms.DateTimePicker();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -82,6 +82,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
+            this.txtProveedor = new System.Windows.Forms.TextBox();
             this.txtStockMax = new System.Windows.Forms.TextBox();
             this.txtNombreProd = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
@@ -92,7 +93,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabalmacen = new System.Windows.Forms.TabControl();
-            this.txtProveedor = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -379,6 +379,7 @@
             this.btnSeleccionar.TabIndex = 91;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // textBox2
             // 
@@ -440,6 +441,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtTipoProducto);
             this.groupBox2.Controls.Add(this.txtStockMin);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.txtPrecioCompra);
@@ -447,7 +449,6 @@
             this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Controls.Add(this.btnModificar);
             this.groupBox2.Controls.Add(this.btnSalir);
-            this.groupBox2.Controls.Add(this.txtTipoProducto);
             this.groupBox2.Controls.Add(this.txtFecha);
             this.groupBox2.Controls.Add(this.label36);
             this.groupBox2.Controls.Add(this.label37);
@@ -470,6 +471,13 @@
             this.groupBox2.TabIndex = 101;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = " Datos Producto";
+            // 
+            // txtTipoProducto
+            // 
+            this.txtTipoProducto.Location = new System.Drawing.Point(134, 108);
+            this.txtTipoProducto.Name = "txtTipoProducto";
+            this.txtTipoProducto.Size = new System.Drawing.Size(155, 20);
+            this.txtTipoProducto.TabIndex = 126;
             // 
             // txtStockMin
             // 
@@ -504,6 +512,7 @@
             this.btnEliminar.TabIndex = 122;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -523,6 +532,7 @@
             this.btnModificar.TabIndex = 120;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnSalir
             // 
@@ -533,14 +543,7 @@
             this.btnSalir.TabIndex = 121;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // txtTipoProducto
-            // 
-            this.txtTipoProducto.FormattingEnabled = true;
-            this.txtTipoProducto.Location = new System.Drawing.Point(134, 107);
-            this.txtTipoProducto.Name = "txtTipoProducto";
-            this.txtTipoProducto.Size = new System.Drawing.Size(181, 21);
-            this.txtTipoProducto.TabIndex = 103;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // txtFecha
             // 
@@ -615,6 +618,13 @@
             this.label40.TabIndex = 65;
             this.label40.Text = "Proveedor:";
             // 
+            // txtProveedor
+            // 
+            this.txtProveedor.Location = new System.Drawing.Point(134, 212);
+            this.txtProveedor.Name = "txtProveedor";
+            this.txtProveedor.Size = new System.Drawing.Size(214, 20);
+            this.txtProveedor.TabIndex = 66;
+            // 
             // txtStockMax
             // 
             this.txtStockMax.Location = new System.Drawing.Point(452, 143);
@@ -626,7 +636,7 @@
             // 
             this.txtNombreProd.Location = new System.Drawing.Point(134, 70);
             this.txtNombreProd.Name = "txtNombreProd";
-            this.txtNombreProd.Size = new System.Drawing.Size(181, 20);
+            this.txtNombreProd.Size = new System.Drawing.Size(155, 20);
             this.txtNombreProd.TabIndex = 68;
             // 
             // label41
@@ -710,13 +720,6 @@
             this.tabalmacen.TabIndex = 92;
             this.tabalmacen.TabStop = false;
             // 
-            // txtProveedor
-            // 
-            this.txtProveedor.Location = new System.Drawing.Point(134, 212);
-            this.txtProveedor.Name = "txtProveedor";
-            this.txtProveedor.Size = new System.Drawing.Size(214, 20);
-            this.txtProveedor.TabIndex = 66;
-            // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -788,7 +791,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ComboBox txtTipoProducto;
         private System.Windows.Forms.DateTimePicker txtFecha;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
@@ -812,5 +814,6 @@
         private System.Windows.Forms.TextBox txtStockMin;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtProveedor;
+        private System.Windows.Forms.TextBox txtTipoProducto;
     }
 }

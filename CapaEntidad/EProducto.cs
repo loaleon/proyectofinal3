@@ -17,7 +17,6 @@ namespace CapaEntidad
         public decimal precioVenta { get; set; }
         public int prodMax { get; set; }
         public int prodMin { get; set; }
-       
         public DateTime fechaIngreso { get; set; }
         
     }    

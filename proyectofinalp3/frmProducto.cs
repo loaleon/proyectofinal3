@@ -87,7 +87,7 @@ namespace proyectofinalp3
 
         private void frmProducto_Load(object sender, EventArgs e)
         {
-
+            MostrarBuscarBD("");
         }
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
@@ -126,6 +126,57 @@ namespace proyectofinalp3
             txtFecha.Text = "";
 
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            objEntidad.idProducto = Convert.ToInt32(txtCodigo.Text);
+            objEntidad.nombreProd = txtNombreProd.Text.ToUpper();
+            objEntidad.idTipoProd = Convert.ToInt32(txtTipoProducto.Text);
+            objEntidad.descripcion = txtDescripcion.Text.ToUpper();
+            objEntidad.idProveedor = Convert.ToInt32(txtProveedor.Text.ToUpper());
+            objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
+            objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
+            objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
+            objEntidad.prodMin = Convert.ToInt32(txtStockMin.Text);
+            objEntidad.fechaIngreso = Convert.ToDateTime(txtFecha.Text);
+
+            objNegocio.InsertandoProductoBD(objEntidad);
+
+            MessageBox.Show("Registro modificado correctamente");
+            MostrarBuscarBD("");
+            LimpiarCampos();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            objEntidad.idProducto = Convert.ToInt32(txtCodigo.Text);
+            objEntidad.nombreProd = txtNombreProd.Text;
+            objEntidad.idTipoProd = Convert.ToInt32(txtTipoProducto.Text);
+            objEntidad.descripcion = txtDescripcion.Text;
+            objEntidad.idProveedor = Convert.ToInt32(txtProveedor.Text);
+            objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
+            objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
+            objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
+            objEntidad.prodMin = Convert.ToInt32(txtStockMin.Text);
+            objEntidad.fechaIngreso = Convert.ToDateTime(txtFecha.Text);
+
+            objNegocio.InsertandoProductoBD(objEntidad);
+
+            MessageBox.Show("Registro eliminado correctamente");
+            MostrarBuscarBD("");
+            LimpiarCampos();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }
 

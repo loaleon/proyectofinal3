@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CapaEntidad;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using CapaEntidad;
 
-namespace CapaDatos
+namespace CapaDatos.Properties
 {
-   public class DProducto
+    public class DProducto
     {
         public void InsertarProducto(EProducto obj)
         {
@@ -20,24 +20,25 @@ namespace CapaDatos
 
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@nombreProd", obj.nombreProd);
+            cmd.Parameters.AddWithValue("@nombreProd", obj.idProducto);
             cmd.Parameters.AddWithValue("@idTipoProd", obj.idTipoProd);
             cmd.Parameters.AddWithValue("@descripcion", obj.descripcion);
             cmd.Parameters.AddWithValue("@idProveedor", obj.idProveedor);
+            cmd.Parameters.AddWithValue("@precioCompra", obj.precioVenta);
+            cmd.Parameters.AddWithValue("@precioVenta", obj.precioVenta);
+            cmd.Parameters.AddWithValue("@prodMax", obj.prodMax);
             cmd.Parameters.AddWithValue("@prodMax", obj.prodMax);
             cmd.Parameters.AddWithValue("@prodMin", obj.prodMin);
-            cmd.Parameters.AddWithValue("@precioCompra", obj.precioCompra);
-            cmd.Parameters.AddWithValue("@precioVenta", obj.precioVenta);
             cmd.Parameters.AddWithValue("@fechaIngreso", obj.fechaIngreso);
-       
-         
+          
+
             SqlCon.Open();
 
             cmd.ExecuteNonQuery();
 
             SqlCon.Close();
         }
-        public List<EProducto> ListarProducto(string buscar)
+       /* public List<EProducto> ListarProducto(string buscar)
         {
             SqlDataReader Mostrar;
             SqlConnection SqlCon = new SqlConnection();
@@ -65,10 +66,8 @@ namespace CapaDatos
                     precioCompra = Mostrar.GetDecimal(5),
                     precioVenta = Mostrar.GetDecimal(6),
                     prodMax = Mostrar.GetInt32(7),
-                    prodMin = Mostrar.GetInt32(8), 
+                    prodMin = Mostrar.GetInt32(8),
                     fechaIngreso = Mostrar.GetDateTime(9),
-                    
-                    
                     
                 });
             }
@@ -76,23 +75,27 @@ namespace CapaDatos
             Mostrar.Close();
 
             return Listar;
-        }
+        }*/
         public void ActualizarProducto(EProducto obj)
         {
 
             SqlConnection SqlCon = new SqlConnection();
             SqlCon = Conexion.CrearInstancia().CrearConexion();
-            SqlCommand cmd = new SqlCommand("uspInsertProducto", SqlCon);
+            SqlCommand cmd = new SqlCommand("uspUdateProducto", SqlCon);
 
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@idProducto", obj.idProducto);
             cmd.Parameters.AddWithValue("@nombreProd", obj.nombreProd);
             cmd.Parameters.AddWithValue("@idTipoProd", obj.idTipoProd);
             cmd.Parameters.AddWithValue("@descripcion", obj.descripcion);
             cmd.Parameters.AddWithValue("@idProveedor", obj.idProveedor);
-            cmd.Parameters.AddWithValue("@proMax", obj.prodMax);
-            cmd.Parameters.AddWithValue("@proMin", obj.prodMin);
-            cmd.Parameters.AddWithValue("@precioCompra", obj.precioCompra);
+            cmd.Parameters.AddWithValue("@precioCompra", obj.precioVenta);
             cmd.Parameters.AddWithValue("@precioVenta", obj.precioVenta);
+            cmd.Parameters.AddWithValue("@prodMax", obj.prodMax);
+            cmd.Parameters.AddWithValue("@prodMax", obj.prodMax);
+            cmd.Parameters.AddWithValue("@prodMin", obj.prodMin);
             cmd.Parameters.AddWithValue("@fechaIngreso", obj.fechaIngreso);
+
 
 
 
@@ -102,7 +105,6 @@ namespace CapaDatos
 
             SqlCon.Close();
         }
-
         public void ElimiarProducto(EProducto obj)
         {
             SqlConnection SqlCon = new SqlConnection();
@@ -116,6 +118,7 @@ namespace CapaDatos
             SqlCon.Open();
             cmd.ExecuteNonQuery();
             SqlCon.Close();
+
 
         }
     }
