@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
 using CapaEntidad;
-using CapaDatos;
+
 
 namespace CapaNegocio
 {
    public class NProducto
     {
-        Datos = new DProducto();
+        DProducto Datos = new DProducto();
         public void InsertandoProductoBD(EProducto obj)
         {
             Datos.InsertarProducto(obj);
@@ -21,7 +21,7 @@ namespace CapaNegocio
         {
             return Datos.ListarProducto(buscar);
         }
-
+        
         public void ActualizarProductoBD(EProducto obj)
         {
             Datos.ActualizarProducto(obj);

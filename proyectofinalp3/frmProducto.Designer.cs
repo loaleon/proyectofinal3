@@ -58,7 +58,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabProducto = new System.Windows.Forms.TabPage();
+            this.gruProducto = new System.Windows.Forms.TabPage();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -92,18 +92,18 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.tabalmacen = new System.Windows.Forms.TabControl();
+            this.tabProducto = new System.Windows.Forms.TabControl();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabProducto.SuspendLayout();
+            this.gruProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProducto)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.tabalmacen.SuspendLayout();
+            this.tabProducto.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbxdescripcion
@@ -356,20 +356,20 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // tabProducto
+            // gruProducto
             // 
-            this.tabProducto.Controls.Add(this.btnSeleccionar);
-            this.tabProducto.Controls.Add(this.textBox2);
-            this.tabProducto.Controls.Add(this.label13);
-            this.tabProducto.Controls.Add(this.label1);
-            this.tabProducto.Controls.Add(this.tablaProducto);
-            this.tabProducto.Location = new System.Drawing.Point(4, 22);
-            this.tabProducto.Name = "tabProducto";
-            this.tabProducto.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProducto.Size = new System.Drawing.Size(622, 357);
-            this.tabProducto.TabIndex = 1;
-            this.tabProducto.Text = "Inventario";
-            this.tabProducto.UseVisualStyleBackColor = true;
+            this.gruProducto.Controls.Add(this.btnSeleccionar);
+            this.gruProducto.Controls.Add(this.textBox2);
+            this.gruProducto.Controls.Add(this.label13);
+            this.gruProducto.Controls.Add(this.label1);
+            this.gruProducto.Controls.Add(this.tablaProducto);
+            this.gruProducto.Location = new System.Drawing.Point(4, 22);
+            this.gruProducto.Name = "gruProducto";
+            this.gruProducto.Padding = new System.Windows.Forms.Padding(3);
+            this.gruProducto.Size = new System.Drawing.Size(622, 357);
+            this.gruProducto.TabIndex = 1;
+            this.gruProducto.Text = "Inventario";
+            this.gruProducto.UseVisualStyleBackColor = true;
             // 
             // btnSeleccionar
             // 
@@ -708,17 +708,17 @@
             this.label7.TabIndex = 87;
             this.label7.Text = "Ingreso Producto";
             // 
-            // tabalmacen
+            // tabProducto
             // 
-            this.tabalmacen.AccessibleDescription = "tabalmsupl";
-            this.tabalmacen.Controls.Add(this.tabPage1);
-            this.tabalmacen.Controls.Add(this.tabProducto);
-            this.tabalmacen.Location = new System.Drawing.Point(6, 98);
-            this.tabalmacen.Name = "tabalmacen";
-            this.tabalmacen.SelectedIndex = 0;
-            this.tabalmacen.Size = new System.Drawing.Size(630, 383);
-            this.tabalmacen.TabIndex = 92;
-            this.tabalmacen.TabStop = false;
+            this.tabProducto.AccessibleDescription = "tabalmsupl";
+            this.tabProducto.Controls.Add(this.tabPage1);
+            this.tabProducto.Controls.Add(this.gruProducto);
+            this.tabProducto.Location = new System.Drawing.Point(6, 98);
+            this.tabProducto.Name = "tabProducto";
+            this.tabProducto.SelectedIndex = 0;
+            this.tabProducto.Size = new System.Drawing.Size(630, 383);
+            this.tabProducto.TabIndex = 92;
+            this.tabProducto.TabStop = false;
             // 
             // frmProducto
             // 
@@ -726,7 +726,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 491);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.tabalmacen);
+            this.Controls.Add(this.tabProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -738,14 +738,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabProducto.ResumeLayout(false);
-            this.tabProducto.PerformLayout();
+            this.gruProducto.ResumeLayout(false);
+            this.gruProducto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProducto)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tabalmacen.ResumeLayout(false);
+            this.tabProducto.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -779,7 +779,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TabPage tabProducto;
+        private System.Windows.Forms.TabPage gruProducto;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label13;
@@ -808,7 +808,7 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TabControl tabalmacen;
+        private System.Windows.Forms.TabControl tabProducto;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtPrecioCompra;
         private System.Windows.Forms.TextBox txtStockMin;

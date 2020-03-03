@@ -174,7 +174,22 @@ namespace proyectofinalp3
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (tablaProducto.SelectedRows.Count > 0)
+            {
+                txtCodigo.Text = tablaProducto.CurrentRow.Cells[0].Value.ToString();
+                txtNombreProd.Text = tablaProducto.CurrentRow.Cells[1].Value.ToString();
+                txtTipoProducto.Text = tablaProducto.CurrentRow.Cells[2].Value.ToString();
+                txtDescripcion.Text = tablaProducto.CurrentRow.Cells[3].Value.ToString();
+                txtProveedor.Text = tablaProducto.CurrentRow.Cells[4].Value.ToString();
+                txtPrecioCompra.Text = tablaProducto.CurrentRow.Cells[5].Value.ToString();
+                txtPrecioVenta.Text = tablaProducto.CurrentRow.Cells[6].Value.ToString();
+                txtStockMax.Text = tablaProducto.CurrentRow.Cells[7].Value.ToString();
+                txtStockMin.Text = tablaProducto.CurrentRow.Cells[8].Value.ToString();
+                txtFecha.Text = tablaProducto.CurrentRow.Cells[9].Value.ToString();
 
+                MessageBox.Show("Registro seleccionado");
+                tabProducto.SelectedIndex = 0;
+            }
         }
     }
     

@@ -7,9 +7,9 @@ using System.Data;
 using System.Data.SqlClient;
 using CapaEntidad;
 
-namespace CapaDatos.Properties
+namespace CapaDatos
 {
-    public class DProducto
+   public class DProducto
     {
         public void InsertarProducto(EProducto obj)
         {
@@ -20,17 +20,16 @@ namespace CapaDatos.Properties
 
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@nombreProd", obj.idProducto);
+            cmd.Parameters.AddWithValue("@nombreProd", obj.nombreProd);
             cmd.Parameters.AddWithValue("@idTipoProd", obj.idTipoProd);
             cmd.Parameters.AddWithValue("@descripcion", obj.descripcion);
             cmd.Parameters.AddWithValue("@idProveedor", obj.idProveedor);
-            cmd.Parameters.AddWithValue("@precioCompra", obj.precioVenta);
+            cmd.Parameters.AddWithValue("@precioCompra", obj.precioCompra);
             cmd.Parameters.AddWithValue("@precioVenta", obj.precioVenta);
-            cmd.Parameters.AddWithValue("@prodMax", obj.prodMax);
             cmd.Parameters.AddWithValue("@prodMax", obj.prodMax);
             cmd.Parameters.AddWithValue("@prodMin", obj.prodMin);
             cmd.Parameters.AddWithValue("@fechaIngreso", obj.fechaIngreso);
-          
+
 
             SqlCon.Open();
 
@@ -38,44 +37,40 @@ namespace CapaDatos.Properties
 
             SqlCon.Close();
         }
-       /* public List<EProducto> ListarProducto(string buscar)
-        {
-            SqlDataReader Mostrar;
-            SqlConnection SqlCon = new SqlConnection();
-            SqlCon = Conexion.CrearInstancia().CrearConexion();
-            SqlCommand cmd = new SqlCommand("uspSelectProducto", SqlCon);
+         public List<EProducto> ListarProducto(string buscar)
+         {
+             SqlDataReader Mostrar;
+             SqlConnection SqlCon = new SqlConnection();
+             SqlCon = Conexion.CrearInstancia().CrearConexion();
+             SqlCommand cmd = new SqlCommand("uspSelectProducto", SqlCon);
 
-            cmd.CommandType = CommandType.StoredProcedure;
+             cmd.CommandType = CommandType.StoredProcedure;
 
-            SqlCon.Open();
-            cmd.Parameters.AddWithValue("@buscar", buscar);
-            Mostrar = cmd.ExecuteReader();
+             SqlCon.Open();
+             cmd.Parameters.AddWithValue("@buscar", buscar);
+             Mostrar = cmd.ExecuteReader();
 
-            List<EProducto> Listar = new List<EProducto>();
+             List<EProducto> Listar = new List<EProducto>();
 
-            while (Mostrar.Read())
-            {
+             while (Mostrar.Read())
+             {
                 Listar.Add(new EProducto
                 {
 
                     idProducto = Mostrar.GetInt32(0),
                     nombreProd = Mostrar.GetString(1),
-                    idTipoProd = Mostrar.GetInt32(2),
-                    descripcion = Mostrar.GetString(3),
-                    idProveedor = Mostrar.GetInt32(4),
-                    precioCompra = Mostrar.GetDecimal(5),
-                    precioVenta = Mostrar.GetDecimal(6),
-                    prodMax = Mostrar.GetInt32(7),
-                    prodMin = Mostrar.GetInt32(8),
-                    fechaIngreso = Mostrar.GetDateTime(9),
-                    
-                });
-            }
-            SqlCon.Close();
-            Mostrar.Close();
+                    //descripcion = Mostrar.GetString(),
 
-            return Listar;
-        }*/
+                    idTipoProd = Mostrar.GetInt32(7),
+
+
+                }); 
+             }
+             SqlCon.Close();
+             Mostrar.Close();
+
+             return Listar;
+         }
         public void ActualizarProducto(EProducto obj)
         {
 
@@ -84,6 +79,7 @@ namespace CapaDatos.Properties
             SqlCommand cmd = new SqlCommand("uspUdateProducto", SqlCon);
 
             cmd.CommandType = CommandType.StoredProcedure;
+
             cmd.Parameters.AddWithValue("@idProducto", obj.idProducto);
             cmd.Parameters.AddWithValue("@nombreProd", obj.nombreProd);
             cmd.Parameters.AddWithValue("@idTipoProd", obj.idTipoProd);
