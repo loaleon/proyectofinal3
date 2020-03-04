@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTipoProducto));
-            this.tabProveedor = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabTipoProducto = new System.Windows.Forms.TabControl();
+            this.gruTipoProducto = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -38,17 +38,17 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.tablaProveedor = new System.Windows.Forms.DataGridView();
+            this.tablaTipoProducto = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -56,12 +56,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabProveedor.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabTipoProducto.SuspendLayout();
+            this.gruTipoProducto.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaProveedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaTipoProducto)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -70,28 +70,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabProveedor
+            // tabTipoProducto
             // 
-            this.tabProveedor.Controls.Add(this.tabPage1);
-            this.tabProveedor.Controls.Add(this.tabPage2);
-            this.tabProveedor.Location = new System.Drawing.Point(12, 110);
-            this.tabProveedor.Name = "tabProveedor";
-            this.tabProveedor.SelectedIndex = 0;
-            this.tabProveedor.Size = new System.Drawing.Size(799, 424);
-            this.tabProveedor.TabIndex = 102;
-            this.tabProveedor.SelectedIndexChanged += new System.EventHandler(this.tabProveedor_SelectedIndexChanged);
+            this.tabTipoProducto.Controls.Add(this.gruTipoProducto);
+            this.tabTipoProducto.Controls.Add(this.tabPage2);
+            this.tabTipoProducto.Location = new System.Drawing.Point(12, 110);
+            this.tabTipoProducto.Name = "tabTipoProducto";
+            this.tabTipoProducto.SelectedIndex = 0;
+            this.tabTipoProducto.Size = new System.Drawing.Size(799, 424);
+            this.tabTipoProducto.TabIndex = 102;
+            this.tabTipoProducto.SelectedIndexChanged += new System.EventHandler(this.tabProveedor_SelectedIndexChanged);
             // 
-            // tabPage1
+            // gruTipoProducto
             // 
-            this.tabPage1.Controls.Add(this.groupBox7);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(791, 398);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Tipo Producto";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.gruTipoProducto.Controls.Add(this.groupBox7);
+            this.gruTipoProducto.Controls.Add(this.label7);
+            this.gruTipoProducto.Location = new System.Drawing.Point(4, 22);
+            this.gruTipoProducto.Name = "gruTipoProducto";
+            this.gruTipoProducto.Padding = new System.Windows.Forms.Padding(3);
+            this.gruTipoProducto.Size = new System.Drawing.Size(791, 398);
+            this.gruTipoProducto.TabIndex = 0;
+            this.gruTipoProducto.Text = "Tipo Producto";
+            this.gruTipoProducto.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -101,7 +101,7 @@
             this.groupBox7.Controls.Add(this.btnAgregar);
             this.groupBox7.Controls.Add(this.label2);
             this.groupBox7.Controls.Add(this.txtCodigo);
-            this.groupBox7.Controls.Add(this.txtDireccion);
+            this.groupBox7.Controls.Add(this.txtDescripcion);
             this.groupBox7.Controls.Add(this.txtNombre);
             this.groupBox7.Controls.Add(this.label20);
             this.groupBox7.Controls.Add(this.label22);
@@ -120,6 +120,7 @@
             this.btnEliminar.TabIndex = 117;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnSalir
             // 
@@ -130,6 +131,7 @@
             this.btnSalir.TabIndex = 116;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // btnModificar
             // 
@@ -139,6 +141,7 @@
             this.btnModificar.TabIndex = 115;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // btnAgregar
             // 
@@ -148,6 +151,7 @@
             this.btnAgregar.TabIndex = 114;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // label2
             // 
@@ -161,6 +165,7 @@
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(160, 31);
             this.txtCodigo.Multiline = true;
             this.txtCodigo.Name = "txtCodigo";
@@ -168,16 +173,18 @@
             this.txtCodigo.Size = new System.Drawing.Size(128, 32);
             this.txtCodigo.TabIndex = 122;
             // 
-            // txtDireccion
+            // txtDescripcion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(160, 159);
-            this.txtDireccion.Multiline = true;
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(312, 64);
-            this.txtDireccion.TabIndex = 106;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(160, 159);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(312, 64);
+            this.txtDescripcion.TabIndex = 106;
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(160, 92);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
@@ -200,9 +207,9 @@
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(49, 159);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(79, 20);
+            this.label22.Size = new System.Drawing.Size(96, 20);
             this.label22.TabIndex = 103;
-            this.label22.Text = "Dirección:";
+            this.label22.Text = "Descripción:";
             // 
             // label7
             // 
@@ -218,7 +225,7 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.btnSeleccionar);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -230,7 +237,7 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.tablaProveedor);
+            this.groupBox8.Controls.Add(this.tablaTipoProducto);
             this.groupBox8.Controls.Add(this.label4);
             this.groupBox8.Controls.Add(this.txtBuscar);
             this.groupBox8.Location = new System.Drawing.Point(17, 33);
@@ -239,25 +246,26 @@
             this.groupBox8.TabIndex = 102;
             this.groupBox8.TabStop = false;
             // 
-            // tablaProveedor
+            // tablaTipoProducto
             // 
-            this.tablaProveedor.AllowUserToAddRows = false;
-            this.tablaProveedor.AllowUserToDeleteRows = false;
-            this.tablaProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tablaTipoProducto.AllowUserToAddRows = false;
+            this.tablaTipoProducto.AllowUserToDeleteRows = false;
+            this.tablaTipoProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tablaProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tablaProveedor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tablaProveedor.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.tablaProveedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tablaProveedor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tablaProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaProveedor.Location = new System.Drawing.Point(12, 65);
-            this.tablaProveedor.Name = "tablaProveedor";
-            this.tablaProveedor.ReadOnly = true;
-            this.tablaProveedor.RowHeadersVisible = false;
-            this.tablaProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaProveedor.Size = new System.Drawing.Size(733, 199);
-            this.tablaProveedor.TabIndex = 101;
+            this.tablaTipoProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tablaTipoProducto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tablaTipoProducto.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.tablaTipoProducto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tablaTipoProducto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tablaTipoProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaTipoProducto.Location = new System.Drawing.Point(12, 65);
+            this.tablaTipoProducto.Name = "tablaTipoProducto";
+            this.tablaTipoProducto.ReadOnly = true;
+            this.tablaTipoProducto.RowHeadersVisible = false;
+            this.tablaTipoProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tablaTipoProducto.Size = new System.Drawing.Size(733, 199);
+            this.tablaTipoProducto.TabIndex = 101;
+            this.tablaTipoProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaTipoProducto_CellContentClick);
             // 
             // label4
             // 
@@ -278,15 +286,16 @@
             this.txtBuscar.Size = new System.Drawing.Size(254, 32);
             this.txtBuscar.TabIndex = 99;
             // 
-            // button1
+            // btnSeleccionar
             // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(665, 342);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 36);
-            this.button1.TabIndex = 92;
-            this.button1.Text = "Seleccionar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeleccionar.Location = new System.Drawing.Point(665, 342);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(108, 36);
+            this.btnSeleccionar.TabIndex = 92;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // label1
             // 
@@ -295,9 +304,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(293, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 25);
+            this.label1.Size = new System.Drawing.Size(222, 25);
             this.label1.TabIndex = 101;
-            this.label1.Text = "Listado de Proveedores";
+            this.label1.Text = "Listado Tipo Producto";
             // 
             // groupBox1
             // 
@@ -364,20 +373,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 546);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.tabProveedor);
+            this.Controls.Add(this.tabTipoProducto);
             this.Name = "frmTipoProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "   Tipo Producto";
-            this.tabProveedor.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmTipoProducto_Load);
+            this.tabTipoProducto.ResumeLayout(false);
+            this.gruTipoProducto.ResumeLayout(false);
+            this.gruTipoProducto.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaProveedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaTipoProducto)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -390,8 +400,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabProveedor;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tabTipoProducto;
+        private System.Windows.Forms.TabPage gruTipoProducto;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
@@ -399,17 +409,17 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.DataGridView tablaProveedor;
+        private System.Windows.Forms.DataGridView tablaTipoProducto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox5;

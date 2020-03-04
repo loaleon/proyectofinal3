@@ -54,20 +54,30 @@ namespace proyectofinalp3
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            objEntidad.nombre = txtNombre.Text.ToUpper();
-            objEntidad.apellido = txtApellido.Text.ToUpper();
-            objEntidad.direccion = txtDireccion.Text.ToUpper();
-            objEntidad.sexo = txtSexo.Text.ToUpper();
-            objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
-            objEntidad.documento = txtDocumento.Text.ToUpper();
-            objEntidad.telefono = txtTelefono.Text.ToUpper();
-            objEntidad.correo = txtCorreo.Text.ToUpper();
-            objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
-            objNegocio.InsertandoClienteBD(objEntidad);
+            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text) || string.IsNullOrEmpty(txtDireccion.Text)
+                || string.IsNullOrEmpty(txtSexo.Text) || string.IsNullOrEmpty(txtTipoDocumento.Text) || string.IsNullOrEmpty(txtDocumento.Text)
+                || string.IsNullOrEmpty(txtTelefono.Text) || string.IsNullOrEmpty(txtCorreo.Text))
+            {
+                MessageBox.Show("Todos los campos debe ser completados");
+            }
+            else
+            {
+                objEntidad.nombre = txtNombre.Text.ToUpper();
+                objEntidad.apellido = txtApellido.Text.ToUpper();
+                objEntidad.direccion = txtDireccion.Text.ToUpper();
+                objEntidad.sexo = txtSexo.Text.ToUpper();
+                objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
+                objEntidad.documento = txtDocumento.Text.ToUpper();
+                objEntidad.telefono = txtTelefono.Text.ToUpper();
+                objEntidad.correo = txtCorreo.Text.ToUpper();
+                objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
+                objNegocio.InsertandoClienteBD(objEntidad);
 
-            MessageBox.Show("Cliente registrado correctamente");
-            MostrarBuscarBD("");
-            LimpiarCampos();
+                MessageBox.Show("Cliente registrado correctamente");
+                MostrarBuscarBD("");
+                LimpiarCampos();
+            }
+            
         }
 
         public void MostrarBuscarBD(string buscar)
@@ -106,40 +116,56 @@ namespace proyectofinalp3
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            objEntidad.idCliente = Convert.ToInt32(txtCodCliente.Text);
-            objEntidad.nombre = txtNombre.Text.ToUpper();
-            objEntidad.apellido = txtApellido.Text.ToUpper();
-            objEntidad.direccion = txtDireccion.Text.ToUpper();
-            objEntidad.sexo = txtSexo.Text.ToUpper();
-            objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
-            objEntidad.documento = txtDocumento.Text.ToUpper();
-            objEntidad.telefono = txtTelefono.Text.ToUpper();
-            objEntidad.correo = txtCorreo.Text.ToUpper();
-            objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
-            objNegocio.ActualizarClienteBD(objEntidad);
+            if (string.IsNullOrEmpty(txtCodCliente.Text))
+            {
+                MessageBox.Show("Registro no exixte");
+            }
+            else
+            {
+                objEntidad.idCliente = Convert.ToInt32(txtCodCliente.Text);
+                objEntidad.nombre = txtNombre.Text.ToUpper();
+                objEntidad.apellido = txtApellido.Text.ToUpper();
+                objEntidad.direccion = txtDireccion.Text.ToUpper();
+                objEntidad.sexo = txtSexo.Text.ToUpper();
+                objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
+                objEntidad.documento = txtDocumento.Text.ToUpper();
+                objEntidad.telefono = txtTelefono.Text.ToUpper();
+                objEntidad.correo = txtCorreo.Text.ToUpper();
+                objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
+                objNegocio.ActualizarClienteBD(objEntidad);
 
-            MessageBox.Show("Cliente modificado correctamente");
-            MostrarBuscarBD("");
-            LimpiarCampos();
+                MessageBox.Show("Cliente modificado correctamente");
+                MostrarBuscarBD("");
+                LimpiarCampos();
+            }
+           
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            objEntidad.idCliente = Convert.ToInt32(txtCodCliente.Text);
-            objEntidad.nombre = txtNombre.Text;
-            objEntidad.apellido = txtApellido.Text;
-            objEntidad.direccion = txtDireccion.Text;
-            objEntidad.sexo = txtSexo.Text.ToUpper();
-            objEntidad.tipoDocumento = txtTipoDocumento.Text;
-            objEntidad.documento = txtDocumento.Text;
-            objEntidad.telefono = txtTelefono.Text;
-            objEntidad.correo = txtCorreo.Text;
-            objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
-            objNegocio.EliminandoClienteBD(objEntidad);
+            if(string.IsNullOrEmpty(txtCodCliente.Text))
+            {
+                MessageBox.Show("Registro no exixte");
+            }
+            else
+            {
+                objEntidad.idCliente = Convert.ToInt32(txtCodCliente.Text);
+                objEntidad.nombre = txtNombre.Text.ToUpper();
+                objEntidad.apellido = txtApellido.Text.ToUpper();
+                objEntidad.direccion = txtDireccion.Text.ToUpper();
+                objEntidad.sexo = txtSexo.Text.ToUpper();
+                objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
+                objEntidad.documento = txtDocumento.Text.ToUpper();
+                objEntidad.telefono = txtTelefono.Text.ToUpper();
+                objEntidad.correo = txtCorreo.Text.ToUpper();
+                objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
+                objNegocio.EliminandoClienteBD(objEntidad);
 
-            MessageBox.Show("Cliente eliminado");
-            MostrarBuscarBD("");
-            LimpiarCampos();
+                MessageBox.Show("Cliente eliminado");
+                MostrarBuscarBD("");
+                LimpiarCampos();
+            }
+
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
@@ -161,6 +187,11 @@ namespace proyectofinalp3
                 tabCliente.SelectedIndex = 0;
             }
             
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
     

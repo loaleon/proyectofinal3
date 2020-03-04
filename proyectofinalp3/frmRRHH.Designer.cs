@@ -39,7 +39,7 @@
             this.tablaEmpleado = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabTipoProducto = new System.Windows.Forms.TabPage();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.txtDepartamento = new System.Windows.Forms.ComboBox();
@@ -81,7 +81,7 @@
             this.tabPage2.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEmpleado)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.tabTipoProducto.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tabEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -206,21 +206,21 @@
             this.label1.TabIndex = 101;
             this.label1.Text = "Listado de Empleados";
             // 
-            // tabPage1
+            // tabTipoProducto
             // 
-            this.tabPage1.Controls.Add(this.btnEliminar);
-            this.tabPage1.Controls.Add(this.groupBox7);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.btnAgregar);
-            this.tabPage1.Controls.Add(this.btnModificar);
-            this.tabPage1.Controls.Add(this.btnSalir);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(701, 382);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Nuevo Empleado";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabTipoProducto.Controls.Add(this.btnEliminar);
+            this.tabTipoProducto.Controls.Add(this.groupBox7);
+            this.tabTipoProducto.Controls.Add(this.label7);
+            this.tabTipoProducto.Controls.Add(this.btnAgregar);
+            this.tabTipoProducto.Controls.Add(this.btnModificar);
+            this.tabTipoProducto.Controls.Add(this.btnSalir);
+            this.tabTipoProducto.Location = new System.Drawing.Point(4, 22);
+            this.tabTipoProducto.Name = "tabTipoProducto";
+            this.tabTipoProducto.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTipoProducto.Size = new System.Drawing.Size(701, 382);
+            this.tabTipoProducto.TabIndex = 0;
+            this.tabTipoProducto.Text = "Nuevo Empleado";
+            this.tabTipoProducto.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
@@ -529,7 +529,7 @@
             // 
             // tabEmpleado
             // 
-            this.tabEmpleado.Controls.Add(this.tabPage1);
+            this.tabEmpleado.Controls.Add(this.tabTipoProducto);
             this.tabEmpleado.Controls.Add(this.tabPage2);
             this.tabEmpleado.Location = new System.Drawing.Point(3, 96);
             this.tabEmpleado.Name = "tabEmpleado";
@@ -615,8 +615,8 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEmpleado)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabTipoProducto.ResumeLayout(false);
+            this.tabTipoProducto.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.tabEmpleado.ResumeLayout(false);
@@ -639,7 +639,7 @@
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridView tablaEmpleado;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabTipoProducto;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.ComboBox txtTipoDocumento;

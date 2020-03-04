@@ -69,6 +69,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -239,6 +240,7 @@
             // 
             // tabcrearmodificar
             // 
+            this.tabcrearmodificar.Controls.Add(this.btnLimpiar);
             this.tabcrearmodificar.Controls.Add(this.btnEliminar);
             this.tabcrearmodificar.Controls.Add(this.btnAgregar);
             this.tabcrearmodificar.Controls.Add(this.btnModificar);
@@ -287,7 +289,7 @@
             // btnSalir
             // 
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(603, 267);
+            this.btnSalir.Location = new System.Drawing.Point(639, 267);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(94, 36);
             this.btnSalir.TabIndex = 120;
@@ -328,9 +330,9 @@
             // 
             this.txtTipoDocumento.FormattingEnabled = true;
             this.txtTipoDocumento.Items.AddRange(new object[] {
-            "Fememino",
-            "Masculino",
-            "Otro"});
+            "CED",
+            "PAS",
+            "RNC"});
             this.txtTipoDocumento.Location = new System.Drawing.Point(493, 35);
             this.txtTipoDocumento.Name = "txtTipoDocumento";
             this.txtTipoDocumento.Size = new System.Drawing.Size(98, 28);
@@ -376,9 +378,9 @@
             // 
             this.txtSexo.FormattingEnabled = true;
             this.txtSexo.Items.AddRange(new object[] {
-            "Fememino",
-            "Masculino",
-            "Otro"});
+            "F",
+            "M",
+            "Otros"});
             this.txtSexo.Location = new System.Drawing.Point(136, 180);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(98, 28);
@@ -507,6 +509,17 @@
             this.txtApellido.Size = new System.Drawing.Size(213, 26);
             this.txtApellido.TabIndex = 105;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiar.Location = new System.Drawing.Point(427, 267);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(94, 36);
+            this.btnLimpiar.TabIndex = 122;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,5 +591,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

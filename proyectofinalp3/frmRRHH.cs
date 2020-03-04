@@ -47,7 +47,7 @@ namespace proyectofinalp3
         {
             if (tablaEmpleado.SelectedRows.Count > 0)
             {
-               // idEmpleado = tablaEmpleado.CurrentRow.Cells[0].Value.ToString();
+              
                 txtCodEmpleado.Text = tablaEmpleado.CurrentRow.Cells[0].Value.ToString();
                 txtNombre.Text = tablaEmpleado.CurrentRow.Cells[1].Value.ToString();
                 txtapeempleado.Text = tablaEmpleado.CurrentRow.Cells[2].Value.ToString();
