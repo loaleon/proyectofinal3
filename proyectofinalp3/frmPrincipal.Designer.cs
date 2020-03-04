@@ -71,6 +71,7 @@
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.tolProductos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tolProveedores = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.menuStrip7 = new System.Windows.Forms.MenuStrip();
@@ -88,7 +89,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tolProveedores = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -523,7 +524,8 @@
             // 
             this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tolProductos,
-            this.tolProveedores});
+            this.tolProveedores,
+            this.tipoProductoToolStripMenuItem});
             this.toolStripMenuItem5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem5.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -535,9 +537,16 @@
             // tolProductos
             // 
             this.tolProductos.Name = "tolProductos";
-            this.tolProductos.Size = new System.Drawing.Size(222, 36);
+            this.tolProductos.Size = new System.Drawing.Size(240, 36);
             this.tolProductos.Text = "Producto";
             this.tolProductos.Click += new System.EventHandler(this.toolStripMenuItem6_Click_1);
+            // 
+            // tolProveedores
+            // 
+            this.tolProveedores.Name = "tolProveedores";
+            this.tolProveedores.Size = new System.Drawing.Size(240, 36);
+            this.tolProveedores.Text = "Proveedores";
+            this.tolProveedores.Click += new System.EventHandler(this.toolStripMenuItem9_Click_2);
             // 
             // pictureBox7
             // 
@@ -663,7 +672,7 @@
             // toolStripMenuItem19
             // 
             this.toolStripMenuItem19.Name = "toolStripMenuItem19";
-            this.toolStripMenuItem19.Size = new System.Drawing.Size(180, 36);
+            this.toolStripMenuItem19.Size = new System.Drawing.Size(175, 36);
             this.toolStripMenuItem19.Text = "Clientes";
             this.toolStripMenuItem19.Click += new System.EventHandler(this.toolStripMenuItem19_Click);
             // 
@@ -708,12 +717,12 @@
     "rling cespedes @Dario Ramirez @Juancarlo @Francis, Con la finalidad de Proyecto " +
     "Final de la materia.";
             // 
-            // tolProveedores
+            // tipoProductoToolStripMenuItem
             // 
-            this.tolProveedores.Name = "tolProveedores";
-            this.tolProveedores.Size = new System.Drawing.Size(222, 36);
-            this.tolProveedores.Text = "Proveedores";
-            this.tolProveedores.Click += new System.EventHandler(this.toolStripMenuItem9_Click_2);
+            this.tipoProductoToolStripMenuItem.Name = "tipoProductoToolStripMenuItem";
+            this.tipoProductoToolStripMenuItem.Size = new System.Drawing.Size(240, 36);
+            this.tipoProductoToolStripMenuItem.Text = "Tipo Producto";
+            this.tipoProductoToolStripMenuItem.Click += new System.EventHandler(this.tipoProductoToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -842,6 +851,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.ToolStripMenuItem tolProveedores;
+        private System.Windows.Forms.ToolStripMenuItem tipoProductoToolStripMenuItem;
     }
 }
 

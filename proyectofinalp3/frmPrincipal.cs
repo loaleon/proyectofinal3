@@ -292,5 +292,11 @@ namespace proyectofinalp3
             frmProveedor miforma = new frmProveedor();
             miforma.Show();
         }
+
+        private void tipoProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTipoProducto miforma = new frmTipoProducto();
+            miforma.Show();
+        }
     }
 }
