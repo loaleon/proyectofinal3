@@ -1,4 +1,6 @@
-﻿namespace proyectofinalp3
+﻿using System;
+
+namespace proyectofinalp3
 {
     partial class frmRRHH
     {
@@ -42,11 +44,11 @@
             this.tabTipoProducto = new System.Windows.Forms.TabPage();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.txtDepartamento = new System.Windows.Forms.ComboBox();
+            this.txtGenero = new System.Windows.Forms.ComboBox();
             this.txtTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.cboDepartamento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDocumento = new System.Windows.Forms.TextBox();
-            this.txtGenero = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
             this.txtFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.label25 = new System.Windows.Forms.Label();
@@ -71,12 +73,12 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tabEmpleado = new System.Windows.Forms.TabControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -84,12 +86,12 @@
             this.tabTipoProducto.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tabEmpleado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -235,11 +237,11 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.txtDepartamento);
+            this.groupBox7.Controls.Add(this.txtGenero);
             this.groupBox7.Controls.Add(this.txtTipoDocumento);
+            this.groupBox7.Controls.Add(this.cboDepartamento);
             this.groupBox7.Controls.Add(this.label3);
             this.groupBox7.Controls.Add(this.txtDocumento);
-            this.groupBox7.Controls.Add(this.txtGenero);
             this.groupBox7.Controls.Add(this.label26);
             this.groupBox7.Controls.Add(this.txtFechaIngreso);
             this.groupBox7.Controls.Add(this.label25);
@@ -265,26 +267,45 @@
             this.groupBox7.TabIndex = 99;
             this.groupBox7.TabStop = false;
             // 
-            // txtDepartamento
+            // txtGenero
             // 
-            this.txtDepartamento.FormattingEnabled = true;
-            this.txtDepartamento.Location = new System.Drawing.Point(434, 235);
-            this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.Size = new System.Drawing.Size(141, 21);
-            this.txtDepartamento.TabIndex = 132;
+            this.txtGenero.AutoCompleteCustomSource.AddRange(new string[] {
+            "F\t",
+            "M",
+            "OTROS"});
+            this.txtGenero.FormattingEnabled = true;
+            this.txtGenero.Items.AddRange(new object[] {
+            "F",
+            "M",
+            "OTROS"});
+            this.txtGenero.Location = new System.Drawing.Point(434, 204);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(121, 21);
+            this.txtGenero.TabIndex = 134;
             // 
             // txtTipoDocumento
             // 
+            this.txtTipoDocumento.AutoCompleteCustomSource.AddRange(new string[] {
+            "CED",
+            "PAS",
+            "RNC"});
             this.txtTipoDocumento.FormattingEnabled = true;
             this.txtTipoDocumento.Items.AddRange(new object[] {
-            "Fememino",
-            "Masculino",
-            "Otro"});
-            this.txtTipoDocumento.Location = new System.Drawing.Point(434, 35);
+            "CED",
+            "PAS",
+            "RNC"});
+            this.txtTipoDocumento.Location = new System.Drawing.Point(434, 34);
             this.txtTipoDocumento.Name = "txtTipoDocumento";
-            this.txtTipoDocumento.Size = new System.Drawing.Size(98, 21);
-            this.txtTipoDocumento.TabIndex = 131;
-            this.txtTipoDocumento.SelectedIndexChanged += new System.EventHandler(this.txtTipoDocumento_SelectedIndexChanged);
+            this.txtTipoDocumento.Size = new System.Drawing.Size(121, 21);
+            this.txtTipoDocumento.TabIndex = 133;
+            // 
+            // cboDepartamento
+            // 
+            this.cboDepartamento.FormattingEnabled = true;
+            this.cboDepartamento.Location = new System.Drawing.Point(434, 235);
+            this.cboDepartamento.Name = "cboDepartamento";
+            this.cboDepartamento.Size = new System.Drawing.Size(141, 21);
+            this.cboDepartamento.TabIndex = 132;
             // 
             // label3
             // 
@@ -302,18 +323,6 @@
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(141, 20);
             this.txtDocumento.TabIndex = 130;
-            // 
-            // txtGenero
-            // 
-            this.txtGenero.FormattingEnabled = true;
-            this.txtGenero.Items.AddRange(new object[] {
-            "Fememino",
-            "Masculino",
-            "Otro"});
-            this.txtGenero.Location = new System.Drawing.Point(434, 204);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(98, 21);
-            this.txtGenero.TabIndex = 128;
             // 
             // label26
             // 
@@ -529,59 +538,13 @@
             // 
             // tabEmpleado
             // 
-            this.tabEmpleado.Controls.Add(this.tabTipoProducto);
             this.tabEmpleado.Controls.Add(this.tabPage2);
+            this.tabEmpleado.Controls.Add(this.tabTipoProducto);
             this.tabEmpleado.Location = new System.Drawing.Point(3, 96);
             this.tabEmpleado.Name = "tabEmpleado";
             this.tabEmpleado.SelectedIndex = 0;
             this.tabEmpleado.Size = new System.Drawing.Size(709, 408);
             this.tabEmpleado.TabIndex = 100;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 79);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(176, 31);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(663, 31);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(247, 31);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(38, 38);
-            this.pictureBox4.TabIndex = 17;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(315, 31);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(33, 38);
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
             // 
             // groupBox1
             // 
@@ -596,6 +559,52 @@
             this.groupBox1.Size = new System.Drawing.Size(718, 92);
             this.groupBox1.TabIndex = 99;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(315, 31);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(33, 38);
+            this.pictureBox5.TabIndex = 18;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(247, 31);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(38, 38);
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(663, 31);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(176, 31);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(5, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(153, 79);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmRRHH
             // 
@@ -620,15 +629,20 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.tabEmpleado.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
+
+       /* private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }*/
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -642,10 +656,8 @@
         private System.Windows.Forms.TabPage tabTipoProducto;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ComboBox txtTipoDocumento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDocumento;
-        private System.Windows.Forms.ComboBox txtGenero;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.DateTimePicker txtFechaIngreso;
         private System.Windows.Forms.Label label25;
@@ -672,12 +684,14 @@
         private System.Windows.Forms.TabControl tabEmpleado;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox txtDepartamento;
+        private System.Windows.Forms.ComboBox cboDepartamento;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox txtGenero;
+        private System.Windows.Forms.ComboBox txtTipoDocumento;
     }
 }

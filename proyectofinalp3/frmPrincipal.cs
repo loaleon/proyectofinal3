@@ -248,7 +248,8 @@ namespace proyectofinalp3
             
         private void toolStripMenuItem17_Click(object sender, EventArgs e)
         {
-            
+            frmVentas miforma = new frmVentas();
+                miforma.Show();
         }
 
         private void toolStripMenuItem15_Click(object sender, EventArgs e)
@@ -296,6 +297,27 @@ namespace proyectofinalp3
         private void tipoProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTipoProducto miforma = new frmTipoProducto();
+            miforma.Show();
+        }
+
+        private void toolStripMenuItem5_Click_2(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void toolStripMenuItem6_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem9_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuario miforma = new frmUsuario();
             miforma.Show();
         }
     }

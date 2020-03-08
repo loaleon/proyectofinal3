@@ -59,5 +59,15 @@ namespace proyectofinalp3.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap viewmag_view_search_find_11032 {
+            get {
+                object obj = ResourceManager.GetObject("viewmag_view_search_find_11032", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -11,7 +11,22 @@ namespace CapaDatos
 {
     public class DEmpleado
     {
+        public DataTable ListarEmpleadoBox()
+        {
 
+            SqlConnection SqlCon = Conexion.CrearInstancia().CrearConexion();
+
+
+            SqlCommand cmd = new SqlCommand("uspSelectDepartamento", SqlCon);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            SqlCon.Close();
+
+            return dt;
+
+        }
         public void InsertarEmpleado(Empleado obj)
         {
 

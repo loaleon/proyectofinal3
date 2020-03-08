@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
 using CapaEntidad;
+using System.Data;
 
 namespace CapaNegocio
 {
@@ -20,7 +21,12 @@ namespace CapaNegocio
         {
             return Datos.ListarEmpleado(buscar);
         }
+        public DataTable SeleccionarDepartamento()
+        {
 
+            return Datos.ListarEmpleadoBox();
+
+        }
         public void ActualizarEmpleadoBD(Empleado obj)
         {
             Datos.ActualizarEmpleado(obj);
