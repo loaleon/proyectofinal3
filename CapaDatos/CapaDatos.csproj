@@ -47,6 +47,7 @@
     <Compile Include="DProducto.cs" />
     <Compile Include="DProveedor.cs" />
     <Compile Include="DTipoProducto.cs" />
+    <Compile Include="DUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

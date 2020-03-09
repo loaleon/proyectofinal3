@@ -29,30 +29,32 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabUsuario = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tablaUsuario = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbContraseña = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
             this.lbCodigo = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabControl1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtEmpleado = new System.Windows.Forms.TextBox();
+            this.tabUsuario.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaUsuario)).BeginInit();
@@ -66,15 +68,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabUsuario
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(14, 99);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(563, 305);
-            this.tabControl1.TabIndex = 0;
+            this.tabUsuario.Controls.Add(this.tabPage1);
+            this.tabUsuario.Controls.Add(this.tabPage2);
+            this.tabUsuario.Location = new System.Drawing.Point(14, 99);
+            this.tabUsuario.Name = "tabUsuario";
+            this.tabUsuario.SelectedIndex = 0;
+            this.tabUsuario.Size = new System.Drawing.Size(563, 357);
+            this.tabUsuario.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -82,7 +84,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(555, 279);
+            this.tabPage1.Size = new System.Drawing.Size(555, 331);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -116,79 +118,86 @@
             this.tablaUsuario.Size = new System.Drawing.Size(486, 150);
             this.tablaUsuario.TabIndex = 0;
             this.tablaUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.tablaUsuario.DoubleClick += new System.EventHandler(this.tablaUsuario_DoubleClick);
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.btnSalir);
+            this.tabPage2.Controls.Add(this.btnEliminar);
+            this.tabPage2.Controls.Add(this.btnActualizar);
+            this.tabPage2.Controls.Add(this.btnGrabar);
+            this.tabPage2.Controls.Add(this.btnNuevo);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(555, 279);
+            this.tabPage2.Size = new System.Drawing.Size(555, 331);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnSalir
             // 
-            this.button5.Location = new System.Drawing.Point(454, 237);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Salir";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnSalir.Location = new System.Drawing.Point(454, 276);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // button4
+            // btnEliminar
             // 
-            this.button4.Location = new System.Drawing.Point(347, 237);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(347, 276);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // button3
+            // btnActualizar
             // 
-            this.button3.Location = new System.Drawing.Point(240, 237);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Actualizar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnActualizar.Location = new System.Drawing.Point(240, 276);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 3;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // button2
+            // btnGrabar
             // 
-            this.button2.Location = new System.Drawing.Point(132, 237);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Grabar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnGrabar.Location = new System.Drawing.Point(132, 276);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
+            this.btnGrabar.TabIndex = 2;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
-            // button1
+            // btnNuevo
             // 
-            this.button1.Location = new System.Drawing.Point(27, 237);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNuevo.Location = new System.Drawing.Point(27, 276);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 1;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtEmpleado);
             this.groupBox2.Controls.Add(this.lbContraseña);
             this.groupBox2.Controls.Add(this.lbNombre);
             this.groupBox2.Controls.Add(this.lbCodigo);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtContrasena);
+            this.groupBox2.Controls.Add(this.txtNombre);
+            this.groupBox2.Controls.Add(this.txtCodigo);
             this.groupBox2.Location = new System.Drawing.Point(27, 15);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(502, 197);
+            this.groupBox2.Size = new System.Drawing.Size(502, 239);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -205,7 +214,7 @@
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(35, 92);
+            this.lbNombre.Location = new System.Drawing.Point(35, 95);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.Size = new System.Drawing.Size(47, 13);
             this.lbNombre.TabIndex = 4;
@@ -220,27 +229,27 @@
             this.lbCodigo.TabIndex = 3;
             this.lbCodigo.Text = "Codigo:";
             // 
-            // textBox3
+            // txtContrasena
             // 
-            this.textBox3.Location = new System.Drawing.Point(130, 146);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(229, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtContrasena.Location = new System.Drawing.Point(130, 146);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(229, 20);
+            this.txtContrasena.TabIndex = 2;
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(130, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(229, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtNombre.Location = new System.Drawing.Point(130, 91);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(229, 20);
+            this.txtNombre.TabIndex = 1;
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(130, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtCodigo.Location = new System.Drawing.Point(130, 39);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -301,17 +310,34 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 200);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Contraseña:";
+            // 
+            // txtEmpleado
+            // 
+            this.txtEmpleado.Location = new System.Drawing.Point(130, 194);
+            this.txtEmpleado.Name = "txtEmpleado";
+            this.txtEmpleado.Size = new System.Drawing.Size(229, 20);
+            this.txtEmpleado.TabIndex = 6;
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 429);
+            this.ClientSize = new System.Drawing.Size(589, 468);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabUsuario);
             this.Name = "frmUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario";
-            this.tabControl1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.frmUsuario_Load);
+            this.tabUsuario.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablaUsuario)).EndInit();
@@ -330,7 +356,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabUsuario;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -339,19 +365,21 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lbContraseña;
         private System.Windows.Forms.Label lbNombre;
         private System.Windows.Forms.Label lbCodigo;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView tablaUsuario;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtEmpleado;
     }
 }
