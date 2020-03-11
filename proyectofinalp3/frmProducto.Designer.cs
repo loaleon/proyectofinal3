@@ -60,7 +60,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gruProducto = new System.Windows.Forms.TabPage();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tablaProducto = new System.Windows.Forms.DataGridView();
@@ -358,7 +358,7 @@
             // gruProducto
             // 
             this.gruProducto.Controls.Add(this.btnSeleccionar);
-            this.gruProducto.Controls.Add(this.textBox2);
+            this.gruProducto.Controls.Add(this.txtBuscar);
             this.gruProducto.Controls.Add(this.label13);
             this.gruProducto.Controls.Add(this.label1);
             this.gruProducto.Controls.Add(this.tablaProducto);
@@ -380,13 +380,14 @@
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // textBox2
+            // txtBuscar
             // 
-            this.textBox2.Location = new System.Drawing.Point(101, 43);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 32);
-            this.textBox2.TabIndex = 90;
+            this.txtBuscar.Location = new System.Drawing.Point(101, 43);
+            this.txtBuscar.Multiline = true;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(209, 32);
+            this.txtBuscar.TabIndex = 90;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label13
             // 
@@ -775,7 +776,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TabPage gruProducto;
         private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView tablaProducto;

@@ -54,6 +54,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmpleado = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.tabUsuario.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -80,19 +82,21 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txtBuscar);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(555, 331);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Lista Usuario";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.tablaUsuario);
-            this.groupBox3.Location = new System.Drawing.Point(6, 28);
+            this.groupBox3.Location = new System.Drawing.Point(6, 89);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(526, 203);
             this.groupBox3.TabIndex = 1;
@@ -133,7 +137,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(555, 331);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Crear Usuario";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnSalir
@@ -315,9 +319,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(35, 200);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Contraseña:";
+            this.label1.Text = "Departamento:";
             // 
             // txtEmpleado
             // 
@@ -325,6 +329,25 @@
             this.txtEmpleado.Name = "txtEmpleado";
             this.txtEmpleado.Size = new System.Drawing.Size(229, 20);
             this.txtEmpleado.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(46, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nombre:";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(128, 33);
+            this.txtBuscar.Multiline = true;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(244, 39);
+            this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // frmUsuario
             // 
@@ -339,6 +362,7 @@
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             this.tabUsuario.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablaUsuario)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -381,5 +405,7 @@
         private System.Windows.Forms.DataGridView tablaUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEmpleado;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label label2;
     }
 }
