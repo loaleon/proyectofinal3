@@ -56,7 +56,7 @@ namespace proyectofinalp3
 
         }
 
-        private void btnAgregar_Click(object sendroger, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
           
         }
@@ -108,14 +108,9 @@ namespace proyectofinalp3
                 txtCodigo.Text = tablaUsuario.CurrentRow.Cells[0].Value.ToString();
                 txtNombre.Text = tablaUsuario.CurrentRow.Cells[1].Value.ToString();
                 txtContrasena.Text = tablaUsuario.CurrentRow.Cells[2].Value.ToString();
-                txtEmpleado.Text = tablaUsuario.CurrentRow.Cells[3].Value.ToString();
-                tabUsuario.SelectedIndex = 1;
+                txtContrasena.Text = tablaUsuario.CurrentRow.Cells[3].Value.ToString();
+                tabUsuario.SelectedIndex = 0;
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            MostrarBuscarBD(txtBuscar.Text);
         }
     }
 }

@@ -231,11 +231,6 @@ namespace proyectofinalp3
         {
             LimpiarCampos();
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            MostrarBuscarBD(txtBuscar.Text);
-        }
     }
     
 }
