@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="DCliente.cs" />
+    <Compile Include="DDetalleVenta.cs" />
     <Compile Include="DEmpleado.cs" />
     <Compile Include="DProducto.cs" />
     <Compile Include="DProveedor.cs" />

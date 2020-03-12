@@ -111,20 +111,29 @@ namespace proyectofinalp3
         }
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
-            objEntidad.nombreProd = txtNombreProd.Text.ToUpper();
-            objEntidad.idTipoProd = Convert.ToInt32(((System.Data.DataRowView)cboTipoProducto.SelectedItem).Row[0]);
-            objEntidad.idProveedor = Convert.ToInt32(((System.Data.DataRowView)cboProveedor.SelectedItem).Row[0]);
-            objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
-            objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
-            objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
-            objEntidad.prodMin = Convert.ToInt32(txtStockMin.Text);
-            objEntidad.fechaIngreso = Convert.ToDateTime(txtFecha.Text);
+            try
+            {
+                objEntidad.nombreProd = txtNombreProd.Text.ToUpper();
+                objEntidad.idTipoProd = Convert.ToInt32(((System.Data.DataRowView)cboTipoProducto.SelectedItem).Row[0]);
+                objEntidad.idProveedor = Convert.ToInt32(((System.Data.DataRowView)cboProveedor.SelectedItem).Row[0]);
+                objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
+                objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
+                objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
+                objEntidad.prodMin = Convert.ToInt32(txtStockMin.Text);
+                objEntidad.fechaIngreso = Convert.ToDateTime(txtFecha.Text);
 
-            objNegocio.InsertandoProductoBD(objEntidad);
+                objNegocio.InsertandoProductoBD(objEntidad);
 
-            MessageBox.Show("Registro ingresado correctamente");
-            MostrarBuscarBD("");
-            LimpiarCampos();
+                MessageBox.Show("Registro ingresado correctamente");
+                MostrarBuscarBD("");
+                LimpiarCampos();
+            }
+          
+
+            catch 
+            {
+                MessageBox.Show("Los campos no pueden estar en blanco");
+            }
         }
         public void MostrarBuscarBD(string buscar)
         {
