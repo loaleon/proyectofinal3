@@ -88,14 +88,32 @@ namespace proyectofinalp3
         private void frmProducto_Load(object sender, EventArgs e)
         {
             MostrarBuscarBD("");
+            CargarBox();
+            CargarProveedorBox();
         }
+        public void CargarBox()
+        {
 
+           
+            cboTipoProducto.ValueMember = "idTipoProd";
+            cboTipoProducto.DisplayMember = "nombre";
+            cboTipoProducto.DataSource = objNegocio.Seleccionar();
+            
+
+        }
+        public void CargarProveedorBox()
+        {
+            
+            cboProveedor.ValueMember = "idProveedor";
+            cboProveedor.DisplayMember = "nombre";
+            cboProveedor.DataSource = objNegocio.SeleccionarProveedorBox();
+
+        }
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             objEntidad.nombreProd = txtNombreProd.Text.ToUpper();
-            objEntidad.idTipoProd = Convert.ToInt32(txtTipoProducto.Text);
-            objEntidad.descripcion = txtDescripcion.Text.ToUpper();
-            objEntidad.idProveedor = Convert.ToInt32(txtProveedor.Text.ToUpper());
+            objEntidad.idTipoProd = Convert.ToInt32(((System.Data.DataRowView)cboTipoProducto.SelectedItem).Row[0]);
+            objEntidad.idProveedor = Convert.ToInt32(((System.Data.DataRowView)cboProveedor.SelectedItem).Row[0]);
             objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
             objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
             objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
@@ -112,13 +130,16 @@ namespace proyectofinalp3
         {
             tablaProducto.DataSource = objNegocio.BuscarProductoBD(buscar);
         }
+       /* public void CargarTipoProductoCombobox(string buscar)
+        {
+            cboTipoProducto.DataSource = objNegocio.CargarListaComboBox(buscar);
+        }*/
         public void LimpiarCampos()
         {
             txtCodigo.Text = "";
             txtNombreProd.Text = "";
-            txtTipoProducto.Text = "";
-            txtDescripcion.Text = "";
-            txtProveedor.Text = "";
+            cboTipoProducto.Text = "";
+            cboProveedor.Text = "";
             txtPrecioCompra.Text = "";
             txtPrecioVenta.Text = "";
             txtStockMax.Text = "";
@@ -137,9 +158,8 @@ namespace proyectofinalp3
             {
                 objEntidad.idProducto = Convert.ToInt32(txtCodigo.Text);
                 objEntidad.nombreProd = txtNombreProd.Text.ToUpper();
-                objEntidad.idTipoProd = Convert.ToInt32(txtTipoProducto.Text);
-                objEntidad.descripcion = txtDescripcion.Text.ToUpper();
-                objEntidad.idProveedor = Convert.ToInt32(txtProveedor.Text.ToUpper());
+                objEntidad.idTipoProd = Convert.ToInt32(((System.Data.DataRowView)cboTipoProducto.SelectedItem).Row[0]);
+                objEntidad.idProveedor = Convert.ToInt32(((System.Data.DataRowView)cboProveedor.SelectedItem).Row[0]);
                 objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
                 objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
                 objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
@@ -164,9 +184,8 @@ namespace proyectofinalp3
         {
             objEntidad.idProducto = Convert.ToInt32(txtCodigo.Text);
             objEntidad.nombreProd = txtNombreProd.Text;
-            objEntidad.idTipoProd = Convert.ToInt32(txtTipoProducto.Text);
-            objEntidad.descripcion = txtDescripcion.Text;
-            objEntidad.idProveedor = Convert.ToInt32(txtProveedor.Text);
+            objEntidad.idTipoProd = Convert.ToInt32(cboTipoProducto.Text);
+            objEntidad.idProveedor = Convert.ToInt32(cboProveedor.Text);
             objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
             objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
             objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
@@ -186,18 +205,27 @@ namespace proyectofinalp3
             {
                 txtCodigo.Text = tablaProducto.CurrentRow.Cells[0].Value.ToString();
                 txtNombreProd.Text = tablaProducto.CurrentRow.Cells[1].Value.ToString();
-                txtTipoProducto.Text = tablaProducto.CurrentRow.Cells[2].Value.ToString();
-                txtDescripcion.Text = tablaProducto.CurrentRow.Cells[3].Value.ToString();
-                txtProveedor.Text = tablaProducto.CurrentRow.Cells[4].Value.ToString();
-                txtPrecioCompra.Text = tablaProducto.CurrentRow.Cells[5].Value.ToString();
-                txtPrecioVenta.Text = tablaProducto.CurrentRow.Cells[6].Value.ToString();
-                txtStockMax.Text = tablaProducto.CurrentRow.Cells[7].Value.ToString();
-                txtStockMin.Text = tablaProducto.CurrentRow.Cells[8].Value.ToString();
-                txtFecha.Text = tablaProducto.CurrentRow.Cells[9].Value.ToString();
+                cboTipoProducto.Text = tablaProducto.CurrentRow.Cells[2].Value.ToString();
+                cboProveedor.Text = tablaProducto.CurrentRow.Cells[3].Value.ToString();
+                txtPrecioCompra.Text = tablaProducto.CurrentRow.Cells[4].Value.ToString();
+                txtPrecioVenta.Text = tablaProducto.CurrentRow.Cells[5].Value.ToString();
+                txtStockMax.Text = tablaProducto.CurrentRow.Cells[6].Value.ToString();
+                txtStockMin.Text = tablaProducto.CurrentRow.Cells[7].Value.ToString();
+                txtFecha.Text = tablaProducto.CurrentRow.Cells[8].Value.ToString();
 
                 MessageBox.Show("Registro seleccionado");
                 tabProducto.SelectedIndex = 0;
             }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            MostrarBuscarBD(txtBuscar.Text);
         }
     }
     

@@ -147,7 +147,7 @@ namespace proyectofinalp3
                 txtFecha.Text = tablaProveedor.CurrentRow.Cells[8].Value.ToString();
 
                 MessageBox.Show("Registro seleccionado");
-                tabProveedor.SelectedIndex = 0;
+                tabProveedor.SelectedIndex = 1;
             }
             else
             {
@@ -159,6 +159,11 @@ namespace proyectofinalp3
         private void tablaProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LipiarCampos();
         }
     }
 }

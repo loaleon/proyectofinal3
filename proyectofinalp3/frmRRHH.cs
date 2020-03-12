@@ -57,7 +57,7 @@ namespace proyectofinalp3
                 txtGenero.Text = tablaEmpleado.CurrentRow.Cells[6].Value.ToString();
                 txttelempleado.Text = tablaEmpleado.CurrentRow.Cells[7].Value.ToString(); ;
                 txtemailempleado.Text = tablaEmpleado.CurrentRow.Cells[8].Value.ToString();
-                txtDepartamento.Text = tablaEmpleado.CurrentRow.Cells[9].Value.ToString();
+                cboDepartamento.Text = tablaEmpleado.CurrentRow.Cells[9].Value.ToString();
                 txtFechaIngreso.Text = tablaEmpleado.CurrentRow.Cells[10].Value.ToString();
                 txtfechaNacimiento.Text = tablaEmpleado.CurrentRow.Cells[11].Value.ToString();
 
@@ -84,6 +84,7 @@ namespace proyectofinalp3
         private void frmRRHH_Load(object sender, EventArgs e)
         {
             MostrarBuscarBD("");
+            CargareEmpleadoBox();
             tablaEmpleado.ClearSelection();
         }
         public void MostrarBuscarBD(string buscar)
@@ -92,8 +93,16 @@ namespace proyectofinalp3
             tablaEmpleado.DataSource = objNegocio.BuscarEmpleadoBD(buscar);
 
         }
+        public void CargareEmpleadoBox()
+        {
+            
+            cboDepartamento.ValueMember = "idDepartamento";
+            cboDepartamento.DisplayMember = "nombre";
+            cboDepartamento.DataSource = objNegocio.SeleccionarDepartamento();
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        }
+
+            private void btnAgregar_Click(object sender, EventArgs e)
         {
             objEntidad.nombre = txtNombre.Text;
             objEntidad.apellido = txtapeempleado.Text;
@@ -103,7 +112,7 @@ namespace proyectofinalp3
             objEntidad.sexo = txtGenero.Text;
             objEntidad.telefono = txttelempleado.Text;
             objEntidad.correo = txtemailempleado.Text;
-             objEntidad.idDepartamento = Convert.ToInt32(txtDepartamento.Text);
+            objEntidad.idDepartamento = Convert.ToInt32(((System.Data.DataRowView)cboDepartamento.SelectedItem).Row[0]);
             objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
             objEntidad.fechaNacimiento = Convert.ToDateTime(txtfechaNacimiento.Text);
 
@@ -132,7 +141,7 @@ namespace proyectofinalp3
             txtGenero.Text = "";
             txttelempleado.Text = "";
             txtemailempleado.Text = "";
-            txtDepartamento.Text = "";
+            cboDepartamento.Text = "";
             txtFechaIngreso.Text = "";
             txtfechaNacimiento.Text = "";
 
@@ -151,7 +160,7 @@ namespace proyectofinalp3
             objEntidad.sexo = txtGenero.Text;
             objEntidad.telefono = txttelempleado.Text;
             objEntidad.correo = txtemailempleado.Text;
-            objEntidad.idDepartamento = Convert.ToInt32(txtDepartamento.Text);
+            objEntidad.idDepartamento = Convert.ToInt32(((System.Data.DataRowView)cboDepartamento.SelectedItem).Row[0]);
             objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
             objEntidad.fechaNacimiento = Convert.ToDateTime(txtfechaNacimiento.Text);
 
@@ -173,7 +182,7 @@ namespace proyectofinalp3
             objEntidad.sexo = txtGenero.Text;
             objEntidad.telefono = txttelempleado.Text;
             objEntidad.correo = txtemailempleado.Text;
-            objEntidad.idDepartamento = Convert.ToInt32(txtDepartamento.Text);
+            objEntidad.idDepartamento = Convert.ToInt32(cboDepartamento.Text);
             objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
             objEntidad.fechaNacimiento = Convert.ToDateTime(txtfechaNacimiento.Text);
 

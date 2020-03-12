@@ -44,6 +44,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tabCliente = new System.Windows.Forms.TabControl();
             this.tabcrearmodificar = new System.Windows.Forms.TabPage();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -255,6 +255,17 @@
             this.tabcrearmodificar.Text = "Nuevo Cliente";
             this.tabcrearmodificar.UseVisualStyleBackColor = true;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiar.Location = new System.Drawing.Point(427, 267);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(94, 36);
+            this.btnLimpiar.TabIndex = 122;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // btnEliminar
             // 
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -335,8 +346,9 @@
             "RNC"});
             this.txtTipoDocumento.Location = new System.Drawing.Point(493, 35);
             this.txtTipoDocumento.Name = "txtTipoDocumento";
-            this.txtTipoDocumento.Size = new System.Drawing.Size(98, 28);
+            this.txtTipoDocumento.Size = new System.Drawing.Size(157, 28);
             this.txtTipoDocumento.TabIndex = 131;
+            this.txtTipoDocumento.Text = "Tipo Documento";
             // 
             // label3
             // 
@@ -385,6 +397,7 @@
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(98, 28);
             this.txtSexo.TabIndex = 128;
+            this.txtSexo.Text = "Sexo";
             // 
             // label26
             // 
@@ -509,17 +522,6 @@
             this.txtApellido.Size = new System.Drawing.Size(213, 26);
             this.txtApellido.TabIndex = 105;
             // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(427, 267);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(94, 36);
-            this.btnLimpiar.TabIndex = 122;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -530,7 +532,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cliente";
+            this.Text = "  ";
             this.Load += new System.EventHandler(this.frmClientes_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

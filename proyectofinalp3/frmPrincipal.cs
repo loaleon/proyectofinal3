@@ -16,19 +16,19 @@ namespace proyectofinalp3
         {
             InitializeComponent();
         }
-        
+
         private void btncerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         private void btnpresupuestos_Click(object sender, EventArgs e)
-        { 
+        {
         }
         private void btnalmacen_Click(object sender, EventArgs e)
         {
         }
         private void btnvvendedor_Click(object sender, EventArgs e)
-        {            
+        {
         }
         private void btnclientes_Click(object sender, EventArgs e)
         {
@@ -49,7 +49,7 @@ namespace proyectofinalp3
 
         private void crearPresupuestoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void presupuestosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem14_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
@@ -147,7 +147,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem7_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
@@ -158,7 +158,7 @@ namespace proyectofinalp3
 
         private void verCluentesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void verPresupuestosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -185,7 +185,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
@@ -205,9 +205,9 @@ namespace proyectofinalp3
             frmGestionDeVendedores miforma = new frmGestionDeVendedores();
 
             miforma.tabpresupuesto.TabPages[2].Show();
-            
+
             miforma.Show();
-            
+
         }
 
         private void toolStripMenuItem24_Click(object sender, EventArgs e)
@@ -218,12 +218,12 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem18_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void toolStripMenuItem3_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void toolStripMenuItem19_Click(object sender, EventArgs e)
@@ -237,7 +237,7 @@ namespace proyectofinalp3
             frmDespacho miforma = new frmDespacho();
             miforma.Show();
 
-            
+
         }
 
         private void toolStripMenuItem6_Click_1(object sender, EventArgs e)
@@ -245,15 +245,16 @@ namespace proyectofinalp3
             frmProducto miforma = new frmProducto();
             miforma.Show();
         }
-            
+
         private void toolStripMenuItem17_Click(object sender, EventArgs e)
         {
-            
+            frmVentas miforma = new frmVentas();
+            miforma.Show();
         }
 
         private void toolStripMenuItem15_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -268,13 +269,13 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem10_Click_2(object sender, EventArgs e)
         {
-           // frmFormularios miforma = new Formularios();
+            // frmFormularios miforma = new Formularios();
             //miforma.Show();
         }
 
         private void toolStripMenuItem9_Click_1(object sender, EventArgs e)
         {
-          
+
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -296,6 +297,32 @@ namespace proyectofinalp3
         private void tipoProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTipoProducto miforma = new frmTipoProducto();
+            miforma.Show();
+        }
+
+        private void toolStripMenuItem5_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem6_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem9_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accesoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuario miforma = new frmUsuario();
             miforma.Show();
         }
     }
