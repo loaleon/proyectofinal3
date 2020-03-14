@@ -31,15 +31,23 @@ namespace proyectofinalp3
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            objEntidad.usuario = txtNombre.Text;
-            objEntidad.contrasena = txtContrasena.Text;
-            objEntidad.idEmpleado = Convert.ToInt32(txtEmpleado.Text);
+            try
+            {
+                objEntidad.usuario = txtNombre.Text;
+                objEntidad.contrasena = txtContrasena.Text;
+                objEntidad.idEmpleado = Convert.ToInt32(txtEmpleado.Text);
 
-            objNegocio.InsertandoUsuarioBD(objEntidad);
-            MessageBox.Show("Usuario registrado correctamente");
+                objNegocio.InsertandoUsuarioBD(objEntidad);
+                MessageBox.Show("Usuario registrado correctamente");
+
+                MostrarBuscarBD("");
+                LimpiarCampos();
+            }
             
-            MostrarBuscarBD("");
-            LimpiarCampos();
+            catch 
+            {
+                MessageBox.Show("Los campos no pueden estar en blanco", MessageBoxIcon.Error.ToString());
+            }
 
         }
 
@@ -63,16 +71,25 @@ namespace proyectofinalp3
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            objEntidad.idUsuario = Convert.ToInt32(txtCodigo.Text);
-            objEntidad.usuario = txtNombre.Text;
-            objEntidad.contrasena = txtContrasena.Text;
-            objEntidad.idEmpleado = Convert.ToInt32(txtEmpleado.Text);
+            try
+            {
+                objEntidad.idUsuario = Convert.ToInt32(txtCodigo.Text);
+                objEntidad.usuario = txtNombre.Text;
+                objEntidad.contrasena = txtContrasena.Text;
+                objEntidad.idEmpleado = Convert.ToInt32(txtEmpleado.Text);
 
-            objNegocio.ActualizarUsuarioBD(objEntidad);
-            MessageBox.Show("Usuario actualizado correctamente");
+                objNegocio.ActualizarUsuarioBD(objEntidad);
+                MessageBox.Show("Usuario actualizado correctamente");
 
-            MostrarBuscarBD("");
-            LimpiarCampos();
+                MostrarBuscarBD("");
+                LimpiarCampos();
+            }
+
+            catch
+            {
+                MessageBox.Show("Usuario no exixte",  MessageBoxIcon.Error.ToString()) ; 
+            }
+           
         }
 
         public void LimpiarCampos()
@@ -85,15 +102,23 @@ namespace proyectofinalp3
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            objEntidad.usuario = txtNombre.Text;
-            objEntidad.contrasena = txtContrasena.Text;
-            objEntidad.idEmpleado = Convert.ToInt32(txtEmpleado.Text);
+            try
+            {
+                objEntidad.usuario = txtNombre.Text;
+                objEntidad.contrasena = txtContrasena.Text;
+                objEntidad.idEmpleado = Convert.ToInt32(txtEmpleado.Text);
 
-            objNegocio.EliminandoUsuarioBD(objEntidad);
-            MessageBox.Show("Usuario elimiando correctamente");
+                objNegocio.EliminandoUsuarioBD(objEntidad);
+                MessageBox.Show("Esta seguro de eliminar el usuario", MessageBoxButtons.YesNo.ToString());
 
-            MostrarBuscarBD("");
-            LimpiarCampos();
+                MostrarBuscarBD("");
+                LimpiarCampos();
+            }
+
+            catch
+            {
+                MessageBox.Show("Usuario no existe");
+            }            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -108,9 +133,14 @@ namespace proyectofinalp3
                 txtCodigo.Text = tablaUsuario.CurrentRow.Cells[0].Value.ToString();
                 txtNombre.Text = tablaUsuario.CurrentRow.Cells[1].Value.ToString();
                 txtContrasena.Text = tablaUsuario.CurrentRow.Cells[2].Value.ToString();
-                txtContrasena.Text = tablaUsuario.CurrentRow.Cells[3].Value.ToString();
-                tabUsuario.SelectedIndex = 0;
+                txtEmpleado.Text = tablaUsuario.CurrentRow.Cells[3].Value.ToString();
+                tabUsuario.SelectedIndex = 1;
             }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

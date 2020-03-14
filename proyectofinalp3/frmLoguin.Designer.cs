@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoguin));
-            this.btnentrar = new System.Windows.Forms.Button();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtusuario = new System.Windows.Forms.TextBox();
@@ -37,20 +37,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnentrar
+            // btnEntrar
             // 
-            this.btnentrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnentrar.Image = ((System.Drawing.Image)(resources.GetObject("btnentrar.Image")));
-            this.btnentrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnentrar.Location = new System.Drawing.Point(59, 172);
-            this.btnentrar.Name = "btnentrar";
-            this.btnentrar.Size = new System.Drawing.Size(95, 34);
-            this.btnentrar.TabIndex = 2;
-            this.btnentrar.Text = "Entrar";
-            this.btnentrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnentrar.UseVisualStyleBackColor = true;
-            this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click);
+            this.btnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Image")));
+            this.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntrar.Location = new System.Drawing.Point(59, 172);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(95, 34);
+            this.btnEntrar.TabIndex = 2;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btncancelar
             // 
@@ -94,20 +94,20 @@
             this.txtclave.Size = new System.Drawing.Size(150, 19);
             this.txtclave.TabIndex = 1;
             // 
-            // Loguin
+            // frmLoguin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(444, 235);
-            this.Controls.Add(this.btnentrar);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtclave);
             this.Controls.Add(this.txtusuario);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Loguin";
+            this.Name = "frmLoguin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loguin";
             this.Load += new System.EventHandler(this.Loguin_Load);
@@ -119,7 +119,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnentrar;
+        private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtusuario;

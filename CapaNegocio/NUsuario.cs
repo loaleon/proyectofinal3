@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
 using CapaEntidad;
+using System.Data;
 
 namespace CapaNegocio
 {
@@ -19,6 +20,12 @@ namespace CapaNegocio
         public List<EUsuario> BuscarUsuarioBD(string buscar)
         {
             return Datos.ListarUsuario (buscar);
+        }
+
+        public static DataTable Login(string usuario, string contrasena)
+        {
+            DUsuario Datos = new DUsuario();
+            return Datos.ListarUsuarioLogin(usuario, contrasena);
         }
 
         public void ActualizarUsuarioBD(EUsuario obj)

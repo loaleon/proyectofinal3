@@ -12,6 +12,13 @@ namespace proyectofinalp3
 {
     public partial class frmPrincipal : Form
     {
+        //private int childFormNumber = 0;
+        public int idUsuario;
+        public int idEmpleado;
+        public int idDepartamento;
+        public string usuario;
+        public string nombre;
+
         public frmPrincipal()
         {
             InitializeComponent();
@@ -264,6 +271,7 @@ namespace proyectofinalp3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           MessageBox.Show("Bienvenido: " + this.usuario, "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -316,6 +324,12 @@ namespace proyectofinalp3
         }
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuario miforma = new frmUsuario();
+            miforma.Show();
+        }
+
+        private void usuarioToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmUsuario miforma = new frmUsuario();
             miforma.Show();

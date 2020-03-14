@@ -34,34 +34,30 @@ namespace CapaDatos
         }
         public List<EDetalleVenta> ListarDetalleVenta(string buscar)
         {
-            SqlDataReader Mostrar;
+          SqlDataReader Mostrar;
             SqlConnection SqlCon = new SqlConnection();
             SqlCon = Conexion.CrearInstancia().CrearConexion();
-            SqlCommand cmd = new SqlCommand("uspSelectCliente", SqlCon);
+            SqlCommand cmd = new SqlCommand("uspSelectDetalleVenta", SqlCon);
 
             cmd.CommandType = CommandType.StoredProcedure;
 
             SqlCon.Open();
-            cmd.Parameters.AddWithValue("@buscar", buscar);
-            Mostrar = cmd.ExecuteReader();
+           // cmd.Parameters.AddWithValue("@buscar", buscar);
+             Mostrar = cmd.ExecuteReader();
 
-            List<ECliente> Listar = new List<ECliente>();
+            List<EDetalleVenta> Listar = new List<EDetalleVenta>();
 
             while (Mostrar.Read())
             {
-                Listar.Add(new ECliente
+                Listar.Add(new EDetalleVenta
                 {
 
-                    idCliente = Mostrar.GetInt32(0),
-                    nombre = Mostrar.GetString(1),
-                    apellido = Mostrar.GetString(2),
-                    tipoDocumento = Mostrar.GetString(3),
-                    documento = Mostrar.GetString(4),
-                    direccion = Mostrar.GetString(5),
-                    telefono = Mostrar.GetString(6),
-                    correo = Mostrar.GetString(7),
-                    sexo = Mostrar.GetString(8),
-                    fechaIngreso = Mostrar.GetDateTime(9)
+                    idDetalleVenta = Mostrar.GetInt32(0),
+                    idProducto = Mostrar.GetInt32(1),
+                    idVenta = Mostrar.GetInt32(2),
+                    cantidad = Mostrar.GetDecimal(3),
+                    precio = Mostrar.GetDecimal(4)
+                   
                 });
             }
             SqlCon.Close();
@@ -70,6 +66,6 @@ namespace CapaDatos
             return Listar;
         }
 
-
+        ///Estamos trabajando con la capa de datos
     }
 }
