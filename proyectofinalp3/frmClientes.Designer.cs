@@ -39,7 +39,6 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.tablaCliente = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
             this.tabCliente = new System.Windows.Forms.TabControl();
@@ -180,23 +179,12 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.btnSeleccionar);
             this.groupBox9.Controls.Add(this.tablaCliente);
             this.groupBox9.Location = new System.Drawing.Point(19, 90);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(706, 227);
             this.groupBox9.TabIndex = 101;
             this.groupBox9.TabStop = false;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(624, 189);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(75, 30);
-            this.btnSeleccionar.TabIndex = 1;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // tablaCliente
             // 
@@ -216,6 +204,7 @@
             this.tablaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaCliente.Size = new System.Drawing.Size(694, 162);
             this.tablaCliente.TabIndex = 0;
+            this.tablaCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaCliente_CellDoubleClick);
             // 
             // label14
             // 
@@ -258,18 +247,18 @@
             // btnLimpiar
             // 
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(427, 267);
+            this.btnLimpiar.Location = new System.Drawing.Point(94, 267);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(94, 36);
             this.btnLimpiar.TabIndex = 122;
-            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.Text = "Nuevo";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(311, 267);
+            this.btnEliminar.Location = new System.Drawing.Point(453, 267);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(94, 36);
             this.btnEliminar.TabIndex = 121;
@@ -279,7 +268,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(68, 267);
+            this.btnAgregar.Location = new System.Drawing.Point(210, 267);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(94, 36);
             this.btnAgregar.TabIndex = 118;
@@ -289,7 +278,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(189, 267);
+            this.btnModificar.Location = new System.Drawing.Point(331, 267);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(94, 36);
             this.btnModificar.TabIndex = 119;
@@ -306,6 +295,7 @@
             this.btnSalir.TabIndex = 120;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // groupBox7
             // 
@@ -592,7 +582,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button btnLimpiar;
     }
 }

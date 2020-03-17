@@ -23,13 +23,15 @@ namespace CapaNegocio
         {
             return Datos.ListarProducto(buscar);
         }
-
+      
         public DataTable Seleccionar()
         {
 
             return Datos.Listar();
             
         }
+
+       
 
         public DataTable SeleccionarProveedorBox()
         {
@@ -38,13 +40,11 @@ namespace CapaNegocio
 
         }
 
-        /*public List<EProducto> CargarListaComboBox(string buscar)
+        public List<EProducto> CargarListaComboBox(string buscar)
         {
             return Datos.ListarProducto(buscar);
 
-            
-        }*/
-
+        }
 
         public void ActualizarProductoBD(EProducto obj)
         {

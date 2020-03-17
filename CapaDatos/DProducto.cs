@@ -29,6 +29,8 @@ namespace CapaDatos
 
         }
 
+        
+
         public DataTable ListarProveedorBox()
         {
 
@@ -108,13 +110,13 @@ namespace CapaDatos
 
              return Listar;
          }
-
-       /*public List<EProducto> ListarProductoComboBox(string buscar)
+        
+        public List<EProducto> ListarProductoBuscar(string buscar)
         {
             SqlDataReader Mostrar;
             SqlConnection SqlCon = new SqlConnection();
             SqlCon = Conexion.CrearInstancia().CrearConexion();
-            SqlCommand cmd = new SqlCommand("uspSelecttipoProdComboBox", SqlCon);
+            SqlCommand cmd = new SqlCommand("uspBuscarProducto", SqlCon);
 
             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -129,11 +131,15 @@ namespace CapaDatos
                 Listar.Add(new EProducto
                 {
 
-                    idTipoProd = Mostrar.GetInt32(0),
-                    //nombreProd = Mostrar.GetString(1),
-                    //idTipoProd = Mostrar.GetInt32(2),
-                    //idProveedor = Mostrar.GetInt32(3),
-                   
+                    idProducto = Mostrar.GetInt32(0),
+                    nombreProd = Mostrar.GetString(1),
+                    idTipoProd = Mostrar.GetInt32(2),
+                    precioCompra = Mostrar.GetDecimal(3),
+                    precioVenta = Mostrar.GetDecimal(4),
+                    prodMax = Mostrar.GetInt32(5),
+                  
+                    
+
 
 
                 });
@@ -142,10 +148,11 @@ namespace CapaDatos
             Mostrar.Close();
 
             return Listar;
-        }*/
+        }
 
-         
-        
+ 
+
+
         public void ActualizarProducto(EProducto obj)
         {
 

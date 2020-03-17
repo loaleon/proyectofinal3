@@ -193,6 +193,7 @@
             this.tablaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaCliente.Size = new System.Drawing.Size(694, 162);
             this.tablaCliente.TabIndex = 0;
+            this.tablaCliente.DoubleClick += new System.EventHandler(this.tablaCliente_DoubleClick);
             // 
             // label14
             // 
@@ -213,6 +214,7 @@
             this.Controls.Add(this.tabCliente);
             this.Controls.Add(this.groupBox3);
             this.Name = "frmBuscarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Clientes";
             this.Load += new System.EventHandler(this.frmBuscarCliente_Load);
             this.groupBox3.ResumeLayout(false);

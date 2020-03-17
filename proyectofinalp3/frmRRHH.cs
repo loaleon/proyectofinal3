@@ -151,45 +151,64 @@ namespace proyectofinalp3
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            objEntidad.idEmpleado = Convert.ToInt32(txtCodEmpleado.Text);
-            objEntidad.nombre = txtNombre.Text;
-            objEntidad.apellido = txtapeempleado.Text;
-            objEntidad.tipoDocumento = txtTipoDocumento.Text;
-            objEntidad.documento = txtDocumento.Text;
-            objEntidad.direccion = txtdirecempleado.Text;
-            objEntidad.sexo = txtGenero.Text;
-            objEntidad.telefono = txttelempleado.Text;
-            objEntidad.correo = txtemailempleado.Text;
-            objEntidad.idDepartamento = Convert.ToInt32(((System.Data.DataRowView)cboDepartamento.SelectedItem).Row[0]);
-            objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
-            objEntidad.fechaNacimiento = Convert.ToDateTime(txtfechaNacimiento.Text);
+            try
+            {
+                objEntidad.idEmpleado = Convert.ToInt32(txtCodEmpleado.Text);
+                objEntidad.nombre = txtNombre.Text;
+                objEntidad.apellido = txtapeempleado.Text;
+                objEntidad.tipoDocumento = txtTipoDocumento.Text;
+                objEntidad.documento = txtDocumento.Text;
+                objEntidad.direccion = txtdirecempleado.Text;
+                objEntidad.sexo = txtGenero.Text;
+                objEntidad.telefono = txttelempleado.Text;
+                objEntidad.correo = txtemailempleado.Text;
+                objEntidad.idDepartamento = Convert.ToInt32(((System.Data.DataRowView)cboDepartamento.SelectedItem).Row[0]);
+                objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
+                objEntidad.fechaNacimiento = Convert.ToDateTime(txtfechaNacimiento.Text);
 
-            objNegocio.ActualizarEmpleadoBD(objEntidad);
-            MessageBox.Show("Emplea actualizado correctamente");
-            MostrarBuscarBD("");
-            LimpiarCampos();
+                objNegocio.ActualizarEmpleadoBD(objEntidad);
+                MessageBox.Show("Empleado actualizado correctamente");
+                MostrarBuscarBD("");
+                LimpiarCampos();
+            }
+
+            catch
+            {
+                MessageBox.Show("Empleado no existe");
+            }
+           
 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            objEntidad.idEmpleado = Convert.ToInt32(txtCodEmpleado.Text);
-            objEntidad.nombre = txtNombre.Text;
-            objEntidad.apellido = txtapeempleado.Text;
-            objEntidad.tipoDocumento = txtTipoDocumento.Text;
-            objEntidad.documento = txtDocumento.Text;
-            objEntidad.direccion = txtdirecempleado.Text;
-            objEntidad.sexo = txtGenero.Text;
-            objEntidad.telefono = txttelempleado.Text;
-            objEntidad.correo = txtemailempleado.Text;
-            objEntidad.idDepartamento = Convert.ToInt32(cboDepartamento.Text);
-            objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
-            objEntidad.fechaNacimiento = Convert.ToDateTime(txtfechaNacimiento.Text);
+            try
+            {
+                objEntidad.idEmpleado = Convert.ToInt32(txtCodEmpleado.Text);
+                objEntidad.nombre = txtNombre.Text;
+                objEntidad.apellido = txtapeempleado.Text;
+                objEntidad.tipoDocumento = txtTipoDocumento.Text;
+                objEntidad.documento = txtDocumento.Text;
+                objEntidad.direccion = txtdirecempleado.Text;
+                objEntidad.sexo = txtGenero.Text;
+                objEntidad.telefono = txttelempleado.Text;
+                objEntidad.correo = txtemailempleado.Text;
+                objEntidad.idDepartamento = Convert.ToInt32(cboDepartamento.Text);
+                objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
+                objEntidad.fechaNacimiento = Convert.ToDateTime(txtfechaNacimiento.Text);
 
-            objNegocio.EliminandoEmpleadoBD(objEntidad);
-            MessageBox.Show("Emplea eliminado correctamente");
-            MostrarBuscarBD("");
-            LimpiarCampos();
+                objNegocio.EliminandoEmpleadoBD(objEntidad);
+                MessageBox.Show("Empleado eliminado correctamente");
+                MostrarBuscarBD("");
+                LimpiarCampos();
+            }
+
+            catch
+            {
+                MessageBox.Show("Empledo no existe");
+            }
+
+           
         }
 
         private void txtTipoDocumento_SelectedIndexChanged(object sender, EventArgs e)

@@ -23,22 +23,29 @@ namespace proyectofinalp3
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            objEntidad.nombre = txtNombre.Text.ToUpper();
-            objEntidad.razonSocial = txtRazonSocial.Text.ToUpper();
-            objEntidad.direccion = txtDireccion.Text.ToUpper();
-            objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
-            objEntidad.documento = txtDocumento.Text.ToUpper();
-            objEntidad.telefono = txtTelefono.Text.ToUpper();
-            objEntidad.correo = txtCorreo.Text.ToUpper();
-            objEntidad.fecha =  Convert.ToDateTime(txtFecha.Text);
+        {   try
+            {
+                objEntidad.nombre = txtNombre.Text.ToUpper();
+                objEntidad.razonSocial = txtRazonSocial.Text.ToUpper();
+                objEntidad.direccion = txtDireccion.Text.ToUpper();
+                objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
+                objEntidad.documento = txtDocumento.Text.ToUpper();
+                objEntidad.telefono = txtTelefono.Text.ToUpper();
+                objEntidad.correo = txtCorreo.Text.ToUpper();
+                objEntidad.fecha = Convert.ToDateTime(txtFecha.Text);
 
-            objNegocio.InsertandoProveedorBD(objEntidad);
+                objNegocio.InsertandoProveedorBD(objEntidad);
 
-            MessageBox.Show("Proveedor registrado correctamente");
-     
-            MostrarBuscarBD("");
-            LipiarCampos();
+                MessageBox.Show("Proveedor registrado correctamente", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MostrarBuscarBD("");
+                LipiarCampos();
+            }
+            catch
+            {
+                MessageBox.Show("Los campos no pueden estar en blanco", "Sistema de venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
             
 
         }
@@ -83,22 +90,38 @@ namespace proyectofinalp3
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            objEntidad.idProveedor = Convert.ToInt32(txtCodigo.Text);
-            objEntidad.nombre = txtNombre.Text.ToUpper();
-            objEntidad.razonSocial = txtRazonSocial.Text.ToUpper();
-            objEntidad.direccion = txtDireccion.Text.ToUpper();
-            objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
-            objEntidad.documento = txtDocumento.Text.ToUpper();
-            objEntidad.telefono = txtTelefono.Text;
-            objEntidad.correo = txtCorreo.Text.ToUpper();
-            objEntidad.fecha = Convert.ToDateTime(txtFecha.Text);
+            try
+            {
+                objEntidad.idProveedor = Convert.ToInt32(txtCodigo.Text);
+                objEntidad.nombre = txtNombre.Text.ToUpper();
+                objEntidad.razonSocial = txtRazonSocial.Text.ToUpper();
+                objEntidad.direccion = txtDireccion.Text.ToUpper();
+                objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
+                objEntidad.documento = txtDocumento.Text.ToUpper();
+                objEntidad.telefono = txtTelefono.Text;
+                objEntidad.correo = txtCorreo.Text.ToUpper();
+                objEntidad.fecha = Convert.ToDateTime(txtFecha.Text);
 
-            objNegocio.ActualizarProveedorBD(objEntidad);
+              
 
-            MessageBox.Show("Registro actualizado correctamente");
+                DialogResult Respuesta;
+
+               Respuesta =  MessageBox.Show("Deseas actualizar el registro", "Sistema Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if (Respuesta == DialogResult.OK)
+                {
+                    objNegocio.ActualizarProveedorBD(objEntidad);
+                    MostrarBuscarBD("");
+                    LipiarCampos();
+                }
+                
+            }
+
+            catch
+            {
+                MessageBox.Show("Registro no existe", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
-            MostrarBuscarBD("");
-            LipiarCampos();
 
         }
 
@@ -109,21 +132,31 @@ namespace proyectofinalp3
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            objEntidad.idProveedor = Convert.ToInt32(txtCodigo.Text);
-            objEntidad.nombre = txtNombre.Text;
-            objEntidad.razonSocial = txtRazonSocial.Text;
-            objEntidad.direccion = txtDireccion.Text;
-            objEntidad.tipoDocumento = txtTipoDocumento.Text;
-            objEntidad.documento = txtDocumento.Text;
-            objEntidad.telefono = txtTelefono.Text;
-            objEntidad.correo = txtCorreo.Text;
-            objEntidad.fecha = Convert.ToDateTime(txtFecha.Text);
+            try
+            {
+                objEntidad.idProveedor = Convert.ToInt32(txtCodigo.Text);
+                objEntidad.nombre = txtNombre.Text;
+                objEntidad.razonSocial = txtRazonSocial.Text;
+                objEntidad.direccion = txtDireccion.Text;
+                objEntidad.tipoDocumento = txtTipoDocumento.Text;
+                objEntidad.documento = txtDocumento.Text;
+                objEntidad.telefono = txtTelefono.Text;
+                objEntidad.correo = txtCorreo.Text;
+                objEntidad.fecha = Convert.ToDateTime(txtFecha.Text);
 
-            objNegocio.EliminandoProveedorBD(objEntidad);
+                objNegocio.EliminandoProveedorBD(objEntidad);
 
-            MessageBox.Show("Registro eliminado correctamente");
-            MostrarBuscarBD("");
-            LipiarCampos();
+                DialogResult Resultado;
+
+               Resultado = MessageBox.Show("Estas seguro de eliminar el registro", "Sistema Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                MostrarBuscarBD("");
+                LipiarCampos();
+            }
+            
+            catch
+            {
+                MessageBox.Show("Registro no existe", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
 
         }
 
@@ -134,7 +167,23 @@ namespace proyectofinalp3
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-             if (tablaProveedor.SelectedRows.Count > 0)
+            
+          
+        }
+
+        private void tablaProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LipiarCampos();
+        }
+
+        private void tablaProveedor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (tablaProveedor.SelectedRows.Count > 0)
             {
                 txtCodigo.Text = tablaProveedor.CurrentRow.Cells[0].Value.ToString();
                 txtNombre.Text = tablaProveedor.CurrentRow.Cells[1].Value.ToString();
@@ -146,24 +195,9 @@ namespace proyectofinalp3
                 txtCorreo.Text = tablaProveedor.CurrentRow.Cells[7].Value.ToString();
                 txtFecha.Text = tablaProveedor.CurrentRow.Cells[8].Value.ToString();
 
-                MessageBox.Show("Registro seleccionado");
+             
                 tabProveedor.SelectedIndex = 1;
             }
-            else
-            {
-
-            }
-            
-        }
-
-        private void tablaProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            LipiarCampos();
         }
     }
 }

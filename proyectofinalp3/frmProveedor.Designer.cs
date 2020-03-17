@@ -35,7 +35,6 @@
             this.tablaProveedor = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -96,7 +95,6 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -129,13 +127,14 @@
             this.tablaProveedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tablaProveedor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tablaProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaProveedor.Location = new System.Drawing.Point(8, 66);
+            this.tablaProveedor.Location = new System.Drawing.Point(8, 71);
             this.tablaProveedor.Name = "tablaProveedor";
             this.tablaProveedor.ReadOnly = true;
             this.tablaProveedor.RowHeadersVisible = false;
             this.tablaProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaProveedor.Size = new System.Drawing.Size(627, 150);
+            this.tablaProveedor.Size = new System.Drawing.Size(627, 215);
             this.tablaProveedor.TabIndex = 101;
+            this.tablaProveedor.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaProveedor_CellDoubleClick);
             // 
             // label4
             // 
@@ -156,17 +155,6 @@
             this.txtBuscar.Size = new System.Drawing.Size(254, 32);
             this.txtBuscar.TabIndex = 99;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(552, 336);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 36);
-            this.button1.TabIndex = 92;
-            this.button1.Text = "Seleccionar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // label1
             // 
@@ -569,7 +557,6 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtRazonSocial;

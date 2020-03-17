@@ -94,39 +94,7 @@ namespace CapaDatos
             return Listar;
         }
 
-        /*public List<EUsuario> ListarLogin(string usuario, string contrasena)
-        {
-            SqlDataReader Mostrar;
-            SqlConnection SqlCon = new SqlConnection();
-            SqlCon = Conexion.CrearInstancia().CrearConexion();
-            SqlCommand cmd = new SqlCommand("uspSelectLogin", SqlCon);
-
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            SqlCon.Open();
-            cmd.Parameters.AddWithValue("@usuario", SqlDbType.VarChar).Value = usuario;
-            cmd.Parameters.AddWithValue("@contrasena", SqlDbType.VarChar).Value = contrasena;
-            Mostrar = cmd.ExecuteReader();
-
-            List<EUsuario> Listar = new List<EUsuario>();
-
-            while (Mostrar.Read())
-            {
-                Listar.Add(new EUsuario
-                {
-
-                   // idUsuario = Mostrar.GetInt32(0),
-                    usuario = Mostrar.GetString(1),
-                    contrasena = Mostrar.GetString(2),
-                   // idEmpleado = Mostrar.GetInt32(3)
-
-                });
-            }
-            SqlCon.Close();
-            Mostrar.Close();
-
-            return Listar;
-        }*/
+       
         public void ActualizarUsuario(EUsuario obj)
         {
 

@@ -59,7 +59,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gruProducto = new System.Windows.Forms.TabPage();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -357,7 +356,6 @@
             // 
             // gruProducto
             // 
-            this.gruProducto.Controls.Add(this.btnSeleccionar);
             this.gruProducto.Controls.Add(this.textBox2);
             this.gruProducto.Controls.Add(this.label13);
             this.gruProducto.Controls.Add(this.label1);
@@ -369,16 +367,6 @@
             this.gruProducto.TabIndex = 1;
             this.gruProducto.Text = "Inventario";
             this.gruProducto.UseVisualStyleBackColor = true;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(527, 307);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(84, 37);
-            this.btnSeleccionar.TabIndex = 91;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // textBox2
             // 
@@ -424,6 +412,7 @@
             this.tablaProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaProducto.Size = new System.Drawing.Size(599, 214);
             this.tablaProducto.TabIndex = 87;
+            this.tablaProducto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaProducto_CellDoubleClick);
             // 
             // tabPage1
             // 
@@ -774,7 +763,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TabPage gruProducto;
-        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label1;

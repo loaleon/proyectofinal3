@@ -26,7 +26,13 @@ namespace proyectofinalp3
         
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult Respuesta;
+           Respuesta = MessageBox.Show("Desea Salir del sistema", "Sistema de Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if(Respuesta == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
         private void btnpresupuestos_Click(object sender, EventArgs e)
         { 
@@ -273,6 +279,24 @@ namespace proyectofinalp3
         {
            MessageBox.Show("Bienvenido: " + this.usuario, "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            if (this.nombre.Equals("Venta"))
+            {
+                MnuAlmacen.Enabled = false;
+                MnuContabilidad.Enabled = false;
+                MnuDespacho.Enabled = false;
+                MnuRecursoHumano.Enabled = true;
+                
+            }
+
+            else if (this.nombre.Equals("Seguridad"))
+            {
+                MnuClientes.Enabled = true;
+                MnuAlmacen.Enabled = true;
+                MnuContabilidad.Enabled = true;
+                MnuDespacho.Enabled = true;
+                MnuRecursoHumano.Enabled = true;
+                MnuVentas.Enabled = true;
+            }
         }
 
         private void toolStripMenuItem10_Click_2(object sender, EventArgs e)
@@ -333,6 +357,18 @@ namespace proyectofinalp3
         {
             frmUsuario miforma = new frmUsuario();
             miforma.Show();
+        }
+
+        private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDepartamento miforma = new frmDepartamento();
+            miforma.Show();
+                
+        }
+
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

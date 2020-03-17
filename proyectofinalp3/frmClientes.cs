@@ -58,7 +58,7 @@ namespace proyectofinalp3
                 || string.IsNullOrEmpty(txtSexo.Text) || string.IsNullOrEmpty(txtTipoDocumento.Text) || string.IsNullOrEmpty(txtDocumento.Text)
                 || string.IsNullOrEmpty(txtTelefono.Text) || string.IsNullOrEmpty(txtCorreo.Text))
             {
-                MessageBox.Show("Todos los campos debe ser completados");
+                MessageBox.Show("Todos los campos debe ser completados", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -71,9 +71,10 @@ namespace proyectofinalp3
                 objEntidad.telefono = txtTelefono.Text.ToUpper();
                 objEntidad.correo = txtCorreo.Text.ToUpper();
                 objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
+               
                 objNegocio.InsertandoClienteBD(objEntidad);
 
-                MessageBox.Show("Cliente registrado correctamente");
+                MessageBox.Show("Cliente registrado correctamente", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarBuscarBD("");
                 LimpiarCampos();
             }
@@ -118,7 +119,7 @@ namespace proyectofinalp3
         {
             if (string.IsNullOrEmpty(txtCodCliente.Text))
             {
-                MessageBox.Show("Registro no exixte");
+                MessageBox.Show("Registro no exixte", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -132,11 +133,19 @@ namespace proyectofinalp3
                 objEntidad.telefono = txtTelefono.Text.ToUpper();
                 objEntidad.correo = txtCorreo.Text.ToUpper();
                 objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
-                objNegocio.ActualizarClienteBD(objEntidad);
+                
+                ;
+                DialogResult Respuesta;
 
-                MessageBox.Show("Cliente modificado correctamente");
-                MostrarBuscarBD("");
-                LimpiarCampos();
+               Respuesta = MessageBox.Show("Deseas modificar Cliente", "Sistema Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+               
+               if (Respuesta == DialogResult.OK)
+                {
+                    objNegocio.ActualizarClienteBD(objEntidad);
+                    MostrarBuscarBD("");
+                    LimpiarCampos();
+                }
+               
             }
            
         }
@@ -145,7 +154,7 @@ namespace proyectofinalp3
         {
             if(string.IsNullOrEmpty(txtCodCliente.Text))
             {
-                MessageBox.Show("Registro no exixte");
+                MessageBox.Show("Registro no exixte", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -159,16 +168,35 @@ namespace proyectofinalp3
                 objEntidad.telefono = txtTelefono.Text.ToUpper();
                 objEntidad.correo = txtCorreo.Text.ToUpper();
                 objEntidad.fechaIngreso = Convert.ToDateTime(txtFechaIngreso.Text);
-                objNegocio.EliminandoClienteBD(objEntidad);
+               
 
-                MessageBox.Show("Cliente eliminado");
-                MostrarBuscarBD("");
-                LimpiarCampos();
+                DialogResult Resultado;
+                Resultado =  MessageBox.Show("Deseas eliminar el Cliente", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                
+                if (Resultado == DialogResult.OK)
+                {
+                    objNegocio.EliminandoClienteBD(objEntidad);
+                    MostrarBuscarBD("");
+                    LimpiarCampos();
+                }
+                
+               
             }
 
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void tablaCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (tablaCliente.SelectedRows.Count > 0)
             {
@@ -183,15 +211,14 @@ namespace proyectofinalp3
                 txtSexo.Text = tablaCliente.CurrentRow.Cells[8].Value.ToString();
                 txtFechaIngreso.Text = tablaCliente.CurrentRow.Cells[9].Value.ToString();
 
-                MessageBox.Show("Registro seleccionado");
+        
                 tabCliente.SelectedIndex = 0;
             }
-            
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-            LimpiarCampos();
+            this.Close();
         }
     }
     
