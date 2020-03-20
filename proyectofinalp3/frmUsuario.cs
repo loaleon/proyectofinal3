@@ -31,23 +31,26 @@ namespace proyectofinalp3
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            try
+            
+                if (string.IsNullOrEmpty(txtEmpleado.Text) || string.IsNullOrEmpty(txtContrasena.Text) ||
+                    string.IsNullOrEmpty(txtEmpleado.Text))
+                {
+                    MessageBox.Show("Los campos no pueden estar en blanco", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
             {
                 objEntidad.usuario = txtNombre.Text;
                 objEntidad.contrasena = txtContrasena.Text;
                 objEntidad.idEmpleado = Convert.ToInt32(txtEmpleado.Text);
 
                 objNegocio.InsertandoUsuarioBD(objEntidad);
-                MessageBox.Show("Usuario registrado correctamente");
+                MessageBox.Show("Usuario registrado correctamente", "Sistema de Venta",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 MostrarBuscarBD("");
                 LimpiarCampos();
+
             }
-            
-            catch 
-            {
-                MessageBox.Show("Los campos no pueden estar en blanco", MessageBoxIcon.Error.ToString());
-            }
+
 
         }
 
@@ -78,16 +81,22 @@ namespace proyectofinalp3
                 objEntidad.contrasena = txtContrasena.Text;
                 objEntidad.idEmpleado = Convert.ToInt32(txtEmpleado.Text);
 
-                objNegocio.ActualizarUsuarioBD(objEntidad);
-                MessageBox.Show("Usuario actualizado correctamente");
+                
+                DialogResult Respuesta;
+               Respuesta = MessageBox.Show("Deseas modificar el registro", "Sistema de Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-                MostrarBuscarBD("");
-                LimpiarCampos();
+                if (Respuesta == DialogResult.OK)
+                {
+                    objNegocio.ActualizarUsuarioBD(objEntidad);
+                    MostrarBuscarBD("");
+                    LimpiarCampos();
+                }
+                
             }
 
             catch
             {
-                MessageBox.Show("Usuario no exixte",  MessageBoxIcon.Error.ToString()) ; 
+                MessageBox.Show("Usuario no exixte", "Sistema de Venta",MessageBoxButtons.OK,MessageBoxIcon.Error); 
             }
            
         }
@@ -108,16 +117,22 @@ namespace proyectofinalp3
                 objEntidad.contrasena = txtContrasena.Text;
                 objEntidad.idEmpleado = Convert.ToInt32(txtEmpleado.Text);
 
-                objNegocio.EliminandoUsuarioBD(objEntidad);
-                MessageBox.Show("Esta seguro de eliminar el usuario", MessageBoxButtons.YesNo.ToString());
+             
+                DialogResult Respuesta;
+               Respuesta = MessageBox.Show("Esta seguro de eliminar el usuario", "Sistema de Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (Respuesta == DialogResult.OK)
+                {
+                    objNegocio.EliminandoUsuarioBD(objEntidad);
+                    MostrarBuscarBD("");
+                    LimpiarCampos();
 
-                MostrarBuscarBD("");
-                LimpiarCampos();
+                }
+                
             }
 
             catch
             {
-                MessageBox.Show("Usuario no existe");
+                MessageBox.Show("Usuario no existe", "Sistema de Venta", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }            
         }
 

@@ -77,6 +77,7 @@ namespace CapaDatos
         }
         public void ElimiarDepartamento(EDepartamento obj)
         {
+
             SqlConnection SqlCon = new SqlConnection();
             SqlCon = Conexion.CrearInstancia().CrearConexion();
             SqlCommand cmd = new SqlCommand("uspDeleteDepartamento", SqlCon);

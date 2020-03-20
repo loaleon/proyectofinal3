@@ -173,6 +173,7 @@
             this.btnModificar.TabIndex = 6;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // btnGrabar
             // 
@@ -180,7 +181,7 @@
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(75, 23);
             this.btnGrabar.TabIndex = 5;
-            this.btnGrabar.Text = "Agregar";
+            this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 

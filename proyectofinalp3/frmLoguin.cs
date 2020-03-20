@@ -76,5 +76,10 @@ namespace proyectofinalp3
         {
 
         }
+
+        private void btnEntrar_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.tabTipoProducto = new System.Windows.Forms.TabControl();
             this.gruTipoProducto = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -95,6 +96,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.btnNuevo);
             this.groupBox7.Controls.Add(this.btnEliminar);
             this.groupBox7.Controls.Add(this.btnSalir);
             this.groupBox7.Controls.Add(this.btnModificar);
@@ -111,10 +113,20 @@
             this.groupBox7.TabIndex = 99;
             this.groupBox7.TabStop = false;
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(51, 271);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(94, 36);
+            this.btnNuevo.TabIndex = 123;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // btnEliminar
             // 
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(325, 271);
+            this.btnEliminar.Location = new System.Drawing.Point(378, 272);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(94, 36);
             this.btnEliminar.TabIndex = 117;
@@ -135,7 +147,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(194, 271);
+            this.btnModificar.Location = new System.Drawing.Point(269, 272);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(94, 36);
             this.btnModificar.TabIndex = 115;
@@ -145,11 +157,11 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(63, 270);
+            this.btnAgregar.Location = new System.Drawing.Point(160, 271);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(94, 36);
             this.btnAgregar.TabIndex = 114;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Grabar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
@@ -427,5 +439,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        protected internal System.Windows.Forms.Button btnNuevo;
     }
 }

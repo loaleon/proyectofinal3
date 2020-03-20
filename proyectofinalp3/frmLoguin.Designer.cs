@@ -51,6 +51,7 @@
             this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.btnEntrar.Enter += new System.EventHandler(this.btnEntrar_Enter);
             // 
             // btncancelar
             // 

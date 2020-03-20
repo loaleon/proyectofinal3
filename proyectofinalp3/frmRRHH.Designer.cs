@@ -39,9 +39,9 @@ namespace proyectofinalp3
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.tablaEmpleado = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabTipoProducto = new System.Windows.Forms.TabPage();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.txtGenero = new System.Windows.Forms.ComboBox();
@@ -125,7 +125,6 @@ namespace proyectofinalp3
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.btnSeleccionar);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -185,17 +184,7 @@ namespace proyectofinalp3
             this.tablaEmpleado.Size = new System.Drawing.Size(615, 231);
             this.tablaEmpleado.TabIndex = 98;
             this.tablaEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEmpleado_CellContentClick);
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeleccionar.Location = new System.Drawing.Point(572, 336);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(108, 36);
-            this.btnSeleccionar.TabIndex = 92;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
-            this.btnSeleccionar.Click += new System.EventHandler(this.button1_Click);
+            this.tablaEmpleado.DoubleClick += new System.EventHandler(this.tablaEmpleado_DoubleClick);
             // 
             // label1
             // 
@@ -210,6 +199,7 @@ namespace proyectofinalp3
             // 
             // tabTipoProducto
             // 
+            this.tabTipoProducto.Controls.Add(this.btnNuevo);
             this.tabTipoProducto.Controls.Add(this.btnEliminar);
             this.tabTipoProducto.Controls.Add(this.groupBox7);
             this.tabTipoProducto.Controls.Add(this.label7);
@@ -224,10 +214,20 @@ namespace proyectofinalp3
             this.tabTipoProducto.Text = "Nuevo Empleado";
             this.tabTipoProducto.UseVisualStyleBackColor = true;
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(29, 336);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(94, 36);
+            this.btnNuevo.TabIndex = 118;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // btnEliminar
             // 
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(289, 336);
+            this.btnEliminar.Location = new System.Drawing.Point(389, 336);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(94, 36);
             this.btnEliminar.TabIndex = 117;
@@ -507,17 +507,17 @@ namespace proyectofinalp3
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(46, 336);
+            this.btnAgregar.Location = new System.Drawing.Point(146, 336);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(94, 36);
             this.btnAgregar.TabIndex = 114;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Grabar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(167, 336);
+            this.btnModificar.Location = new System.Drawing.Point(267, 336);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(94, 36);
             this.btnModificar.TabIndex = 115;
@@ -650,7 +650,6 @@ namespace proyectofinalp3
         private System.Windows.Forms.Button bnterrar;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridView tablaEmpleado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabTipoProducto;
@@ -693,5 +692,6 @@ namespace proyectofinalp3
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox txtGenero;
         private System.Windows.Forms.ComboBox txtTipoDocumento;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }

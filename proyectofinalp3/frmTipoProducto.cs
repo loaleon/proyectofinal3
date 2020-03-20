@@ -65,7 +65,7 @@ namespace proyectofinalp3
         {
             if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtDescripcion.Text))
             {
-                MessageBox.Show("No puede tener campos en blanco");
+                MessageBox.Show("No puede tener campos en blanco", "Sistema de Venta", MessageBoxButtons.OK,MessageBoxIcon.Error);
 
 
             }
@@ -76,7 +76,7 @@ namespace proyectofinalp3
 
                 objNegocio.InsertandoTipoProductoBD(objEntidad);
 
-                MessageBox.Show("Registro ingresado correctamente");
+                MessageBox.Show("Registro ingresado correctamente", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarBuscarBD("");
                 LimpiarCampos();
 
@@ -87,7 +87,7 @@ namespace proyectofinalp3
         {
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
-                MessageBox.Show("Tipo de producto no registrado");
+                MessageBox.Show("Tipo de producto no registrado", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }
@@ -97,11 +97,17 @@ namespace proyectofinalp3
                 objEntidad.nombre = txtNombre.Text.ToUpper();
                 objEntidad.descripcion = txtDescripcion.Text.ToUpper();
 
-                objNegocio.ActualizarTipoProductoBD(objEntidad);
-
-                MessageBox.Show("Registro actualizado correctamente");
-                MostrarBuscarBD("");
-                LimpiarCampos();
+                
+                DialogResult Respuesta;
+               Respuesta = MessageBox.Show("Deseas modificar el registro", "Siste de Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+               
+                if (Respuesta == DialogResult.OK)
+                {
+                    objNegocio.ActualizarTipoProductoBD(objEntidad);
+                    MostrarBuscarBD("");
+                    LimpiarCampos();
+                }
+                
 
             }
         }
@@ -128,7 +134,7 @@ namespace proyectofinalp3
         {
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
-                MessageBox.Show("Tipo de producto no registrado");
+                MessageBox.Show("Tipo de producto no registrado", "Sistema de Venta",MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }
@@ -138,11 +144,20 @@ namespace proyectofinalp3
                 objEntidad.nombre = txtNombre.Text.ToUpper();
                 objEntidad.descripcion = txtDescripcion.Text.ToUpper();
 
-                objNegocio.EliminandoTipoProductoBD(objEntidad);
 
-                MessageBox.Show("Registro eliminado correctamente");
-                MostrarBuscarBD("");
-                LimpiarCampos();
+                DialogResult Respuesta;
+
+               Respuesta = MessageBox.Show("Estas seguro de eliminar el registro", "Sistema de Venta", MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                
+                if (Respuesta == DialogResult.OK)
+                {
+
+                    objNegocio.EliminandoTipoProductoBD(objEntidad);
+                    MostrarBuscarBD("");
+                    LimpiarCampos();
+                }
+
+               
             }
         }
 
@@ -169,6 +184,11 @@ namespace proyectofinalp3
         private void tablaTipoProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

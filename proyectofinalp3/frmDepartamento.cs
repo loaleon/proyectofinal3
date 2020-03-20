@@ -53,24 +53,6 @@ namespace proyectofinalp3
             tablaDepartamento.DataSource = objNegocio.BuscarDepartamentoBD(buscar);
 
         }
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtNombre.Text))
-            {
-                MessageBox.Show("Registro no exixte");
-            }
-            else
-            {
-
-                objEntidad.nombre = txtNombre.Text.ToUpper();
-
-                objNegocio.ActualizarDepartamentoBD(objEntidad);
-
-                MessageBox.Show("Departamento modificado correctamente");
-                MostrarBuscarBD("");
-                LimpiarCampos();
-            }
-        }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtNombre.Text))
@@ -131,6 +113,25 @@ namespace proyectofinalp3
         private void frmDepartamento_Load(object sender, EventArgs e)
         {
             MostrarBuscarBD("");
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                MessageBox.Show("Registro no exixte");
+            }
+            else
+            {
+
+                objEntidad.nombre = txtNombre.Text.ToUpper();
+
+                objNegocio.ActualizarDepartamentoBD(objEntidad);
+
+                MessageBox.Show("Departamento modificado correctamente");
+                MostrarBuscarBD("");
+                LimpiarCampos();
+            }
         }
     }
 }

@@ -23,30 +23,31 @@ namespace proyectofinalp3
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
-        {   try
-            {
-                objEntidad.nombre = txtNombre.Text.ToUpper();
-                objEntidad.razonSocial = txtRazonSocial.Text.ToUpper();
-                objEntidad.direccion = txtDireccion.Text.ToUpper();
-                objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
-                objEntidad.documento = txtDocumento.Text.ToUpper();
-                objEntidad.telefono = txtTelefono.Text.ToUpper();
-                objEntidad.correo = txtCorreo.Text.ToUpper();
-                objEntidad.fecha = Convert.ToDateTime(txtFecha.Text);
-
-                objNegocio.InsertandoProveedorBD(objEntidad);
-
-                MessageBox.Show("Proveedor registrado correctamente", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                MostrarBuscarBD("");
-                LipiarCampos();
-            }
-            catch
+        {   
+                if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtRazonSocial.Text) || string.IsNullOrEmpty(txtDireccion.Text)
+               || string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtTipoDocumento.Text) || string.IsNullOrEmpty(txtDocumento.Text)
+               || string.IsNullOrEmpty(txtTelefono.Text))
             {
                 MessageBox.Show("Los campos no pueden estar en blanco", "Sistema de venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
-            
+                else
+                {
+                        objEntidad.nombre = txtNombre.Text.ToUpper();
+                        objEntidad.razonSocial = txtRazonSocial.Text.ToUpper();
+                        objEntidad.direccion = txtDireccion.Text.ToUpper();
+                        objEntidad.tipoDocumento = txtTipoDocumento.Text.ToUpper();
+                        objEntidad.documento = txtDocumento.Text.ToUpper();
+                        objEntidad.telefono = txtTelefono.Text.ToUpper();
+                        objEntidad.correo = txtCorreo.Text.ToUpper();
+                        objEntidad.fecha = Convert.ToDateTime(txtFecha.Text);
+
+                        objNegocio.InsertandoProveedorBD(objEntidad);
+
+                        MessageBox.Show("Proveedor registrado correctamente", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        MostrarBuscarBD("");
+                        LipiarCampos();
+                }    
 
         }
 
@@ -155,7 +156,7 @@ namespace proyectofinalp3
             
             catch
             {
-                MessageBox.Show("Registro no existe", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                MessageBox.Show("Registro no existe", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

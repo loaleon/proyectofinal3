@@ -272,7 +272,7 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(94, 36);
             this.btnAgregar.TabIndex = 118;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Grabar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
