@@ -145,13 +145,17 @@ namespace proyectofinalp3
                 objEntidad.correo = txtCorreo.Text;
                 objEntidad.fecha = Convert.ToDateTime(txtFecha.Text);
 
-                objNegocio.EliminandoProveedorBD(objEntidad);
-
                 DialogResult Resultado;
 
                Resultado = MessageBox.Show("Estas seguro de eliminar el registro", "Sistema Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                MostrarBuscarBD("");
-                LipiarCampos();
+               if (Resultado == DialogResult.OK)
+                {
+                    objNegocio.EliminandoProveedorBD(objEntidad);
+                    MostrarBuscarBD("");
+                    LipiarCampos();
+                }
+                
+               
             }
             
             catch

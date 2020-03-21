@@ -412,7 +412,9 @@
             this.tablaProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaProducto.Size = new System.Drawing.Size(599, 214);
             this.tablaProducto.TabIndex = 87;
+            this.tablaProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaProducto_CellContentClick);
             this.tablaProducto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaProducto_CellDoubleClick);
+            this.tablaProducto.DoubleClick += new System.EventHandler(this.tablaProducto_DoubleClick);
             // 
             // tabPage1
             // 
@@ -694,8 +696,8 @@
             // tabProducto
             // 
             this.tabProducto.AccessibleDescription = "tabalmsupl";
-            this.tabProducto.Controls.Add(this.tabPage1);
             this.tabProducto.Controls.Add(this.gruProducto);
+            this.tabProducto.Controls.Add(this.tabPage1);
             this.tabProducto.Location = new System.Drawing.Point(6, 98);
             this.tabProducto.Name = "tabProducto";
             this.tabProducto.SelectedIndex = 0;

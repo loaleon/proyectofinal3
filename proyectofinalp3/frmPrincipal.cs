@@ -12,7 +12,7 @@ namespace proyectofinalp3
 {
     public partial class frmPrincipal : Form
     {
-        //private int childFormNumber = 0;
+        
         public int idUsuario;
         public int idEmpleado;
         public int idDepartamento;
@@ -292,8 +292,8 @@ namespace proyectofinalp3
             {
                 MnuClientes.Enabled = true;
                 MnuAlmacen.Enabled = true;
-                MnuContabilidad.Enabled = true;
-                MnuDespacho.Enabled = true;
+                MnuContabilidad.Enabled = false;
+                MnuDespacho.Enabled = false;
                 MnuRecursoHumano.Enabled = true;
                 MnuVentas.Enabled = true;
             }
@@ -301,9 +301,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem10_Click_2(object sender, EventArgs e)
         {
-           // frmFormularios miforma = new Formularios();
-            //miforma.Show();
-        }
+        }   
 
         private void toolStripMenuItem9_Click_1(object sender, EventArgs e)
         {

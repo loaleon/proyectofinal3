@@ -23,21 +23,22 @@ namespace proyectofinalp3
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                objEntidad.nombre = txtNombre.Text.ToUpper();
-                objNegocio.InsertandoDepartamentoBD(objEntidad);
+                if (string.IsNullOrEmpty(txtNombre.Text))
+                {
+                    MessageBox.Show("Los campos no pueden estar en blanco","Sistema de Venta", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+                else
+                {
+                    objEntidad.nombre = txtNombre.Text.ToUpper();
+                    objNegocio.InsertandoDepartamentoBD(objEntidad);
+                     MessageBox.Show("Registro grabado correctamente", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MostrarBuscarBD("");
+                    LimpiarCampos();
+                }
+                
+            
 
-                MessageBox.Show("Departamento registrado");
-
-                MostrarBuscarBD("");
-                LimpiarCampos();
-            }
-
-            catch
-            {
-                MessageBox.Show("Campo Nombre no puede estar en blaco");
-            }
+            
 
         }
 
@@ -93,21 +94,27 @@ namespace proyectofinalp3
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtCodigo.Text))
-            {
-                MessageBox.Show("Registro no exixte");
-            }
-            else
+            try
             {
                 objEntidad.idDepartamento = Convert.ToInt32(txtCodigo.Text);
                 objEntidad.nombre = txtNombre.Text.ToUpper();
-                
-                objNegocio.EliminandoDepartamentoBD(objEntidad);
 
-                MessageBox.Show("Cliente eliminado");
-                MostrarBuscarBD("");
-                LimpiarCampos();
+                
+                DialogResult Resultado;
+               Resultado = MessageBox.Show("Esta seguro que deseas eliminar el registro", "Sistema de Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+               
+                if (Resultado == DialogResult.OK)
+                {
+                    objNegocio.EliminandoDepartamentoBD(objEntidad);
+                    MostrarBuscarBD("");
+                    LimpiarCampos();
+                }
+              
             }
+            catch
+            {
+                MessageBox.Show("Los campos no pueden estar en blanco", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }                   
         }
 
         private void frmDepartamento_Load(object sender, EventArgs e)
@@ -117,21 +124,29 @@ namespace proyectofinalp3
 
         private void btnModificar_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombre.Text))
+          try
             {
-                MessageBox.Show("Registro no exixte");
-            }
-            else
-            {
-
+                objEntidad.idDepartamento = Convert.ToInt32(txtCodigo.Text);
                 objEntidad.nombre = txtNombre.Text.ToUpper();
 
-                objNegocio.ActualizarDepartamentoBD(objEntidad);
+                DialogResult Respuesta;
+                Respuesta = MessageBox.Show("Deseas modificar el registro", "Sistema de Venta",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                if (Respuesta == DialogResult.OK)
+                {
+                    objNegocio.ActualizarDepartamentoBD(objEntidad);
+                    MostrarBuscarBD("");
+                    LimpiarCampos();
+                }      
+            }  
+           catch
+            {
+                MessageBox.Show("Los campos no pueden estar en blanco", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
+        }
 
-                MessageBox.Show("Departamento modificado correctamente");
-                MostrarBuscarBD("");
-                LimpiarCampos();
-            }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -272,6 +272,16 @@ namespace proyectofinalp3
                 tabProducto.SelectedIndex = 0;
             }
         }
+
+        private void tablaProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tablaProducto_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
