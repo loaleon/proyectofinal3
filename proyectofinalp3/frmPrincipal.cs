@@ -268,11 +268,11 @@ namespace proyectofinalp3
                 MnuAlmacen.Enabled = false;
                 MnuContabilidad.Enabled = false;
                 MnuDespacho.Enabled = false;
-                MnuRecursoHumano.Enabled = true;
+                MnuRecursoHumano.Enabled = false;
                 
             }
 
-            else if (this.nombre.Equals("Seguridad"))
+            else if (this.nombre.Equals("SEGURIDAD"))
             {
                 MnuClientes.Enabled = true;
                 MnuAlmacen.Enabled = true;
@@ -281,6 +281,17 @@ namespace proyectofinalp3
                 MnuRecursoHumano.Enabled = true;
                 MnuVentas.Enabled = true;
             }
+
+            else if (this.nombre.Equals("ALMACEN"))
+            {
+                MnuClientes.Enabled = false;
+                MnuAlmacen.Enabled = true;
+                MnuContabilidad.Enabled = false;
+                MnuDespacho.Enabled = false;
+                MnuRecursoHumano.Enabled = false;
+                MnuVentas.Enabled = false;
+            }
+
         }
 
         private void toolStripMenuItem10_Click_2(object sender, EventArgs e)
