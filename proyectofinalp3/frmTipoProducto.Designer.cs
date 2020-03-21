@@ -49,7 +49,6 @@
             this.tablaTipoProducto = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -73,8 +72,8 @@
             // 
             // tabTipoProducto
             // 
-            this.tabTipoProducto.Controls.Add(this.gruTipoProducto);
             this.tabTipoProducto.Controls.Add(this.tabPage2);
+            this.tabTipoProducto.Controls.Add(this.gruTipoProducto);
             this.tabTipoProducto.Location = new System.Drawing.Point(12, 110);
             this.tabTipoProducto.Name = "tabTipoProducto";
             this.tabTipoProducto.SelectedIndex = 0;
@@ -237,7 +236,6 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.btnSeleccionar);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -278,6 +276,7 @@
             this.tablaTipoProducto.Size = new System.Drawing.Size(733, 199);
             this.tablaTipoProducto.TabIndex = 101;
             this.tablaTipoProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaTipoProducto_CellContentClick);
+            this.tablaTipoProducto.DoubleClick += new System.EventHandler(this.tablaTipoProducto_DoubleClick);
             // 
             // label4
             // 
@@ -297,17 +296,6 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(254, 32);
             this.txtBuscar.TabIndex = 99;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeleccionar.Location = new System.Drawing.Point(665, 342);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(108, 36);
-            this.btnSeleccionar.TabIndex = 92;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // label1
             // 
@@ -431,7 +419,6 @@
         private System.Windows.Forms.DataGridView tablaTipoProducto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox5;

@@ -212,13 +212,18 @@ namespace proyectofinalp3
                 txtFechaIngreso.Text = tablaCliente.CurrentRow.Cells[9].Value.ToString();
 
         
-                tabCliente.SelectedIndex = 0;
+                tabCliente.SelectedIndex = 1;
             }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tablaCliente_DoubleClick(object sender, EventArgs e)
+        {
+
         }
     }
     

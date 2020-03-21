@@ -67,26 +67,22 @@ namespace proyectofinalp3
 
         private void presupuestosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmContabilidad miforma = new frmContabilidad();
-            miforma.Show();
+            
         }
 
         private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
-            miforma.Show();
+         
         }
 
         private void crearClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
-            miforma.Show();
+           
         }
 
         private void modificarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
-            miforma.Show();
+           
         }
 
         private void almacenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,20 +99,17 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
-            miforma.Show();
+            
         }
 
         private void toolStripMenuItem9_Click(object sender, EventArgs e)
         {
-            frmContabilidad miforma = new frmContabilidad();
-            miforma.Show();
+            
         }
 
         private void toolStripMenuItem10_Click(object sender, EventArgs e)
         {
-            frmContabilidad miforma = new frmContabilidad();
-            miforma.Show();
+            
         }
 
         private void toolStripMenuItem11_Click(object sender, EventArgs e)
@@ -154,8 +147,7 @@ namespace proyectofinalp3
 
         private void crearClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
-            miforma.Show();
+         
         }
 
         private void toolStripMenuItem7_Click(object sender, EventArgs e)
@@ -165,8 +157,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
-            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
-            miforma.Show();
+            
         }
 
         private void verCluentesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -176,8 +167,7 @@ namespace proyectofinalp3
 
         private void verPresupuestosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
-            miforma.Show();
+            
         }
 
         private void toolStripMenuItem5_Click_1(object sender, EventArgs e)
@@ -203,8 +193,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
         {
-            frmContabilidad miforma = new frmContabilidad();
-            miforma.Show();
+           
         }
 
         private void toolStripMenuItem10_Click_1(object sender, EventArgs e)
@@ -215,11 +204,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem14_Click_1(object sender, EventArgs e)
         {
-            frmGestionDeVendedores miforma = new frmGestionDeVendedores();
-
-            miforma.tabpresupuesto.TabPages[2].Show();
-            
-            miforma.Show();
+           
             
         }
 
@@ -247,8 +232,7 @@ namespace proyectofinalp3
 
         private void toolStripMenuItem4_Click_1(object sender, EventArgs e)
         {
-            frmDespacho miforma = new frmDespacho();
-            miforma.Show();
+            
 
             
         }

@@ -205,6 +205,7 @@
             this.tablaCliente.Size = new System.Drawing.Size(694, 162);
             this.tablaCliente.TabIndex = 0;
             this.tablaCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaCliente_CellDoubleClick);
+            this.tablaCliente.DoubleClick += new System.EventHandler(this.tablaCliente_DoubleClick);
             // 
             // label14
             // 
@@ -219,8 +220,8 @@
             // 
             // tabCliente
             // 
-            this.tabCliente.Controls.Add(this.tabcrearmodificar);
             this.tabCliente.Controls.Add(this.tabpage1);
+            this.tabCliente.Controls.Add(this.tabcrearmodificar);
             this.tabCliente.Location = new System.Drawing.Point(1, 96);
             this.tabCliente.Name = "tabCliente";
             this.tabCliente.SelectedIndex = 0;

@@ -269,7 +269,7 @@ namespace proyectofinalp3
                 txtFecha.Text = tablaProducto.CurrentRow.Cells[8].Value.ToString();
 
                
-                tabProducto.SelectedIndex = 0;
+                tabProducto.SelectedIndex = 1;
             }
         }
 

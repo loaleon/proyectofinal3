@@ -168,17 +168,7 @@ namespace proyectofinalp3
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            if (tablaTipoProducto.SelectedRows.Count > 0)
-            {
-                txtCodigo.Text = tablaTipoProducto.CurrentRow.Cells[0].Value.ToString();
-                txtNombre.Text = tablaTipoProducto.CurrentRow.Cells[1].Value.ToString();
-                txtDescripcion.Text = tablaTipoProducto.CurrentRow.Cells[2].Value.ToString();
-
-                MessageBox.Show("Registro seleccionado");
-
-                tabTipoProducto.SelectedIndex = 0;
-
-            }
+            
         }
 
         private void tablaTipoProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -189,6 +179,18 @@ namespace proyectofinalp3
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+        }
+
+        private void tablaTipoProducto_DoubleClick(object sender, EventArgs e)
+        {
+            if (tablaTipoProducto.SelectedRows.Count > 0)
+            {
+                txtCodigo.Text = tablaTipoProducto.CurrentRow.Cells[0].Value.ToString();
+                txtNombre.Text = tablaTipoProducto.CurrentRow.Cells[1].Value.ToString();
+                txtDescripcion.Text = tablaTipoProducto.CurrentRow.Cells[2].Value.ToString();
+                tabTipoProducto.SelectedIndex = 1;
+
+            }
         }
     }
 }
