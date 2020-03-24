@@ -171,7 +171,7 @@ namespace proyectofinalp3
                
 
                 DialogResult Resultado;
-                Resultado =  MessageBox.Show("Deseas eliminar el Cliente", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                Resultado =  MessageBox.Show("Deseas eliminar el Cliente", "Sistema Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 
                 if (Resultado == DialogResult.OK)
                 {
