@@ -68,7 +68,6 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.cboProveedor = new System.Windows.Forms.ComboBox();
             this.cboTipoProducto = new System.Windows.Forms.ComboBox();
-            this.txtStockMin = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtPrecioCompra = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -436,7 +435,6 @@
             this.groupBox2.Controls.Add(this.btnNuevo);
             this.groupBox2.Controls.Add(this.cboProveedor);
             this.groupBox2.Controls.Add(this.cboTipoProducto);
-            this.groupBox2.Controls.Add(this.txtStockMin);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.txtPrecioCompra);
             this.groupBox2.Controls.Add(this.btnEliminar);
@@ -491,22 +489,14 @@
             this.cboTipoProducto.Size = new System.Drawing.Size(155, 21);
             this.cboTipoProducto.TabIndex = 127;
             // 
-            // txtStockMin
-            // 
-            this.txtStockMin.Location = new System.Drawing.Point(452, 160);
-            this.txtStockMin.Name = "txtStockMin";
-            this.txtStockMin.Size = new System.Drawing.Size(98, 20);
-            this.txtStockMin.TabIndex = 125;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(318, 158);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 20);
+            this.label14.Size = new System.Drawing.Size(0, 20);
             this.label14.TabIndex = 124;
-            this.label14.Text = "StockMin:";
             // 
             // txtPrecioCompra
             // 
@@ -560,7 +550,7 @@
             // txtFecha
             // 
             this.txtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtFecha.Location = new System.Drawing.Point(447, 210);
+            this.txtFecha.Location = new System.Drawing.Point(452, 160);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(98, 20);
             this.txtFecha.TabIndex = 102;
@@ -569,7 +559,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(318, 210);
+            this.label36.Location = new System.Drawing.Point(323, 160);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(58, 20);
             this.label36.TabIndex = 99;
@@ -795,7 +785,6 @@
         private System.Windows.Forms.TabControl tabProducto;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtPrecioCompra;
-        private System.Windows.Forms.TextBox txtStockMin;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cboProveedor;
         private System.Windows.Forms.ComboBox cboTipoProducto;

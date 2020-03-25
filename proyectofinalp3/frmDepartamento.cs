@@ -34,11 +34,7 @@ namespace proyectofinalp3
                      MessageBox.Show("Registro grabado correctamente", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarBuscarBD("");
                     LimpiarCampos();
-                }
-                
-            
-
-            
+                }      
 
         }
 
@@ -54,25 +50,7 @@ namespace proyectofinalp3
             tablaDepartamento.DataSource = objNegocio.BuscarDepartamentoBD(buscar);
 
         }
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtNombre.Text))
-            {
-                MessageBox.Show("Registro no exixte");
-            }
-            else
-            {
-               
-                objEntidad.nombre = txtNombre.Text.ToUpper();
-                
-                objNegocio.EliminandoDepartamentoBD(objEntidad);
-
-                MessageBox.Show("Cliente eliminado");
-                MostrarBuscarBD("");
-                LimpiarCampos();
-            }
-
-        }
+      
 
         private void tablaDepartamento_DoubleClick(object sender, EventArgs e)
         {
@@ -94,27 +72,30 @@ namespace proyectofinalp3
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            try
+
+            if (string.IsNullOrEmpty(txtCodigo.Text))
+            {
+                MessageBox.Show("Los campos no pueden estar en blanco", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
             {
                 objEntidad.idDepartamento = Convert.ToInt32(txtCodigo.Text);
                 objEntidad.nombre = txtNombre.Text.ToUpper();
 
-                
+
                 DialogResult Resultado;
-               Resultado = MessageBox.Show("Esta seguro que deseas eliminar el registro", "Sistema de Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-               
+                Resultado = MessageBox.Show("Esta seguro que deseas eliminar el registro", "Sistema de Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
                 if (Resultado == DialogResult.OK)
                 {
                     objNegocio.EliminandoDepartamentoBD(objEntidad);
                     MostrarBuscarBD("");
                     LimpiarCampos();
                 }
-              
+
+
+
             }
-            catch
-            {
-                MessageBox.Show("Los campos no pueden estar en blanco", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }                   
         }
 
         private void frmDepartamento_Load(object sender, EventArgs e)

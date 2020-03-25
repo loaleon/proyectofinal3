@@ -263,7 +263,7 @@ namespace proyectofinalp3
         {
            MessageBox.Show("Bienvenido: " + this.usuario, "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            if (this.nombre.Equals("Venta"))
+            if (this.nombre.Equals("VENTA"))
             {
                 MnuAlmacen.Enabled = false;
                 MnuContabilidad.Enabled = false;
@@ -286,6 +286,15 @@ namespace proyectofinalp3
             {
                 MnuClientes.Enabled = false;
                 MnuAlmacen.Enabled = true;
+                MnuContabilidad.Enabled = false;
+                MnuDespacho.Enabled = false;
+                MnuRecursoHumano.Enabled = false;
+                MnuVentas.Enabled = false;
+            }
+            else
+            {
+                MnuClientes.Enabled = false;
+                MnuAlmacen.Enabled = false;
                 MnuContabilidad.Enabled = false;
                 MnuDespacho.Enabled = false;
                 MnuRecursoHumano.Enabled = false;

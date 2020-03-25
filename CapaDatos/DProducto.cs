@@ -61,7 +61,7 @@ namespace CapaDatos
             cmd.Parameters.AddWithValue("@precioCompra", obj.precioCompra);
             cmd.Parameters.AddWithValue("@precioVenta", obj.precioVenta);
             cmd.Parameters.AddWithValue("@prodMax", obj.prodMax);
-            cmd.Parameters.AddWithValue("@prodMin", obj.prodMin);
+            //cmd.Parameters.AddWithValue("@prodMin", obj.prodMin);
             cmd.Parameters.AddWithValue("@fechaIngreso", obj.fechaIngreso);
 
 
@@ -98,7 +98,7 @@ namespace CapaDatos
                     precioCompra = Mostrar.GetDecimal(4),
                     precioVenta = Mostrar.GetDecimal(5),
                     prodMax = Mostrar.GetInt32(6),
-                    prodMin = Mostrar.GetInt32(7),
+                    //prodMin = Mostrar.GetInt32(7),
                     fechaIngreso = Mostrar.GetDateTime(8)
 
 
@@ -169,7 +169,7 @@ namespace CapaDatos
             cmd.Parameters.AddWithValue("@precioCompra", obj.precioVenta);
             cmd.Parameters.AddWithValue("@precioVenta", obj.precioVenta);
             cmd.Parameters.AddWithValue("@prodMax", obj.prodMax);
-            cmd.Parameters.AddWithValue("@prodMin", obj.prodMin);
+            //cmd.Parameters.AddWithValue("@prodMin", obj.prodMin);
             cmd.Parameters.AddWithValue("@fechaIngreso", obj.fechaIngreso);
 
 

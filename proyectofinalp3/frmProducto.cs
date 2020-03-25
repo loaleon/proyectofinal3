@@ -111,29 +111,35 @@ namespace proyectofinalp3
         }
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                objEntidad.nombreProd = txtNombreProd.Text.ToUpper();
-                objEntidad.idTipoProd = Convert.ToInt32(((System.Data.DataRowView)cboTipoProducto.SelectedItem).Row[0]);
-                objEntidad.idProveedor = Convert.ToInt32(((System.Data.DataRowView)cboProveedor.SelectedItem).Row[0]);
-                objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
-                objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
-                objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
-                objEntidad.prodMin = Convert.ToInt32(txtStockMin.Text);
-                objEntidad.fechaIngreso = Convert.ToDateTime(txtFecha.Text);
+            
+                if (string.IsNullOrEmpty(txtNombreProd.Text) || string.IsNullOrEmpty(cboTipoProducto.Text) ||
+                    string.IsNullOrEmpty(cboProveedor.Text) || string.IsNullOrEmpty(txtPrecioCompra.Text) ||
+                    string.IsNullOrEmpty(txtPrecioVenta.Text) || string.IsNullOrEmpty(txtStockMax.Text))
+                {
 
-                objNegocio.InsertandoProductoBD(objEntidad);
+                    MessageBox.Show("Los campos no pueden estar en blanco", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);         
+                }
 
-                MessageBox.Show("Registro ingresado correctamente", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MostrarBuscarBD("");
-                LimpiarCampos();
-            }
+                else
+                {
+                    objEntidad.nombreProd = txtNombreProd.Text.ToUpper();
+                    objEntidad.idTipoProd = Convert.ToInt32(((System.Data.DataRowView)cboTipoProducto.SelectedItem).Row[0]);
+                    objEntidad.idProveedor = Convert.ToInt32(((System.Data.DataRowView)cboProveedor.SelectedItem).Row[0]);
+                    objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
+                    objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
+                    objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
+                    //objEntidad.prodMin = Convert.ToInt32(txtStockMin.Text);
+                    objEntidad.fechaIngreso = Convert.ToDateTime(txtFecha.Text);
+
+                    objNegocio.InsertandoProductoBD(objEntidad);
+
+                    MessageBox.Show("Registro ingresado correctamente", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MostrarBuscarBD("");
+                    LimpiarCampos();
+                }
           
 
-            catch 
-            {
-                MessageBox.Show("Los campos no pueden estar en blanco", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Error );
-            }
+            
         }
         public void MostrarBuscarBD(string buscar)
         {
@@ -150,30 +156,31 @@ namespace proyectofinalp3
             txtPrecioCompra.Text = "";
             txtPrecioVenta.Text = "";
             txtStockMax.Text = "";
-            txtStockMin.Text = "";
+            //txtStockMin.Text = "";
             txtFecha.Text = "";
 
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            
                 if (string.IsNullOrEmpty(txtCodigo.Text))
                 {
                  
-                    MessageBox.Show("Producto no registrado", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Producto no registrado", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
                     objEntidad.idProducto = Convert.ToInt32(txtCodigo.Text);
                     objEntidad.nombreProd = txtNombreProd.Text.ToUpper();
+                    //objEntidad.idTipoProd = Convert.ToInt32(cboTipoProducto.SelectedValue);
+                    //objEntidad.idProveedor = Convert.ToInt32(cboProveedor.SelectedValue);
                     objEntidad.idTipoProd = Convert.ToInt32(((System.Data.DataRowView)cboTipoProducto.SelectedItem).Row[0]);
                     objEntidad.idProveedor = Convert.ToInt32(((System.Data.DataRowView)cboProveedor.SelectedItem).Row[0]);
                     objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
                     objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
                     objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
-                    objEntidad.prodMin = Convert.ToInt32(txtStockMin.Text);
+                    //objEntidad.prodMin = Convert.ToInt32(txtStockMin.Text);
                     objEntidad.fechaIngreso = Convert.ToDateTime(txtFecha.Text);
 
                     
@@ -188,17 +195,7 @@ namespace proyectofinalp3
                     }
                     
                     
-                }
-                
-           
-            }
-
-            catch
-            {
-               
-                MessageBox.Show("Producto no existe", "Sistema Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-          
+                }                 
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -208,22 +205,25 @@ namespace proyectofinalp3
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-           try
+
+            if (string.IsNullOrEmpty(txtCodigo.Text))
             {
-                
-                   objEntidad.idProducto = Convert.ToInt32(txtCodigo.Text);
-                    objEntidad.nombreProd = txtNombreProd.Text;
-                    objEntidad.idTipoProd = Convert.ToInt32(cboTipoProducto.Text);
-                    objEntidad.idProveedor = Convert.ToInt32(cboProveedor.Text);
-                    objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
-                    objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
-                    objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
-                    objEntidad.prodMin = Convert.ToInt32(txtStockMin.Text);
-                    objEntidad.fechaIngreso = Convert.ToDateTime(txtFecha.Text);
+                MessageBox.Show("Producto no existe", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                objEntidad.idProducto = Convert.ToInt32(txtCodigo.Text);
+                objEntidad.nombreProd = txtNombreProd.Text;
+                objEntidad.idTipoProd = Convert.ToInt32(((System.Data.DataRowView)cboTipoProducto.SelectedItem).Row[0]);
+                objEntidad.idProveedor = Convert.ToInt32(((System.Data.DataRowView)cboProveedor.SelectedItem).Row[0]);
+                //objEntidad.idTipoProd = Convert.ToInt32(cboTipoProducto.Text);
+                //objEntidad.idProveedor = Convert.ToInt32(cboProveedor.Text);
+                objEntidad.precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
+                objEntidad.precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
+                objEntidad.prodMax = Convert.ToInt32(txtStockMax.Text);
+                //objEntidad.prodMin = Convert.ToInt32(txtStockMin.Text);
+                objEntidad.fechaIngreso = Convert.ToDateTime(txtFecha.Text);
 
-                    
-
-                //Respuesta = MessageBox.Show("Esta seguro que quieres eliminar", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);  
                 DialogResult Respuesta;
                 Respuesta = MessageBox.Show("Deseas elimar Producto", "Sistema de Venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (Respuesta == DialogResult.OK)
@@ -233,17 +233,9 @@ namespace proyectofinalp3
                     LimpiarCampos();
                 }
 
-              
-            }
-            catch
-            {
-                DialogResult Respuesta;
-                Respuesta = MessageBox.Show("Producto no existe", "Sistema de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-           
         }
-
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             
@@ -265,7 +257,7 @@ namespace proyectofinalp3
                 txtPrecioCompra.Text = tablaProducto.CurrentRow.Cells[4].Value.ToString();
                 txtPrecioVenta.Text = tablaProducto.CurrentRow.Cells[5].Value.ToString();
                 txtStockMax.Text = tablaProducto.CurrentRow.Cells[6].Value.ToString();
-                txtStockMin.Text = tablaProducto.CurrentRow.Cells[7].Value.ToString();
+                //txtStockMin.Text = tablaProducto.CurrentRow.Cells[7].Value.ToString();
                 txtFecha.Text = tablaProducto.CurrentRow.Cells[8].Value.ToString();
 
                
