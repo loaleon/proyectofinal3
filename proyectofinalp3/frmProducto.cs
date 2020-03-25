@@ -282,6 +282,11 @@ namespace proyectofinalp3
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            MostrarBuscarBD(txtBuscar.Text);
+        }
     }
     
 }

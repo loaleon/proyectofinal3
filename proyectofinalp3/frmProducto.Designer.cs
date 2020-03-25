@@ -59,7 +59,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gruProducto = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tablaProducto = new System.Windows.Forms.DataGridView();
@@ -356,7 +356,7 @@
             // 
             // gruProducto
             // 
-            this.gruProducto.Controls.Add(this.textBox2);
+            this.gruProducto.Controls.Add(this.txtBuscar);
             this.gruProducto.Controls.Add(this.label13);
             this.gruProducto.Controls.Add(this.label1);
             this.gruProducto.Controls.Add(this.tablaProducto);
@@ -368,13 +368,15 @@
             this.gruProducto.Text = "Inventario";
             this.gruProducto.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtBuscar
             // 
-            this.textBox2.Location = new System.Drawing.Point(101, 43);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 32);
-            this.textBox2.TabIndex = 90;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(101, 43);
+            this.txtBuscar.Multiline = true;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(209, 32);
+            this.txtBuscar.TabIndex = 90;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label13
             // 
@@ -765,7 +767,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TabPage gruProducto;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView tablaProducto;

@@ -157,5 +157,10 @@ namespace proyectofinalp3
         {
             LimpiarCampos();
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            MostrarBuscarBD(txtBuscar.Text);
+        }
     }
 }

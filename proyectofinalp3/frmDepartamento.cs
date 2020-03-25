@@ -148,5 +148,10 @@ namespace proyectofinalp3
         {
             this.Close();
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            MostrarBuscarBD(txtBuscar.Text);
+        }
     }
 }
